@@ -1,0 +1,18 @@
+/*
+Theme Name: Ocean Alliance Network
+Theme URI: https://oceanalliancenetwork.org
+Author: Trinacle
+Author URI: https://trinacle.com
+Description: A modern ocean-themed WordPress theme for the Ocean Alliance Network. Features a "Descend Into the Deep" scroll experience — the ocean darkens from surface (header) through six depth zones to the abyss (footer), with rising bubbles, god-rays, an animated depth gauge, glassmorphic mega menu, and editorial typography (Fraunces + Inter). Designed for foundation / charity / nonprofit use.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ocean-alliance
+Tags: nonprofit, charity, foundation, ocean, environmental, one-column, custom-logo, custom-colors, featured-images, threaded-comments, translation-ready
+*/
+
+/* The actual stylesheet lives in assets/css/style.css and is enqueued via functions.php.
+   This file exists at the theme root solely so WordPress recognizes the theme. */
