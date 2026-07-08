@@ -51,11 +51,6 @@ jobs:
             -e "ssh" \
             ./ "deploy:${{ secrets.DEPLOY_PATH }}/"
 
-      - name: Verify deploy (diagnostic)
-        # Print the on-disk state so we can see exactly what landed.
-        run: |
-          ssh deploy 'echo "=== DEPLOY_PATH contents ===" && ls -la ${{ secrets.DEPLOY_PATH }}/ && echo "" && echo "=== style.css size + first line ===" && wc -c ${{ secrets.DEPLOY_PATH }}/assets/css/style.css && head -1 ${{ secrets.DEPLOY_PATH }}/assets/css/style.css && echo "" && echo "=== Searching for old vs new palette ===" && grep -c "5fc8f0" ${{ secrets.DEPLOY_PATH }}/assets/css/style.css && echo "(old cyan count above)" && grep -c "2b6f9e" ${{ secrets.DEPLOY_PATH }}/assets/css/style.css && echo "(new steel-blue count above)" && echo "" && echo "=== Any OTHER oceanalliancenetwork theme folders? ===" && find ~/public_html -maxdepth 5 -type d -name "oceanalliancenetwork" 2>/dev/null'
-
       - name: Deploy summary
         run: |
           echo "✅ Theme deployed to ${{ secrets.DEPLOY_PATH }}"
