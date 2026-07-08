@@ -44,23 +44,25 @@ add_action('after_setup_theme', 'oan_content_width', 0);
  * Asset paths use get_template_directory_uri() so they resolve regardless of where WP lives.
  */
 function oan_assets() {
-    $ver = '1.0.0';
     $uri = get_template_directory_uri();
+    $path = get_template_directory();
 
-    // Core stylesheet (the real CSS — root style.css only carries the WP theme header).
-    wp_enqueue_style('oan-style', $uri . '/assets/css/style.css', array(), $ver);
+    // Use file modification time as the cache-busting version, so the URL
+    // changes automatically whenever the file is updated. This forces LiteSpeed
+    // / CDN static-asset caches to fetch the new file after every deploy.
+    wp_enqueue_style('oan-style', $uri . '/assets/css/style.css', array(), filemtime($path . '/assets/css/style.css'));
 
     // Page-specific stylesheet — NOT loaded on the homepage.
     if (!is_front_page()) {
-        wp_enqueue_style('oan-pages', $uri . '/assets/css/pages.css', array('oan-style'), $ver);
+        wp_enqueue_style('oan-pages', $uri . '/assets/css/pages.css', array('oan-style'), filemtime($path . '/assets/css/pages.css'));
     }
 
     // Main interactions: scroll-depth, bubble canvas, mega menu, reveal, counters.
-    wp_enqueue_script('oan-main', $uri . '/assets/js/main.js', array(), $ver, true);
+    wp_enqueue_script('oan-main', $uri . '/assets/js/main.js', array(), filemtime($path . '/assets/js/main.js'), true);
 
     // Donate page script — only on the Donate page template.
     if (is_page_template('page-donate.php')) {
-        wp_enqueue_script('oan-donate', $uri . '/assets/js/donate.js', array(), $ver, true);
+        wp_enqueue_script('oan-donate', $uri . '/assets/js/donate.js', array(), filemtime($path . '/assets/js/donate.js'), true);
     }
 }
 add_action('wp_enqueue_scripts', 'oan_assets');
