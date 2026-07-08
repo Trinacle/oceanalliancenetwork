@@ -49,7 +49,7 @@
     </div>
     <div class="footer-bottom">
         <p>&copy; <?php echo esc_html(date_i18n('Y')); ?> Ocean Alliance Network. A 501(c)(3) nonprofit.</p>
-        <p class="footer-credit">Designed for the depths.</p>
+        <p class="footer-credit">Designed for the depths · build 1.0.1</p>
     </div>
 </footer>
 
