@@ -1,0 +1,51 @@
+name: Deploy theme to Bluehost
+
+# Auto-deploy on every push to main (skill-standard pipeline).
+# rsync over SSH to the Bluehost staging theme folder.
+# Gated on the DEPLOY_ENABLED repo variable so you can pause deploys.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:    # manual trigger from the Actions tab
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: vars.DEPLOY_ENABLED == 'true'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.SSH_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          # SSH config with IdentitiesOnly (prevents "Too many auth failures")
+          cat > ~/.ssh/config <<EOF
+          Host deploy
+            HostName ${{ secrets.SSH_HOST }}
+            User ${{ secrets.SSH_USER }}
+            Port ${{ secrets.SSH_PORT }}
+            IdentityFile ~/.ssh/id_deploy
+            UserKnownHostsFile ~/.ssh/known_hosts
+          EOF
+          chmod 600 ~/.ssh/config
+          ssh-keyscan -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Test SSH connection
+        run: ssh deploy 'echo "connected as $(whoami) on $(hostname)"'
+
+      - name: Rsync theme to Bluehost staging
+        run: |
+          rsync -avz --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.gitignore' \
+            --exclude='.gitattributes' \
+            -e "ssh" \
+            ./ "deploy:${{ secrets.DEPLOY_PATH }}/"
+
+      - name: Deploy summary
+        run: |
+          echo "✅ Theme deployed to ${{ secrets.DEPLOY_PATH }}"
+          echo "Preview: https://oceanalliancenetwork.org/staging/2135/"

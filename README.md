@@ -65,44 +65,61 @@ ocean-alliance/                     ← this repo = the theme root
 
 ---
 
-## 🚀 Install via Bluehost cPanel + Git (recommended)
+## 🚀 Deploy — GitHub Actions auto-deploy (skill standard)
 
-This theme is deployed from GitHub. Once set up, **every push to GitHub can be pulled into
-WordPress with one click** in cPanel.
+Every push to `main` triggers a GitHub Actions workflow that rsyncs the theme to the
+Bluehost server over SSH. **No manual cPanel steps.** Gated on a repo variable so you can
+pause deploys.
 
-### 1. Connect the repo in cPanel
-1. Log in to **Bluehost cPanel**.
-2. Find **Files → Git Version Control**.
-3. Click **Create** → **Clone** a repository.
-   - **URL:** `https://github.com/Trinacle/oceanalliancenetwork.git`
-   - **Repository Path (Repository Name):** `ocean-alliance`
-   - **Clone Path (the destination in your hosting):**
-     `wp-content/themes/ocean-alliance`
-   - *(Use the absolute version of that path shown in cPanel — usually something like
-     `/home/USERNAME/public_html/wp-content/themes/ocean-alliance`)*
-4. Click **Create** (or **Clone**).
+**Environments:**
+| | URL | Server path |
+|--|-----|-------------|
+| **Staging** | `https://oceanalliancenetwork.org/staging/2135/` | `/home1/thefindg/public_html/website_76291747/staging/wp-content/themes/oceanalliancenetwork` |
 
-### 2. Deploy (pull) the files
-1. In the Git Version Control list, find your new `ocean-alliance` repo.
-2. Click **Manage** → **Pull or Deploy** tab.
-3. Click **Deploy HEAD Commit**. The files copy into `wp-content/themes/ocean-alliance/`.
+### One-time setup (SSH keypair + GitHub secrets)
 
-### 3. Activate the theme
-1. Open **WordPress Admin** → **Appearance → Themes**.
-2. You'll see **Ocean Alliance Network**. Click **Activate**.
-3. On activation, the theme **auto-creates** the four core Pages (About, Media, Community,
-   Donate) with their templates already assigned, and sets the homepage as the static front
-   page. (Idempotent — safe to activate repeatedly.)
+1. **Generate a dedicated SSH keypair** (already done locally at `~/.ssh/oan_deploy`):
+   ```bash
+   ssh-keygen -t rsa -b 4096 -f ~/.ssh/oan_deploy -N "" -C "github-oan-deploy@trinacle"
+   ```
 
-### 4. Add your logo
-- **Appearance → Customize → Site Identity → Logo** → upload `oan-logo-wide.png`
-  (or whatever logo you want). If no logo is set, an SVG wave mark shows as fallback.
+2. **Add the PUBLIC key to Bluehost:**
+   - cPanel → **Security → SSH Access → Manage SSH Keys → Import Key**
+   - Paste the contents of `~/.ssh/oan_deploy.pub`
+   - Authorize the key after import.
 
-### 5. Update later (the part that matches thesmokedrop.com)
-1. I push changes to GitHub (`Trinacle/oceanalliancenetwork`).
-2. In cPanel → **Git Version Control** → **Manage** your repo → **Pull or Deploy** →
-   click **Deploy HEAD Commit**.
-3. Done — the live site updates instantly.
+3. **Add secrets to GitHub** (repo → Settings → Secrets and variables → Actions →
+   **New repository secret**):
+   | Secret | Value |
+   |--------|-------|
+   | `SSH_HOST` | `XXX.bluehost.com` (your Bluehost server hostname — see cPanel) |
+   | `SSH_USER` | your cPanel username |
+   | `SSH_PORT` | `22` |
+   | `SSH_KEY` | the PRIVATE key contents (`~/.ssh/oan_deploy`, the file without `.pub`) |
+   | `DEPLOY_PATH` | `/home1/thefindg/public_html/website_76291747/staging/wp-content/themes/oceanalliancenetwork` |
+
+4. **Add the gate variable** (same page → **Variables** tab → **New repository variable**):
+   - Name: `DEPLOY_ENABLED` · Value: `true`
+
+5. **Activate the theme** in WP Admin → Appearance → Themes → **Ocean Alliance Network**.
+   On activation it auto-creates the 4 core Pages (About/Media/Community/Donate) and sets
+   the homepage as the static front page.
+
+6. **Upload your logo** in Appearance → Customize → Site Identity (or leave the SVG fallback).
+
+### The update loop (every change)
+1. Edit theme files → `git push origin main`.
+2. GitHub Actions runs `deploy.yml` → rsyncs to the server (~30–45s).
+3. Verify with a cache-busting fetch (LiteSpeed serves stale HTML otherwise):
+   ```bash
+   curl -s "https://oceanalliancenetwork.org/staging/2135/?nc=$(date +%s)" \
+     -H "User-Agent: Mozilla/5.0" | grep -c '</html>'
+   ```
+
+### Pushing to production
+Staging → production is your call. Either point production at the same repo with a different
+`DEPLOY_PATH`, or use Bluehost's "Push staging to live." Always flush permalinks
+(Settings → Permalinks → Save) and purge LiteSpeed cache after a production deploy.
 
 ---
 
