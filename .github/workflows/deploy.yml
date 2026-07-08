@@ -35,6 +35,12 @@ jobs:
       - name: Test SSH connection
         run: ssh deploy 'echo "connected as $(whoami) on $(hostname)"'
 
+      - name: Ensure deploy target exists
+        # mkdir -p creates the full path tree if any parent is missing.
+        # rsync alone only creates the final folder, which fails if a
+        # parent directory doesn't exist yet.
+        run: ssh deploy 'mkdir -p ${{ secrets.DEPLOY_PATH }}'
+
       - name: Rsync theme to Bluehost staging
         run: |
           rsync -avz --delete \
