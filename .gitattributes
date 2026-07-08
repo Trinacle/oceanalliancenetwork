@@ -1,0 +1,12 @@
+# Normalize line endings to LF in the repo.
+# Fixes the cPanel "uncommitted changes" error caused by Windows CRLF
+# being converted to LF on the Linux server at checkout.
+* text=auto eol=lf
+
+# Binary files — never touch
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
