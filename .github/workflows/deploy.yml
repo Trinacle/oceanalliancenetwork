@@ -43,7 +43,7 @@ jobs:
 
       - name: Rsync theme to Bluehost staging
         run: |
-          rsync -avz --delete \
+          rsync -avzc --delete \
             --exclude='.git/' \
             --exclude='.github/' \
             --exclude='.gitignore' \
