@@ -1,0 +1,11 @@
+---
+# cPanel Git deployment config.
+# Tells Bluehost's "Deploy HEAD Commit" button how to publish the theme.
+#
+# $HOME is auto-set by cPanel to your account's home directory.
+# Update the DEPLOYPATH below if the theme ever moves.
+
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/website_76291747/wp-content/themes/oceanalliancenetwork
+    - /bin/rsync -av --delete --exclude='.git' --exclude='.cpanel.yml' --exclude='.gitignore' ./ $DEPLOYPATH/
