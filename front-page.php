@@ -50,9 +50,9 @@ $uri = get_template_directory_uri();
 <section id="mission" class="section depth-sunlight">
     <div class="container narrow">
         <span class="eyebrow reveal">Our mission</span>
-        <h2 class="section-title reveal">From the surface to the seabed, <em>everything is connected.</em></h2>
+        <h2 class="section-title reveal">A collaborative initiative to <em>protect our oceans.</em></h2>
         <p class="lead reveal">
-            The ocean produces over half the oxygen we breathe, regulates our climate, and feeds billions. Yet it is changing faster than at any point in human history. Ocean Alliance Network exists to meet that change with science, story, and collective action.
+            The Ocean Alliance Network (OAN) brings together leaders, innovators, influencers, and communities to protect our oceans. We bridge ocean conservation and action through storytelling, technology, and strategic partnerships — uniting research, education, and policy to create measurable impact for marine ecosystems and the communities that depend on them.
         </p>
     </div>
 
@@ -77,35 +77,75 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
-     WHAT WE DO — twilight zone
+     FLAGSHIP CAMPAIGNS — the real OAN initiatives
+     ============================================ -->
+<section id="campaigns" class="section depth-twilight">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">What we do</span>
+            <h2 class="section-title">Three flagship initiatives.</h2>
+            <p class="lead">Each campaign bridges science and storytelling to drive measurable protection for marine ecosystems.</p>
+        </div>
+        <div class="campaigns-grid">
+            <article class="campaign-card reveal">
+                <div class="campaign-icon">
+                    <svg viewBox="0 0 32 32"><path d="M16 4C10 12 6 16 6 22a10 10 0 0 0 20 0c0-6-4-10-10-18z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 12v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <span class="campaign-tag">Voice 4 Oceans · LEAF</span>
+                <h3>Listen. Engage. Act. Forward.</h3>
+                <p>Our flagship engagement framework — turning awareness into action by amplifying the voices of coastal communities, scientists, and the next generation of ocean stewards.</p>
+            </article>
+            <article class="campaign-card reveal">
+                <div class="campaign-icon">
+                    <svg viewBox="0 0 32 32"><path d="M4 20h24M6 20v-8h4v8M14 20V6h4v14M22 20v-10h4v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <span class="campaign-tag">TMDL Awareness</span>
+                <h3>Total Maximum Daily Load</h3>
+                <p>Driving public understanding of water-quality limits under the Clean Water Act — because what runs off our land ends up in the sea.</p>
+            </article>
+            <article class="campaign-card reveal">
+                <div class="campaign-icon">
+                    <svg viewBox="0 0 32 32"><path d="M4 18c4 0 4-4 8-4s4 4 8 4 4-4 8-4M4 24c4 0 4-4 8-4s4 4 8 4 4-4 8-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </div>
+                <span class="campaign-tag">Whale Strike Reduction</span>
+                <h3>Protecting whales from ship strikes</h3>
+                <p>Working with maritime partners on slow-transit corridors and real-time monitoring to reduce fatal vessel collisions with migrating whales.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     HOW WE WORK — the OAN approach
      ============================================ -->
 <section id="work" class="section depth-twilight">
     <div class="container">
         <div class="section-head reveal">
-            <span class="eyebrow">What we do</span>
-            <h2 class="section-title">Four currents, one mission.</h2>
+            <span class="eyebrow">How we work</span>
+            <h2 class="section-title">Bridging conservation and action.</h2>
+            <p class="lead">OAN connects the dots between research, storytelling, and the people who can turn both into policy and protection.</p>
         </div>
 
         <div class="pillars">
             <article class="pillar reveal">
                 <div class="pillar-icon"><svg viewBox="0 0 32 32"><path d="M16 4C10 12 6 16 6 22a10 10 0 0 0 20 0c0-6-4-10-10-18z" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-                <h3>Science</h3>
-                <p>Funding and fieldwork that closes the gap between research and real-world protection.</p>
+                <h3>Storytelling</h3>
+                <p>Original films, commercials, and documentary series that bring the ocean to millions who may never see it.</p>
             </article>
             <article class="pillar reveal">
                 <div class="pillar-icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 16h22M16 5c4 3 4 19 0 22M16 5c-4 3-4 19 0 22" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-                <h3>Storytelling</h3>
-                <p>Films, commercials, and series that bring the ocean to audiences who never see it.</p>
+                <h3>Technology</h3>
+                <p>Data, monitoring, and platforms that turn science into accessible tools for communities and decision-makers.</p>
             </article>
             <article class="pillar reveal">
                 <div class="pillar-icon"><svg viewBox="0 0 32 32"><path d="M16 6l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
-                <h3>Community</h3>
-                <p>Ambassadors and local leaders turning awareness into action on every coastline.</p>
+                <h3>Partnerships</h3>
+                <p>Strategic alliances uniting researchers, creators, brands, and coastal communities around shared goals.</p>
             </article>
             <article class="pillar reveal">
                 <div class="pillar-icon"><svg viewBox="0 0 32 32"><path d="M6 24c4 0 4-4 8-4s4 4 8 4 4-4 8-4M6 16c4 0 4-4 8-4s4 4 8 4 4-4 8-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-                <h3>Policy</h3>
-                <p>Convening summits and alliances that move decision-makers toward lasting protection.</p>
+                <h3>Education</h3>
+                <p>Programs and summits that empower the next generation of ocean stewards and informed citizens.</p>
             </article>
         </div>
     </div>

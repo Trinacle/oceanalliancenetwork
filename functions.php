@@ -174,3 +174,55 @@ function oan_pingback_header($headers) {
     return $headers;
 }
 add_filter('wp_headers', 'oan_pingback_header');
+
+/**
+ * SEO meta tags + Open Graph + structured data (skill Phase 7).
+ * Emits description, OG, Twitter card, and Organization JSON-LD.
+ * Respects SEO plugins (Yoast/RankMath) if active — those plugins run
+ * later on wp_head and emit their own canonical/description tags.
+ */
+function oan_meta_tags() {
+    $uri = get_template_directory_uri();
+    $default_og = $uri . '/assets/img/oan-media-7.jpg';
+    $site_name  = get_bloginfo('name');
+    $desc       = 'The Ocean Alliance Network (OAN) brings together leaders, innovators, influencers, and communities to protect our oceans through storytelling, technology, and strategic partnerships.';
+
+    // Per-page description: excerpt on singular, default elsewhere.
+    if (is_singular() && has_excerpt()) {
+        $desc = wp_strip_all_tags(get_the_excerpt());
+    }
+    // Current page URL.
+    $current_url = home_url(add_query_arg(array(), (isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '')));
+
+    echo '<meta name="description" content="' . esc_attr($desc) . '">' . "\n";
+    echo '<meta property="og:site_name" content="' . esc_attr($site_name) . '">' . "\n";
+    echo '<meta property="og:type" content="' . (is_singular() ? 'article' : 'website') . '">' . "\n";
+    echo '<meta property="og:title" content="' . esc_attr(wp_get_document_title()) . '">' . "\n";
+    echo '<meta property="og:description" content="' . esc_attr($desc) . '">' . "\n";
+    echo '<meta property="og:url" content="' . esc_url($current_url) . '">' . "\n";
+
+    // OG image: featured image on singular, default hero otherwise.
+    if (is_singular() && has_post_thumbnail()) {
+        $default_og = wp_get_attachment_image_url(get_post_thumbnail_id(), 'large');
+    }
+    echo '<meta property="og:image" content="' . esc_url($default_og) . '">' . "\n";
+    echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+    echo '<meta name="twitter:title" content="' . esc_attr(wp_get_document_title()) . '">' . "\n";
+    echo '<meta name="twitter:description" content="' . esc_attr($desc) . '">' . "\n";
+    echo '<meta name="twitter:image" content="' . esc_url($default_og) . '">' . "\n";
+
+    // Organization structured data on the homepage.
+    if (is_front_page()) {
+        $schema = array(
+            '@context'    => 'https://schema.org',
+            '@type'       => 'Organization',
+            'name'        => 'Ocean Alliance Network',
+            'url'         => home_url('/'),
+            'logo'        => $uri . '/assets/img/oan-logo-wide.png',
+            'description' => $desc,
+            'sameAs'      => array('https://oceanalliancenetwork.org'),
+        );
+        echo '<script type="application/ld+json">' . wp_json_encode($schema) . '</script>' . "\n";
+    }
+}
+add_action('wp_head', 'oan_meta_tags', 5);

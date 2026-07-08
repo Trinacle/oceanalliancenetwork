@@ -8,13 +8,13 @@
 
 /* ---------- TOKENS ---------- */
 :root{
-  /* depth stops (top -> bottom) */
-  --c-surface:   #5fc8f0;
-  --c-shallow:   #1fa9d8;
-  --c-sunlit:    #0a7bb0;
-  --c-twilight:  #0a4f78;
-  --c-midnight:  #062a45;
-  --c-abyss:     #020a1a;
+  /* depth stops (top -> bottom) — deepened, less cyan, more sophisticated ocean */
+  --c-surface:   #2b6f9e;   /* was #5fc8f0 (too cyan) — now a muted steel-blue surface */
+  --c-shallow:   #1a5680;
+  --c-sunlit:    #0e4267;
+  --c-twilight:  #0a3252;
+  --c-midnight:  #062039;
+  --c-abyss:     #01060f;
 
   --accent:      #6fe7c4;   /* bio-luminescent teal */
   --accent-2:    #4cc9f0;   /* electric blue */
@@ -61,12 +61,12 @@ ul{margin:0;padding:0;list-style:none}
   position:fixed;inset:0;z-index:-3;
   background:linear-gradient(180deg,
     var(--c-surface) 0%,
-    var(--c-shallow) 14%,
-    var(--c-sunlit) 32%,
-    var(--c-twilight) 52%,
-    var(--c-midnight) 74%,
+    var(--c-shallow) 10%,
+    var(--c-sunlit) 24%,
+    var(--c-twilight) 44%,
+    var(--c-midnight) 70%,
     var(--c-abyss) 100%);
-  background-size:100% 320vh;       /* tall so we can shift on scroll */
+  background-size:100% 280vh;       /* tall so we can shift on scroll */
   background-position:0 0;
   transition:background-position .2s linear;
 }
@@ -97,6 +97,61 @@ ul{margin:0;padding:0;list-style:none}
 @keyframes sway{
   0%{transform:rotate(8deg) translateX(-10px);opacity:.35}
   100%{transform:rotate(4deg) translateX(20px);opacity:.6}
+}
+
+/* ---------- MARINE LIFE SILHOUETTES ---------- */
+/* Dark, faded shapes drifting at depth. Darker than the water so they read
+   as shadows — never bright. Honors prefers-reduced-motion (see bottom). */
+.marine-life{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.silhouette{
+  position:absolute;
+  color:rgba(0,0,0,.18);          /* dark shadow on blue water */
+  filter:blur(1px);
+  will-change:transform;
+}
+/* Humpback whale — surface zone, large, slow */
+.whale--1{
+  width:min(620px,55vw);
+  top:8%;left:-30%;
+  opacity:.5;
+  animation:drift-right 95s linear infinite;
+}
+/* Smaller whale — twilight zone */
+.whale--2{
+  width:min(360px,32vw);
+  top:42%;left:-25%;
+  opacity:.32;
+  animation:drift-right 140s linear infinite;
+  animation-delay:-40s;
+}
+/* School of fish — sunlit zone */
+.fish--1{
+  width:min(180px,16vw);
+  top:26%;left:-15%;
+  opacity:.4;
+  animation:drift-right 60s linear infinite;
+  animation-delay:-15s;
+}
+/* Single large fish — midnight zone */
+.fish--2{
+  width:min(220px,20vw);
+  top:64%;left:-20%;
+  opacity:.28;
+  animation:drift-right 110s linear infinite;
+  animation-delay:-70s;
+}
+/* Manta ray — abyss zone */
+.ray--1{
+  width:min(440px,40vw);
+  top:82%;left:-30%;
+  opacity:.25;
+  animation:drift-right 180s linear infinite;
+  animation-delay:-100s;
+}
+@keyframes drift-right{
+  0%{transform:translateX(0) translateY(0)}
+  50%{transform:translateX(60vw) translateY(-18px)}
+  100%{transform:translateX(140vw) translateY(0)}
 }
 
 /* bubble canvas */
@@ -300,9 +355,9 @@ ul{margin:0;padding:0;list-style:none}
 .hero-bg-overlay{
   position:absolute;inset:0;
   background:linear-gradient(180deg,
-    rgba(8,40,68,.45) 0%,
-    rgba(8,40,68,.55) 40%,
-    rgba(4,20,40,.75) 100%);
+    rgba(6,24,44,.55) 0%,
+    rgba(6,24,44,.65) 40%,
+    rgba(2,14,28,.85) 100%);
 }
 .hero-content{position:relative;z-index:3;max-width:900px}
 .hero-content .eyebrow,
@@ -360,6 +415,36 @@ ul{margin:0;padding:0;list-style:none}
 .pillar p{font-size:14px;color:var(--ink-soft);margin:0}
 @media(max-width:900px){.pillars{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.pillars{grid-template-columns:1fr}}
+
+/* ---------- CAMPAIGNS ---------- */
+.campaigns-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.campaign-card{
+  padding:36px 28px;border-radius:18px;
+  background:var(--glass);border:1px solid var(--line);
+  backdrop-filter:blur(8px);
+  transition:transform .5s var(--ease-out),background .4s,border-color .4s;
+}
+.campaign-card:hover{transform:translateY(-8px);background:var(--glass-strong);border-color:rgba(111,231,196,.3)}
+.campaign-icon{width:56px;height:56px;color:var(--accent);margin-bottom:20px}
+.campaign-icon svg{width:100%;height:100%}
+.campaign-tag{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
+.campaign-card h3{font-size:1.4rem;margin-bottom:10px}
+.campaign-card p{font-size:14px;color:var(--ink-soft);margin:0}
+@media(max-width:900px){.campaigns-grid{grid-template-columns:1fr}}
+
+/* ---------- ACCESSIBILITY (skill Phase 7) ---------- */
+.skip-link{
+  position:absolute;top:-100px;left:16px;z-index:100;
+  background:var(--accent);color:#03241b;
+  padding:12px 20px;border-radius:0 0 10px 10px;
+  font-weight:600;font-size:14px;
+  transition:top .25s var(--ease);
+}
+.skip-link:focus{top:0;outline:none}
+*:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.btn:focus-visible,.nav-list>li>a:focus-visible,.amount-btn:focus-visible{
+  outline:2px solid var(--accent);outline-offset:3px;
+}
 
 /* ---------- FILM CARD ---------- */
 .film-card{
