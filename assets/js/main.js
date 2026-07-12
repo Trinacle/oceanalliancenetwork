@@ -36,8 +36,9 @@
       const docH = document.documentElement.scrollHeight - window.innerHeight;
       const p = docH > 0 ? Math.min(st / docH, 1) : 0;
 
-      // shift the tall gradient upward to "descend"
-      if(bg) bg.style.backgroundPosition = `0 ${p * 220}vh`;
+      // Background gradient is now FIXED (no scroll-driven blue shift).
+      // The depth gauge still animates for a subtle sense of descent.
+      // if(bg) bg.style.backgroundPosition = `0 ${p * 220}vh`;
 
       // header solidifies after first breath
       if(header) header.classList.toggle('scrolled', st > 60);

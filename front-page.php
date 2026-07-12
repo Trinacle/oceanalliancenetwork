@@ -15,7 +15,7 @@ $uri = get_template_directory_uri();
      ============================================ -->
 <section id="hero">
     <div class="hero-bg" aria-hidden="true">
-        <img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-7.jpg" alt="" />
+        <img src="<?php echo esc_url($uri); ?>/assets/img/oan-hero-d1.jpg" alt="" />
         <div class="hero-bg-overlay"></div>
     </div>
     <div class="hero-surface" aria-hidden="true">
@@ -111,6 +111,22 @@ $uri = get_template_directory_uri();
                 <h3>Protecting whales from ship strikes</h3>
                 <p>Working with maritime partners on slow-transit corridors and real-time monitoring to reduce fatal vessel collisions with migrating whales.</p>
             </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     TURTLE PARALLAX — full-width image break
+     ============================================ -->
+<section id="turtle-break" class="parallax-break">
+    <div class="parallax-bg" style="background-image:url('<?php echo esc_url($uri); ?>/assets/img/oan-turtle.jpeg');"></div>
+    <div class="parallax-overlay"></div>
+    <div class="container narrow center parallax-content">
+        <div class="reveal">
+            <span class="eyebrow">Every creature counts</span>
+            <h2 class="section-title">Six of seven sea turtle species are threatened with extinction.</h2>
+            <p class="lead">From coral reefs to the open ocean, the ecosystems we depend on are connected by species like this one. OAN funds the science, the storytelling, and the community action that gives them a chance.</p>
+            <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="btn btn--primary">Protect marine life</a>
         </div>
     </div>
 </section>
