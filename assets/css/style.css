@@ -621,134 +621,127 @@ ul{margin:0;padding:0;list-style:none}
   .parallax-bg{background-attachment:scroll}  /* fixed bg is janky on mobile */
 }
 
-/* ---------- FOOTER (ocean floor with sand) ---------- */
+/* ---------- FOOTER — "Bioluminescent Deep" ---------- */
 #site-footer{
-  position:relative;z-index:1;
-  padding:0;
-  border-top:0;
+  position:relative;z-index:1;padding:0;border-top:0;overflow:hidden;
+  background:radial-gradient(ellipse 120% 80% at 50% 0%,
+    #0a2540 0%, var(--c-abyss) 55%, #000308 100%);
+}
+/* glowing surface curve at the top — like looking up at the water from below */
+.footer-surface{
+  position:absolute;top:-2px;left:0;right:0;height:140px;
   background:
-    /* sandy seabed at the very bottom */
-    linear-gradient(180deg,
-      var(--c-abyss) 0%,
-      #00060f 70%,
-      #0a0e10 88%,
-      #1a1410 95%,
-      #2a2018 100%);
-  overflow:hidden;
-}
-/* sand texture overlay — subtle granular dots */
-#site-footer::before{
-  content:"";position:absolute;bottom:0;left:0;right:0;height:80px;
-  background:
-    radial-gradient(2px 1px at 12% 80%, rgba(180,150,100,.15), transparent),
-    radial-gradient(2px 1px at 28% 60%, rgba(200,170,120,.12), transparent),
-    radial-gradient(1.5px 1px at 45% 90%, rgba(180,150,100,.18), transparent),
-    radial-gradient(2px 1px at 63% 70%, rgba(190,160,110,.13), transparent),
-    radial-gradient(1.5px 1px at 78% 85%, rgba(200,170,120,.15), transparent),
-    radial-gradient(2px 1px at 91% 65%, rgba(180,150,100,.14), transparent),
-    linear-gradient(180deg, transparent 0%, rgba(80,60,35,.25) 60%, rgba(60,45,25,.4) 100%);
+    radial-gradient(ellipse 90% 100% at 50% -40%,
+      rgba(111,231,196,.18) 0%, rgba(76,201,240,.08) 35%, transparent 70%);
   pointer-events:none;z-index:0;
+  animation:surface-glow 8s ease-in-out infinite alternate;
 }
-/* sand ripple line separating water from seabed */
-#site-footer::after{
-  content:"";position:absolute;bottom:80px;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,
-    transparent, rgba(150,120,80,.15) 20%,
-    rgba(180,140,90,.25) 40%, rgba(160,130,85,.2) 60%,
-    rgba(170,135,88,.22) 80%, transparent);
-  box-shadow:0 2px 12px rgba(100,75,40,.15);
-  pointer-events:none;z-index:0;
+@keyframes surface-glow{
+  0%{opacity:.6;transform:scaleX(1)}
+  100%{opacity:1;transform:scaleX(1.06)}
 }
-/* decorative wave divider at the top of the footer */
-.footer-wave{
-  display:block;width:100%;height:60px;
-  margin-bottom:-1px;
-  color:var(--c-abyss);
-  position:relative;z-index:1;
+/* bio-luminescent floating orbs */
+.footer-orb{
+  position:absolute;border-radius:50%;pointer-events:none;z-index:0;
+  filter:blur(2px);
+  animation:orb-float var(--dur,12s) ease-in-out infinite alternate;
 }
-.footer-wave path{fill:currentColor}
+.footer-orb--1{width:8px;height:8px;background:rgba(111,231,196,.6);top:30%;left:12%;--dur:11s}
+.footer-orb--2{width:5px;height:5px;background:rgba(76,201,240,.5);top:55%;left:78%;--dur:14s;animation-delay:-3s}
+.footer-orb--3{width:10px;height:10px;background:rgba(111,231,196,.4);top:72%;left:30%;--dur:16s;animation-delay:-6s}
+.footer-orb--4{width:6px;height:6px;background:rgba(76,201,240,.45);top:40%;left:88%;--dur:13s;animation-delay:-2s}
+.footer-orb--5{width:7px;height:7px;background:rgba(111,231,196,.5);top:65%;left:55%;--dur:15s;animation-delay:-8s}
+@keyframes orb-float{
+  0%{transform:translateY(0) translateX(0);opacity:.3}
+  100%{transform:translateY(-30px) translateX(15px);opacity:.8}
+}
+@media(prefers-reduced-motion:reduce){.footer-orb,.footer-surface{animation:none}}
+
 .footer-inner{
   max-width:var(--maxw);margin:0 auto;
-  padding:80px 32px 50px;
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr 1fr;
-  gap:48px;
-  align-items:start;
-  position:relative;z-index:2;   /* above sand pseudo-elements */
+  padding:100px 32px 40px;
+  position:relative;z-index:2;
 }
-/* footer logo rule moved up to the .brand-logo block */
+/* CTA band — the hero moment of the footer */
+.footer-cta{
+  text-align:center;margin-bottom:80px;padding:0 20px;
+}
+.footer-cta h2{
+  font-family:var(--serif);font-size:clamp(2rem,5vw,3.6rem);
+  line-height:1.05;letter-spacing:-.02em;margin:0 0 16px;
+}
+.footer-cta h2 em{color:var(--accent)}
+.footer-cta p{font-size:1.1rem;color:var(--ink-soft);max-width:50ch;margin:0 auto 28px}
+.footer-cta .btn{font-size:16px;padding:18px 36px}
+
+/* main grid: brand + links */
+.footer-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;
+  padding-bottom:60px;border-bottom:1px solid var(--line);
+}
+.footer-brand-col .brand-logo{height:auto;width:72px;margin-bottom:20px;filter:none}
 .footer-brand-col .footer-tag{
-  font-family:var(--serif);font-size:1.5rem;font-weight:500;margin:0 0 8px;
+  font-family:var(--serif);font-size:1.4rem;font-weight:500;margin:0 0 8px;
 }
 .footer-brand-col .footer-mission{
-  color:var(--ink-soft);font-size:14px;margin:0 0 24px;max-width:32ch;
+  color:var(--ink-soft);font-size:14px;margin:0 0 24px;max-width:34ch;line-height:1.6;
 }
-.footer-social{display:flex;gap:12px;margin-bottom:0}
+.footer-social{display:flex;gap:10px}
 .footer-social a{
-  width:42px;height:42px;border-radius:50%;
+  width:40px;height:40px;border-radius:12px;
   display:flex;align-items:center;justify-content:center;
-  background:var(--glass);border:1px solid var(--line);
-  color:var(--ink-soft);
+  background:var(--glass);border:1px solid var(--line);color:var(--ink-soft);
   transition:all .35s var(--ease-out);
 }
 .footer-social a:hover{
-  background:var(--accent);color:#03241b;border-color:var(--accent);
-  transform:translateY(-3px);
+  background:rgba(111,231,196,.15);color:var(--accent);
+  border-color:rgba(111,231,196,.4);transform:translateY(-3px);
+  box-shadow:0 0 20px rgba(111,231,196,.2);
 }
 .footer-social svg{width:18px;height:18px}
 .footer-col h6{
-  font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--accent);margin:0 0 20px;font-weight:600;
+  font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 18px;font-weight:600;
 }
 .footer-col a{
   display:block;font-size:14px;color:var(--ink-soft);
-  padding:7px 0;transition:color .2s,padding-left .25s var(--ease-out);
+  padding:6px 0;transition:color .2s,padding-left .25s var(--ease-out);
 }
 .footer-col a:hover{color:var(--ink);padding-left:6px}
-.footer-newsletter{
-  grid-column:1/-1;
-  margin-top:20px;padding:36px;
-  background:var(--glass);border:1px solid var(--line);border-radius:18px;
-  display:flex;align-items:center;justify-content:space-between;gap:32px;
-  flex-wrap:wrap;
-}
-.footer-newsletter h4{
-  font-family:var(--serif);font-size:1.4rem;margin:0;
-}
-.footer-newsletter p{font-size:13px;color:var(--ink-soft);margin:4px 0 0}
-.footer-newsletter-form{display:flex;gap:8px;flex:1;min-width:260px;max-width:420px}
-.footer-newsletter-form input{
-  flex:1;padding:13px 18px;
-  background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:100px;
-  color:var(--ink);font-size:14px;
-}
-.footer-newsletter-form input:focus{outline:none;border-color:var(--accent)}
-.footer-newsletter-form input::placeholder{color:var(--ink-faint)}
-.footer-newsletter-form button{
-  padding:13px 24px;border-radius:100px;
-  background:var(--accent);color:#03241b;font-weight:600;font-size:14px;
-  white-space:nowrap;transition:transform .3s var(--ease-out),box-shadow .3s;
-}
-.footer-newsletter-form button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(111,231,196,.35)}
+
+/* bottom row: legal + newsletter inline */
 .footer-bottom{
-  max-width:var(--maxw);margin:0 auto;
-  padding:24px 32px 56px;            /* extra bottom padding to sit on sand */
-  border-top:1px solid var(--line);
-  display:flex;justify-content:space-between;align-items:center;gap:16px;
-  font-size:12px;color:var(--ink-faint);flex-wrap:wrap;
-  position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;
+  padding:32px 0 48px;position:relative;z-index:2;
 }
-.footer-bottom a{color:var(--ink-soft);transition:color .2s}
-.footer-bottom a:hover{color:var(--accent)}
-.footer-legal{display:flex;gap:20px;flex-wrap:wrap}
+.footer-legal-row{display:flex;gap:24px;flex-wrap:wrap;font-size:13px;color:var(--ink-faint)}
+.footer-legal-row a{color:var(--ink-soft);transition:color .2s}
+.footer-legal-row a:hover{color:var(--accent)}
+.footer-copy{font-size:13px;color:var(--ink-faint)}
+.footer-mini-form{display:flex;gap:6px}
+.footer-mini-form input{
+  padding:10px 16px;background:rgba(0,0,0,.3);border:1px solid var(--line);
+  border-radius:100px;color:var(--ink);font-size:13px;width:220px;
+}
+.footer-mini-form input:focus{outline:none;border-color:var(--accent)}
+.footer-mini-form input::placeholder{color:var(--ink-faint)}
+.footer-mini-form button{
+  padding:10px 20px;border-radius:100px;
+  background:rgba(111,231,196,.15);color:var(--accent);border:1px solid rgba(111,231,196,.3);
+  font-weight:600;font-size:13px;white-space:nowrap;transition:all .3s var(--ease-out);
+}
+.footer-mini-form button:hover{background:var(--accent);color:#03241b;box-shadow:0 0 20px rgba(111,231,196,.3)}
+
 @media(max-width:900px){
-  .footer-inner{grid-template-columns:1fr 1fr;gap:36px;padding:60px 24px 40px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
   .footer-brand-col{grid-column:1/-1}
+  .footer-bottom{grid-template-columns:1fr;gap:20px}
 }
 @media(max-width:600px){
-  .footer-inner{grid-template-columns:1fr}
-  .footer-newsletter{flex-direction:column;align-items:flex-start;padding:28px 24px}
-  .footer-newsletter-form{max-width:none;width:100%}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-cta{margin-bottom:60px}
+  .footer-mini-form{width:100%}
+  .footer-mini-form input{flex:1;width:auto}
 }
 
 /* ---------- LUAU GALLERY ---------- */
