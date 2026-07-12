@@ -69,15 +69,13 @@
     <div class="header-inner">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="brand" aria-label="<?php esc_attr_e('Ocean Alliance Network home', 'ocean-alliance'); ?>">
             <?php
-            // Custom logo (set in Appearance → Customize → Site Identity), with SVG fallback.
+            $oan_uri = get_template_directory_uri();
+            // Custom logo (set in Appearance → Customize → Site Identity) takes priority;
+            // otherwise fall back to the bundled OAN logo file.
             if (has_custom_logo()) {
                 the_custom_logo();
             } else { ?>
-                <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
-                    <path d="M4 30c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-                    <path d="M4 38c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
-                    <circle cx="24" cy="14" r="5" fill="currentColor"/>
-                </svg>
+                <img class="brand-logo" src="<?php echo esc_url($oan_uri); ?>/assets/img/oan-logo-wide.png" alt="<?php esc_attr_e('Ocean Alliance Network', 'ocean-alliance'); ?>" />
             <?php } ?>
             <span class="brand-text">Ocean Alliance<small>Network</small></span>
         </a>

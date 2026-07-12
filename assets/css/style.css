@@ -245,7 +245,10 @@ ul{margin:0;padding:0;list-style:none}
 }
 .brand{display:flex;align-items:center;gap:12px;color:var(--ink)}
 .brand-mark{width:42px;height:42px;color:var(--accent);transition:transform .6s var(--ease)}
+.brand-logo{height:46px;width:auto;filter:brightness(0) invert(1);transition:transform .6s var(--ease),opacity .3s}
 .brand:hover .brand-mark{transform:rotate(-8deg) scale(1.05)}
+.brand:hover .brand-logo{transform:scale(1.03)}
+@media(max-width:540px){.brand-logo{height:38px}}
 .brand-text{font-family:var(--serif);font-size:20px;font-weight:600;line-height:1;letter-spacing:-.01em}
 .brand-text small{display:block;font-family:var(--sans);font-size:10px;font-weight:600;
   letter-spacing:.3em;color:var(--ink-faint);margin-top:4px}
