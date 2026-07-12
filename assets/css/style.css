@@ -274,40 +274,42 @@ ul{margin:0;padding:0;list-style:none}
 .nav-donate:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(111,231,196,.45)}
 
 /* ---------- MEGA MENU ---------- */
-.mega{
-  position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(12px);
-  width:min(680px,90vw);
-  background:rgba(6,26,48,.85);backdrop-filter:blur(22px) saturate(140%);
-  border:1px solid var(--line);border-radius:20px;
-  padding:28px;
+/* Wrapper bridges the gap between nav item and dropdown so hover never breaks */
+.has-mega{position:relative}
+.mega-wrap{
+  position:absolute;top:100%;left:0;right:0;
+  padding-top:22px;            /* invisible bridge — mouse travels through this */
   opacity:0;visibility:hidden;pointer-events:none;
-  transition:opacity .35s var(--ease-out),transform .35s var(--ease-out),visibility .35s;
-  box-shadow:0 30px 80px rgba(0,0,0,.5);
+  transition:opacity .25s var(--ease-out),visibility .25s;
 }
-.has-mega:hover .mega,.has-mega:focus-within .mega{
-  opacity:1;visibility:visible;pointer-events:auto;
-  transform:translateX(-50%) translateY(0);
+.has-mega:hover .mega-wrap,.has-mega:focus-within .mega-wrap,
+.mega-wrap:hover{opacity:1;visibility:visible;pointer-events:auto}
+.mega{
+  left:50%;transform:translateX(-50%);
+  width:min(820px,92vw);
+  background:rgba(4,20,38,.92);backdrop-filter:blur(22px) saturate(140%);
+  border:1px solid var(--line);border-radius:18px;
+  padding:32px;
+  box-shadow:0 30px 80px rgba(0,0,0,.6);
 }
-.mega-grid{display:grid;grid-template-columns:1.2fr 1fr 1.1fr;gap:24px}
-.mega-col h4{font-size:1.4rem;margin-bottom:8px}
-.mega-col h5{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--ink-faint);margin:0 0 14px}
-.mega-col p{font-size:13px;color:var(--ink-soft);margin:0 0 12px}
-.mega-col ul li{margin-bottom:2px}
+/* simple 2-column layout — just links, big touch targets */
+.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 48px}
+.mega-head{
+  grid-column:1/-1;display:flex;align-items:center;gap:14px;
+  padding-bottom:18px;margin-bottom:8px;border-bottom:1px solid var(--line);
+}
+.mega-head h4{font-size:1.2rem;margin:0}
+.mega-head .mega-tag{margin:0}
+.mega-col h5{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-faint);margin:0 0 6px;font-weight:600}
+.mega-col ul li{margin-bottom:0}
 .mega-col ul a{
-  display:block;padding:8px 10px;margin-left:-10px;border-radius:8px;
-  font-size:14px;color:var(--ink-soft);transition:background .2s,color .2s;
+  display:block;padding:11px 12px;margin-left:-12px;border-radius:10px;
+  font-size:15px;color:var(--ink);transition:background .2s,color .2s,padding-left .2s;
 }
-.mega-col ul a:hover{background:var(--glass);color:var(--ink)}
-.mega-intro{padding-right:8px;border-right:1px solid var(--line)}
-.mega-cta{display:inline-block;margin-top:8px;font-size:13px;font-weight:600;color:var(--accent)}
-.mega-feature{
-  background:linear-gradient(160deg,rgba(111,231,196,.12),rgba(76,201,240,.05));
-  border:1px solid rgba(111,231,196,.2);border-radius:14px;padding:20px;
-}
-.mega-feature--img{background-image:linear-gradient(160deg,rgba(255,138,91,.15),rgba(76,201,240,.05))}
+.mega-col ul a:hover{background:var(--glass);color:var(--accent);padding-left:18px}
 .mega-tag{display:inline-block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:8px;font-weight:600}
+  color:var(--accent);font-weight:600}
 
 /* ---------- MOBILE TOGGLE ---------- */
 #menu-toggle{display:none;width:44px;height:44px;position:relative}

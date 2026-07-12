@@ -87,26 +87,28 @@
                 <!-- ABOUT mega -->
                 <li class="has-mega">
                     <a href="<?php echo esc_url(oan_page_url('about')); ?>"><?php esc_html_e('About', 'ocean-alliance'); ?> <span class="caret"></span></a>
-                    <div class="mega" role="region" aria-label="<?php esc_attr_e('About', 'ocean-alliance'); ?>">
-                        <div class="mega-grid">
-                            <div class="mega-col mega-intro">
-                                <h4>About OAN</h4>
-                                <p>A coalition of scientists, storytellers, and communities working to defend the ocean — from the surface to the deep.</p>
-                                <a href="<?php echo esc_url(oan_page_url('about')); ?>" class="mega-cta">Our story →</a>
+                    <div class="mega-wrap">
+                        <div class="mega" role="region" aria-label="<?php esc_attr_e('About', 'ocean-alliance'); ?>">
+                            <div class="mega-head">
+                                <span class="mega-tag">About</span>
+                                <h4>The organization</h4>
                             </div>
-                            <div class="mega-col">
-                                <h5>Organization</h5>
-                                <ul>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('about', 'fiscal-sponsor')); ?>">Fiscal Sponsor &amp; Tax ID</a></li>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('about', 'strategic-advisors')); ?>">Strategic Advisors</a></li>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('about', 'advisors')); ?>">Board of Advisors</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-col mega-feature">
-                                <span class="mega-tag">501(c)(3) Nonprofit</span>
-                                <h5>Donate with confidence</h5>
-                                <p>Every contribution is tax-deductible through our fiscal sponsor.</p>
-                                <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="btn-mini">Donate →</a>
+                            <div class="mega-grid">
+                                <div class="mega-col">
+                                    <h5>Who we are</h5>
+                                    <ul>
+                                        <li><a href="<?php echo esc_url(oan_page_url('about')); ?>">Our Story</a></li>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('about', 'strategic-advisors')); ?>">Strategic Advisors</a></li>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('about', 'advisors')); ?>">Board of Advisors</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col">
+                                    <h5>Accountability</h5>
+                                    <ul>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('about', 'fiscal-sponsor')); ?>">Fiscal Sponsor &amp; Tax ID</a></li>
+                                        <li><a href="<?php echo esc_url(oan_page_url('donate')); ?>">Donate</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -115,27 +117,27 @@
                 <!-- MEDIA mega -->
                 <li class="has-mega">
                     <a href="<?php echo esc_url(oan_page_url('media')); ?>"><?php esc_html_e('Media', 'ocean-alliance'); ?> <span class="caret"></span></a>
-                    <div class="mega" role="region" aria-label="<?php esc_attr_e('Media', 'ocean-alliance'); ?>">
-                        <div class="mega-grid">
-                            <div class="mega-col mega-intro">
-                                <h4>Media Division</h4>
-                                <p>Original films, commercials, and series that amplify the voices of the ocean.</p>
-                                <a href="<?php echo esc_url(oan_page_url('media')); ?>" class="mega-cta">Watch all →</a>
+                    <div class="mega-wrap">
+                        <div class="mega" role="region" aria-label="<?php esc_attr_e('Media', 'ocean-alliance'); ?>">
+                            <div class="mega-head">
+                                <span class="mega-tag">Media</span>
+                                <h4>Films &amp; series</h4>
                             </div>
-                            <div class="mega-col">
-                                <h5>Series &amp; Films</h5>
-                                <ul>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('media', 'students')); ?>">Video Commercials — Students</a></li>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('media', 'wavemaker')); ?>">Wave Maker</a></li>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('media', 'local-legends')); ?>">Local Legends</a></li>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('media', 'conferences')); ?>">Conferences &amp; Summits</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-col mega-feature mega-feature--img">
-                                <span class="mega-tag">Featured</span>
-                                <h5>Local Legends</h5>
-                                <p>Profiles of the people protecting our coastlines.</p>
-                                <a href="<?php echo esc_url(oan_anchor_url('media', 'local-legends')); ?>" class="btn-mini">Watch →</a>
+                            <div class="mega-grid">
+                                <div class="mega-col">
+                                    <h5>Original series</h5>
+                                    <ul>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('media', 'wavemaker')); ?>">Wave Maker</a></li>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('media', 'local-legends')); ?>">Local Legends</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col">
+                                    <h5>Programs &amp; events</h5>
+                                    <ul>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('media', 'students')); ?>">Student Commercials</a></li>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('media', 'conferences')); ?>">Conferences &amp; Summits</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -144,26 +146,27 @@
                 <!-- COMMUNITY mega -->
                 <li class="has-mega">
                     <a href="<?php echo esc_url(oan_page_url('community')); ?>"><?php esc_html_e('Community', 'ocean-alliance'); ?> <span class="caret"></span></a>
-                    <div class="mega" role="region" aria-label="<?php esc_attr_e('Community', 'ocean-alliance'); ?>">
-                        <div class="mega-grid">
-                            <div class="mega-col mega-intro">
-                                <h4>Our Community</h4>
-                                <p>The people who make this movement possible — on the water and online.</p>
-                                <a href="<?php echo esc_url(oan_page_url('community')); ?>" class="mega-cta">Get involved →</a>
+                    <div class="mega-wrap">
+                        <div class="mega" role="region" aria-label="<?php esc_attr_e('Community', 'ocean-alliance'); ?>">
+                            <div class="mega-head">
+                                <span class="mega-tag">Community</span>
+                                <h4>Get involved</h4>
                             </div>
-                            <div class="mega-col">
-                                <h5>Connect</h5>
-                                <ul>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('community', 'ambassadors')); ?>">Ambassadors</a></li>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('community', 'blog')); ?>">Blog &amp; Stories</a></li>
-                                    <li><a href="<?php echo esc_url(oan_anchor_url('community', 'events')); ?>">Past Events</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-col mega-feature">
-                                <span class="mega-tag">Join us</span>
-                                <h5>Become an Ambassador</h5>
-                                <p>Lead the movement in your coastal community.</p>
-                                <a href="<?php echo esc_url(oan_anchor_url('community', 'ambassadors')); ?>" class="btn-mini">Apply →</a>
+                            <div class="mega-grid">
+                                <div class="mega-col">
+                                    <h5>Join us</h5>
+                                    <ul>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('community', 'ambassadors')); ?>">Ambassadors</a></li>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('community', 'events')); ?>">Past Events</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col">
+                                    <h5>Stay connected</h5>
+                                    <ul>
+                                        <li><a href="<?php echo esc_url(oan_anchor_url('community', 'blog')); ?>">Blog &amp; Stories</a></li>
+                                        <li><a href="<?php echo esc_url(oan_page_url('donate')); ?>">Support the movement</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
