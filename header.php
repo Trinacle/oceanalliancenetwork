@@ -105,13 +105,12 @@
             <?php
             $oan_uri = get_template_directory_uri();
             // Custom logo (set in Appearance → Customize → Site Identity) takes priority;
-            // otherwise fall back to the bundled OAN logo file.
+            // otherwise fall back to the bundled white OAN logo file.
             if (has_custom_logo()) {
                 the_custom_logo();
             } else { ?>
-                <img class="brand-logo" src="<?php echo esc_url($oan_uri); ?>/assets/img/oan-logo-header.png" alt="<?php esc_attr_e('Ocean Alliance Network', 'ocean-alliance'); ?>" />
+                <img class="brand-logo" src="<?php echo esc_url($oan_uri); ?>/assets/img/oan-logo-white.png" alt="<?php esc_attr_e('Ocean Alliance Network', 'ocean-alliance'); ?>" />
             <?php } ?>
-            <span class="brand-text">Ocean Alliance<small>Network</small></span>
         </a>
 
         <nav id="primary-nav" aria-label="<?php esc_attr_e('Primary', 'ocean-alliance'); ?>">

@@ -95,25 +95,16 @@ $uri = get_template_directory_uri();
         </div>
         <div class="campaigns-grid">
             <article class="campaign-card reveal">
-                <div class="campaign-icon">
-                    <svg viewBox="0 0 32 32"><path d="M16 4C10 12 6 16 6 22a10 10 0 0 0 20 0c0-6-4-10-10-18z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 12v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </div>
                 <span class="campaign-tag">Voice 4 Oceans · LEAF</span>
                 <h3>Listen. Engage. Act. Forward.</h3>
                 <p>Our flagship engagement framework — turning awareness into action by amplifying the voices of coastal communities, scientists, and the next generation of ocean stewards.</p>
             </article>
             <article class="campaign-card reveal">
-                <div class="campaign-icon">
-                    <svg viewBox="0 0 32 32"><path d="M4 20h24M6 20v-8h4v8M14 20V6h4v14M22 20v-10h4v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </div>
                 <span class="campaign-tag">TMDL Awareness</span>
                 <h3>Total Maximum Daily Load</h3>
                 <p>Driving public understanding of water-quality limits under the Clean Water Act — because what runs off our land ends up in the sea.</p>
             </article>
             <article class="campaign-card reveal">
-                <div class="campaign-icon">
-                    <svg viewBox="0 0 32 32"><path d="M4 18c4 0 4-4 8-4s4 4 8 4 4-4 8-4M4 24c4 0 4-4 8-4s4 4 8 4 4-4 8-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-                </div>
                 <span class="campaign-tag">Whale Strike Reduction</span>
                 <h3>Protecting whales from ship strikes</h3>
                 <p>Working with maritime partners on slow-transit corridors and real-time monitoring to reduce fatal vessel collisions with migrating whales.</p>
@@ -151,22 +142,18 @@ $uri = get_template_directory_uri();
 
         <div class="pillars">
             <article class="pillar reveal">
-                <div class="pillar-icon"><svg viewBox="0 0 32 32"><path d="M16 4C10 12 6 16 6 22a10 10 0 0 0 20 0c0-6-4-10-10-18z" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
                 <h3>Storytelling</h3>
                 <p>Original films, commercials, and documentary series that bring the ocean to millions who may never see it.</p>
             </article>
             <article class="pillar reveal">
-                <div class="pillar-icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 16h22M16 5c4 3 4 19 0 22M16 5c-4 3-4 19 0 22" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
                 <h3>Technology</h3>
                 <p>Data, monitoring, and platforms that turn science into accessible tools for communities and decision-makers.</p>
             </article>
             <article class="pillar reveal">
-                <div class="pillar-icon"><svg viewBox="0 0 32 32"><path d="M16 6l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
                 <h3>Partnerships</h3>
                 <p>Strategic alliances uniting researchers, creators, brands, and coastal communities around shared goals.</p>
             </article>
             <article class="pillar reveal">
-                <div class="pillar-icon"><svg viewBox="0 0 32 32"><path d="M6 24c4 0 4-4 8-4s4 4 8 4 4-4 8-4M6 16c4 0 4-4 8-4s4 4 8 4 4-4 8-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
                 <h3>Education</h3>
                 <p>Programs and summits that empower the next generation of ocean stewards and informed citizens.</p>
             </article>
@@ -242,38 +229,29 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
-     FOUNDING SUPPORTER CIRCLE
+     VOICES OF THE ALLIANCE — supporter stories
      ============================================ -->
 <section id="supporter-circle" class="section depth-midnight">
-    <div class="container narrow">
-        <div class="section-head reveal">
-            <span class="eyebrow">Founding Supporter Circle</span>
-            <h2 class="section-title">Be among the first to carry the tide.</h2>
-            <p class="lead">An exclusive circle of founding supporters powering the launch of the Ocean Alliance Network Media Division. Your support funds original films, education, and protection of the ocean.</p>
+    <div class="container">
+        <div class="section-head center reveal">
+            <span class="eyebrow">Voices of the Alliance</span>
+            <h2 class="section-title">A community of <em>ocean defenders.</em></h2>
+            <p class="lead">Scientists, storytellers, students, and coastal leaders — united by a belief that the ocean is worth fighting for. These are a few of the people who make OAN possible.</p>
         </div>
-
-        <div class="tiers">
-            <div class="tier reveal">
-                <span class="tier-name">Tide</span>
-                <span class="tier-amount">$100</span>
-                <ul><li>Founding supporter recognition</li><li>Digital supporter badge</li><li>Behind-the-scenes updates</li></ul>
-                <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="btn btn--ghost">Join</a>
-            </div>
-            <div class="tier tier--featured reveal">
-                <span class="tier-flag">Most popular</span>
-                <span class="tier-name">Current</span>
-                <span class="tier-amount">$500</span>
-                <ul><li>Everything in Tide</li><li>Name in film credits</li><li>Invitation to annual summit</li><li>Limited-edition print</li></ul>
-                <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="btn btn--primary">Join</a>
-            </div>
-            <div class="tier reveal">
-                <span class="tier-name">Deep Blue</span>
-                <span class="tier-amount">$2,500</span>
-                <ul><li>Everything in Current</li><li>Executive producer credit</li><li>Private screening invite</li><li>Direct line to the team</li></ul>
-                <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="btn btn--ghost">Join</a>
-            </div>
+        <div class="voices-grid">
+            <article class="voice-card reveal">
+                <p class="voice-quote">"Storytelling is how we turn science into action. A single film can reach more people than a decade of research papers."</p>
+                <p class="voice-name">— OAN Media Division</p>
+            </article>
+            <article class="voice-card reveal">
+                <p class="voice-quote">"Our coastline is our livelihood. When we protect the ocean, we protect our families, our economy, and our future."</p>
+                <p class="voice-name">— Coastal Ambassador</p>
+            </article>
+            <article class="voice-card reveal">
+                <p class="voice-quote">"The next generation will inherit whatever ocean we leave them. That's why we educate, engage, and empower young ocean stewards."</p>
+                <p class="voice-name">— Student Program Lead</p>
+            </article>
         </div>
-        <p class="tiers-note reveal">All contributions are tax-deductible. <a href="<?php echo esc_url(oan_anchor_url('about', 'fiscal-sponsor')); ?>">Tax ID &amp; fiscal sponsor info →</a></p>
     </div>
 </section>
 
@@ -308,25 +286,21 @@ $uri = get_template_directory_uri();
         </div>
         <div class="support-grid">
             <article class="support-card reveal">
-                <div class="support-icon"><svg viewBox="0 0 32 32"><path d="M16 4C10 12 6 16 6 22a10 10 0 0 0 20 0c0-6-4-10-10-18z" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-                <h3>Donate</h3>
-                <p>Fund the films, science, and community programs that protect the ocean. Every dollar is tax-deductible.</p>
-                <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="link-arrow">Give now →</a>
+                <h3>Support our work</h3>
+                <p>Fund the films, science, and community programs that protect the ocean.</p>
+                <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="link-arrow">Learn more →</a>
             </article>
             <article class="support-card reveal">
-                <div class="support-icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="11" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 28c0-6 5-10 11-10s11 4 11 10" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
                 <h3>Become an Ambassador</h3>
                 <p>Lead OAN's work in your community — host events, screen films, and rally your coastline.</p>
                 <a href="<?php echo esc_url(oan_anchor_url('community', 'ambassadors')); ?>" class="link-arrow">Apply →</a>
             </article>
             <article class="support-card reveal">
-                <div class="support-icon"><svg viewBox="0 0 32 32"><path d="M16 6l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
                 <h3>Partner with us</h3>
-                <p>Brands, foundations, and institutions backing ocean protection through sponsorship and collaboration.</p>
+                <p>Brands, foundations, and institutions backing ocean protection through collaboration.</p>
                 <a href="mailto:hello@oceanalliancenetwork.org" class="link-arrow">Reach out →</a>
             </article>
             <article class="support-card reveal">
-                <div class="support-icon"><svg viewBox="0 0 32 32"><path d="M4 12v16h24V12M4 12l12-8 12 8M4 12h24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
                 <h3>Spread the word</h3>
                 <p>Share our films, follow our campaigns, and amplify the voices fighting for the ocean.</p>
                 <a href="<?php echo esc_url(oan_page_url('media')); ?>" class="link-arrow">Watch + share →</a>

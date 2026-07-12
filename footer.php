@@ -26,7 +26,7 @@
         <!-- CTA band — the hero moment -->
         <div class="footer-cta reveal">
             <h2>The ocean needs <em>all of us.</em></h2>
-            <p>Donate, become an ambassador, or simply share the story. Every action moves the tide.</p>
+            <p>Become an ambassador, partner with us, or simply share the story. Every action protects our oceans.</p>
             <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="btn btn--primary">Dive in</a>
         </div>
 
