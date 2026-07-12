@@ -20,7 +20,7 @@
     <div class="footer-inner">
         <!-- Brand column -->
         <div class="footer-brand-col">
-            <img class="brand-logo" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/oan-logo-wide.png" alt="<?php esc_attr_e('Ocean Alliance Network', 'ocean-alliance'); ?>" />
+            <img class="brand-logo" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/oan-logo-white.png" alt="<?php esc_attr_e('Ocean Alliance Network', 'ocean-alliance'); ?>" />
             <p class="footer-tag">Protecting the blue planet, together.</p>
             <p class="footer-mission">A collaborative initiative bringing together leaders, innovators, and communities to defend the ocean — from the surface to the deep.</p>
             <div class="footer-social">

@@ -75,7 +75,7 @@
             if (has_custom_logo()) {
                 the_custom_logo();
             } else { ?>
-                <img class="brand-logo" src="<?php echo esc_url($oan_uri); ?>/assets/img/oan-logo-wide.png" alt="<?php esc_attr_e('Ocean Alliance Network', 'ocean-alliance'); ?>" />
+                <img class="brand-logo" src="<?php echo esc_url($oan_uri); ?>/assets/img/oan-logo-header.png" alt="<?php esc_attr_e('Ocean Alliance Network', 'ocean-alliance'); ?>" />
             <?php } ?>
             <span class="brand-text">Ocean Alliance<small>Network</small></span>
         </a>

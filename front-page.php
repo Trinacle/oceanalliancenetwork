@@ -28,10 +28,10 @@ $uri = get_template_directory_uri();
     <div class="hero-content reveal">
         <span class="eyebrow">A movement for the blue planet</span>
         <h1 class="hero-title">
-            We are <em>stewards</em><br/>
-            of the living ocean.
+            Uniting to <em>protect</em><br/>
+            our oceans.
         </h1>
-        <p class="hero-sub">Ocean Alliance Network unites scientists, storytellers, and coastal communities to protect what connects us all.</p>
+        <p class="hero-sub">The Ocean Alliance Network brings together leaders, innovators, influencers, and communities to protect our oceans — bridging conservation and action through storytelling, technology, and strategic partnerships.</p>
         <div class="hero-cta">
             <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="btn btn--primary">Dive in — Donate</a>
             <a href="#mission" class="btn btn--ghost">Explore the depths</a>
@@ -54,6 +54,13 @@ $uri = get_template_directory_uri();
         <p class="lead reveal">
             The Ocean Alliance Network (OAN) brings together leaders, innovators, influencers, and communities to protect our oceans. We bridge ocean conservation and action through storytelling, technology, and strategic partnerships — uniting research, education, and policy to create measurable impact for marine ecosystems and the communities that depend on them.
         </p>
+        <div class="mission-focus reveal">
+            <div class="focus-item"><span>01</span><p><strong>Amplify</strong> ocean conservation through film, media, and storytelling.</p></div>
+            <div class="focus-item"><span>02</span><p><strong>Engage</strong> communities, influencers, and the next generation of ocean stewards.</p></div>
+            <div class="focus-item"><span>03</span><p><strong>Advance</strong> research and technology that drives measurable protection.</p></div>
+            <div class="focus-item"><span>04</span><p><strong>Build</strong> strategic partnerships across science, industry, and policy.</p></div>
+            <div class="focus-item"><span>05</span><p><strong>Mobilize</strong> action through summits, campaigns, and ambassador programs.</p></div>
+        </div>
     </div>
 
     <div class="stats-grid">
@@ -189,6 +196,52 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
+     LOCAL LEGENDS LUAU — photo gallery
+     ============================================ -->
+<section id="luau-gallery" class="section depth-twilight">
+    <div class="container wide">
+        <div class="section-head center reveal">
+            <span class="eyebrow">Local Legends Live Luau</span>
+            <h2 class="section-title">A night celebrating ocean champions.</h2>
+            <p class="lead">Our flagship gathering brought together advisors, ambassadors, filmmakers, and community leaders for an evening of storytelling, music, and commitment to the ocean.</p>
+        </div>
+        <div class="gallery-grid reveal">
+            <div class="gallery-item gallery-item--tall"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-2.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-3.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-5.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item gallery-item--wide"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-8.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-4.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item gallery-item--tall"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-6.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-10.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item gallery-item--wide"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-9.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     2026 SUMMIT — save the date
+     ============================================ -->
+<section id="summit" class="section depth-midnight">
+    <div class="container">
+        <div class="summit-card reveal">
+            <div class="summit-date">
+                <span class="summit-month">SPRING</span>
+                <span class="summit-year">2026</span>
+            </div>
+            <div class="summit-body">
+                <span class="eyebrow">Save the date</span>
+                <h2 class="section-title">Ocean Alliance Summit 2026</h2>
+                <p>The next convening of the Ocean Alliance Network — bringing together scientists, storytellers, policymakers, and community leaders to align on the next wave of ocean protection. Three days of keynotes, working groups, film screenings, and a coastal cleanup.</p>
+                <div class="summit-cta">
+                    <a href="<?php echo esc_url(oan_anchor_url('community', 'events')); ?>" class="btn btn--ghost">Details →</a>
+                    <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="btn btn--primary">Sponsor the summit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
      FOUNDING SUPPORTER CIRCLE
      ============================================ -->
 <section id="supporter-circle" class="section depth-midnight">
@@ -240,6 +293,44 @@ $uri = get_template_directory_uri();
                 <img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-9.jpg" alt="Local Legends Live — OAN community event" loading="lazy" />
                 <span class="photo-caption">Local Legends Live</span>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     WAYS TO SUPPORT
+     ============================================ -->
+<section id="support" class="section depth-abyss">
+    <div class="container">
+        <div class="section-head center reveal">
+            <span class="eyebrow">Ways to support</span>
+            <h2 class="section-title">There's a role for everyone.</h2>
+        </div>
+        <div class="support-grid">
+            <article class="support-card reveal">
+                <div class="support-icon"><svg viewBox="0 0 32 32"><path d="M16 4C10 12 6 16 6 22a10 10 0 0 0 20 0c0-6-4-10-10-18z" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+                <h3>Donate</h3>
+                <p>Fund the films, science, and community programs that protect the ocean. Every dollar is tax-deductible.</p>
+                <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="link-arrow">Give now →</a>
+            </article>
+            <article class="support-card reveal">
+                <div class="support-icon"><svg viewBox="0 0 32 32"><circle cx="16" cy="11" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 28c0-6 5-10 11-10s11 4 11 10" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+                <h3>Become an Ambassador</h3>
+                <p>Lead OAN's work in your community — host events, screen films, and rally your coastline.</p>
+                <a href="<?php echo esc_url(oan_anchor_url('community', 'ambassadors')); ?>" class="link-arrow">Apply →</a>
+            </article>
+            <article class="support-card reveal">
+                <div class="support-icon"><svg viewBox="0 0 32 32"><path d="M16 6l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+                <h3>Partner with us</h3>
+                <p>Brands, foundations, and institutions backing ocean protection through sponsorship and collaboration.</p>
+                <a href="mailto:hello@oceanalliancenetwork.org" class="link-arrow">Reach out →</a>
+            </article>
+            <article class="support-card reveal">
+                <div class="support-icon"><svg viewBox="0 0 32 32"><path d="M4 12v16h24V12M4 12l12-8 12 8M4 12h24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+                <h3>Spread the word</h3>
+                <p>Share our films, follow our campaigns, and amplify the voices fighting for the ocean.</p>
+                <a href="<?php echo esc_url(oan_page_url('media')); ?>" class="link-arrow">Watch + share →</a>
+            </article>
         </div>
     </div>
 </section>
