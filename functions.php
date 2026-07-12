@@ -220,7 +220,7 @@ function oan_meta_tags() {
             '@type'       => 'Organization',
             'name'        => 'Ocean Alliance Network',
             'url'         => home_url('/'),
-            'logo'        => $uri . '/assets/img/oan-logo-wide.png',
+            'logo'        => $uri . '/assets/img/oan-logo-wide-white.png',
             'description' => $desc,
             'sameAs'      => array('https://oceanalliancenetwork.org'),
         );
