@@ -57,6 +57,7 @@ em{font-style:italic;color:var(--accent)}
 ul{margin:0;padding:0;list-style:none}
 
 /* ---------- OCEAN BACKGROUND ---------- */
+/* Tall gradient that shifts upward on scroll → ocean gets darker as you descend */
 #ocean-bg{
   position:fixed;inset:0;z-index:-3;
   background:linear-gradient(180deg,
@@ -66,7 +67,9 @@ ul{margin:0;padding:0;list-style:none}
     var(--c-twilight) 58%,
     var(--c-midnight) 78%,
     var(--c-abyss) 100%);
-  background-attachment:fixed;       /* fixed — no scroll-driven color shift */
+  background-size:100% 280vh;
+  background-position:0 0;
+  transition:background-position .15s linear;
 }
 /* moving underwater light */
 .caustics{
@@ -97,77 +100,61 @@ ul{margin:0;padding:0;list-style:none}
   100%{transform:rotate(4deg) translateX(20px);opacity:.6}
 }
 
-/* ---------- MARINE LIFE SILHOUETTES ---------- */
-/* Dark, faded shapes drifting at depth. Darker than the water so they read
-   as shadows — never bright. Honors prefers-reduced-motion (see bottom). */
-/* MARINE LIFE — scrolls WITH the page. Positioned absolutely against
-   the full document height (not the viewport), so creatures sit at real
-   page depths and scroll away as you descend. */
+/* ---------- MARINE LIFE ---------- */
+/* Scrolls WITH the page. Creatures positioned by vh across document height. */
 .marine-life{
   position:absolute;top:0;left:0;width:100%;
   pointer-events:none;z-index:-1;
 }
-/* Creature PNGs — faded, distant, dark silhouettes */
 .creature{
   position:absolute;
   opacity:var(--fade,.28);
   filter:blur(1.5px) brightness(.4);
   will-change:transform;
-  height:auto;
-  object-fit:contain;
+  height:auto;object-fit:contain;
 }
 .creature--fish{
-  color:rgba(0,0,0,.18);
+  color:rgba(0,0,0,.16);
   filter:blur(1px);
 }
+.creature[data-dir="right"]{animation:drift-right var(--dur,90s) linear infinite}
+.creature[data-dir="left"]{animation:drift-left var(--dur,90s) linear infinite}
 
-/* Whale (1024x310) — bigger, near top (pushed down a bit), facing RIGHT.
-   Negative delay = exactly half the duration so it starts at center-screen. */
+/* ZONE 1: shallow — fish school + 2 creatures (spread so they never overlap) */
+.fish-a{width:min(126px,11vw);top:6vh;opacity:.38;--dur:55s;animation-delay:-27s}
+.c-1{top:22vh;width:min(140px,13vw);--fade:.22;--dur:85s;animation-delay:-42s}
+.c-2{top:42vh;width:min(168px,15vw);--fade:.26;--dur:105s;animation-delay:-52s}
+
+/* ZONE 2: mid-water — creature + fish + creature */
+.c-3{top:68vh;width:min(126px,11vw);--fade:.2;--dur:72s;animation-delay:-36s}
+.fish-b{width:min(110px,10vw);top:88vh;opacity:.34;--dur:48s;animation-delay:-24s}
+.c-4{top:112vh;width:min(154px,14vw);--fade:.24;--dur:95s;animation-delay:-47s}
+
+/* ZONE 3: deep — 2 creatures + fish */
+.c-5{top:145vh;width:min(120px,11vw);--fade:.18;--dur:65s;animation-delay:-32s}
+.c-6{top:178vh;width:min(140px,12vw);--fade:.2;--dur:88s;animation-delay:-44s}
+.fish-c{width:min(100px,9vw);top:205vh;opacity:.3;--dur:52s;animation-delay:-26s}
+
+/* ZONE 4: abyss — whale at bottom + creature + extra fish */
 .creature--whale{
-  width:min(364px,32vw);
-  top:14vh;
-  --fade:.3;
-  animation:drift-right 130s linear infinite;
-  animation-delay:-65s;
+  width:min(300px,26vw);
+  top:240vh;
+  --fade:.28;
+  --dur:120s;
+  animation:drift-right 120s linear infinite;
+  animation-delay:-60s;
 }
-
-/* Fish school — facing right */
-.creature--fish{
-  width:min(126px,11vw);
-  top:8vh;
-  opacity:.38;
-  animation:drift-right 55s linear infinite;
-  animation-delay:-27s;
-}
-
-/* RIGHT-facing creatures get drift-right; LEFT-facing get drift-left */
-.creature[data-dir="right"]:not(.creature--whale):not(.creature--fish){
-  animation:drift-right var(--dur,90s) linear infinite;
-}
-.creature[data-dir="left"]{
-  animation:drift-left var(--dur,90s) linear infinite;
-}
-
-/* Per-creature placement: spread across the document height.
-   Each delay is exactly -50% of its duration so the creature starts
-   at center-screen (visible immediately, not 60s from now).
-   Top positions spread from 8vh down to 250vh so there's always
-   1-2 visible at any scroll depth. */
-.creature:nth-of-type(2){top:30vh;width:min(154px,14vw);--fade:.22;--dur:80s; animation-delay:-40s}
-.creature:nth-of-type(3){top:60vh;width:min(196px,17vw);--fade:.28;--dur:110s;animation-delay:-55s}
-.creature:nth-of-type(4){top:95vh;width:min(140px,12vw);--fade:.2; --dur:70s; animation-delay:-35s}
-.creature:nth-of-type(5){top:130vh;width:min(168px,15vw);--fade:.24;--dur:100s;animation-delay:-50s}
-.creature:nth-of-type(6){top:175vh;width:min(133px,12vw);--fade:.18;--dur:62s; animation-delay:-31s}
-.creature:nth-of-type(7){top:220vh;width:min(182px,16vw);--fade:.22;--dur:95s; animation-delay:-47s}
+.c-7{top:270vh;width:min(130px,12vw);--fade:.18;--dur:75s;animation-delay:-37s}
+.fish-d{width:min(120px,10vw);top:300vh;opacity:.32;--dur:50s;animation-delay:-25s}
 
 @keyframes drift-right{
   0%{transform:translateX(-30vw) translateY(0)}
-  50%{transform:translateX(50vw) translateY(-18px)}
+  50%{transform:translateX(50vw) translateY(-15px)}
   100%{transform:translateX(130vw) translateY(0)}
 }
 @keyframes drift-left{
   0%{transform:translateX(130vw) translateY(0)}
-  50%{transform:translateX(50vw) translateY(-18px)}
+  50%{transform:translateX(50vw) translateY(-15px)}
   100%{transform:translateX(-30vw) translateY(0)}
 }
 
@@ -378,13 +365,7 @@ ul{margin:0;padding:0;list-style:none}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;
   animation:hero-zoom 24s ease-out forwards;}
 @keyframes hero-zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
-.hero-bg-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(180deg,
-    rgba(6,24,44,.55) 0%,
-    rgba(6,24,44,.65) 40%,
-    rgba(2,14,28,.85) 100%);
-}
+.hero-bg-overlay{display:none}
 .hero-content{position:relative;z-index:3;max-width:900px}
 .hero-content .eyebrow,
 .hero-content .hero-title,
@@ -744,8 +725,10 @@ ul{margin:0;padding:0;list-style:none}
 /* ---------- FOOTER — "Bioluminescent Deep" ---------- */
 #site-footer{
   position:relative;z-index:1;padding:0;border-top:0;overflow:hidden;
-  background:radial-gradient(ellipse 120% 80% at 50% 0%,
-    #0a2540 0%, var(--c-abyss) 55%, #000308 100%);
+  background:
+    linear-gradient(180deg, rgba(2,10,26,.72) 0%, rgba(2,10,26,.82) 100%),
+    url('../img/deep-ocean.webp') center bottom / cover no-repeat,
+    radial-gradient(ellipse 120% 80% at 50% 0%, #0a2540 0%, var(--c-abyss) 55%, #000308 100%);
 }
 /* glowing surface curve at the top — like looking up at the water from below */
 .footer-surface{

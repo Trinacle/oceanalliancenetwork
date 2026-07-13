@@ -30,29 +30,55 @@
 </div>
 
 <!-- MARINE LIFE — scrolls WITH the page (not fixed).
-     Spans full document height so creatures appear at different depths
-     and scroll away as you descend. Each creature is positioned as a %
-     of the page so they spread out and repeat naturally on long pages. -->
+     Spread across document height so only 1-2 visible at each scroll depth. -->
 <div class="marine-life" aria-hidden="true">
     <?php $creature_uri = get_template_directory_uri() . '/assets/img/creatures'; ?>
-    <!-- Whale — facing RIGHT, near top, bigger -->
+
+    <!-- ZONE 1: shallow (top of page) -->
+    <!-- Fish school A — facing RIGHT -->
+    <svg class="creature creature--fish fish-a" viewBox="0 0 120 60" data-dir="right">
+        <path d="M5 30 Q15 18 28 30 Q15 42 5 30 Z M28 30 L36 26 L36 34 Z" fill="currentColor"/>
+        <path d="M44 22 Q54 10 67 22 Q54 34 44 22 Z M67 22 L75 18 L75 26 Z" fill="currentColor"/>
+        <path d="M82 36 Q92 24 105 36 Q92 48 82 36 Z M105 36 L113 32 L113 40 Z" fill="currentColor"/>
+        <path d="M50 44 Q60 34 71 44 Q60 54 50 44 Z M71 44 L78 41 L78 47 Z" fill="currentColor"/>
+    </svg>
+    <!-- Creature facing LEFT -->
+    <img class="creature c-1" src="<?php echo esc_url($creature_uri); ?>/1024x623.png" alt="" data-dir="left" />
+    <!-- Creature facing RIGHT -->
+    <img class="creature c-2" src="<?php echo esc_url($creature_uri); ?>/1024x653.png" alt="" data-dir="right" />
+
+    <!-- ZONE 2: mid-water -->
+    <!-- Creature facing RIGHT -->
+    <img class="creature c-3" src="<?php echo esc_url($creature_uri); ?>/1024x503.png" alt="" data-dir="right" />
+    <!-- Fish school B — facing RIGHT -->
+    <svg class="creature creature--fish fish-b" viewBox="0 0 120 60" data-dir="right">
+        <path d="M5 30 Q15 18 28 30 Q15 42 5 30 Z M28 30 L36 26 L36 34 Z" fill="currentColor"/>
+        <path d="M44 22 Q54 10 67 22 Q54 34 44 22 Z M67 22 L75 18 L75 26 Z" fill="currentColor"/>
+        <path d="M82 36 Q92 24 105 36 Q92 48 82 36 Z M105 36 L113 32 L113 40 Z" fill="currentColor"/>
+        <path d="M50 44 Q60 34 71 44 Q60 54 50 44 Z M71 44 L78 41 L78 47 Z" fill="currentColor"/>
+    </svg>
+    <!-- Creature facing LEFT -->
+    <img class="creature c-4" src="<?php echo esc_url($creature_uri); ?>/1024x458.png" alt="" data-dir="left" />
+
+    <!-- ZONE 3: deep -->
+    <!-- Creature facing RIGHT -->
+    <img class="creature c-5" src="<?php echo esc_url($creature_uri); ?>/1024x411.png" alt="" data-dir="right" />
+    <!-- Creature facing RIGHT -->
+    <img class="creature c-6" src="<?php echo esc_url($creature_uri); ?>/1024x317.png" alt="" data-dir="right" />
+    <!-- Fish school C — facing RIGHT -->
+    <svg class="creature creature--fish fish-c" viewBox="0 0 120 60" data-dir="right">
+        <path d="M5 30 Q15 18 28 30 Q15 42 5 30 Z M28 30 L36 26 L36 34 Z" fill="currentColor"/>
+        <path d="M44 22 Q54 10 67 22 Q54 34 44 22 Z M67 22 L75 18 L75 26 Z" fill="currentColor"/>
+        <path d="M82 36 Q92 24 105 36 Q92 48 82 36 Z M105 36 L113 32 L113 40 Z" fill="currentColor"/>
+    </svg>
+
+    <!-- ZONE 4: abyss (bottom) -->
+    <!-- Whale — facing RIGHT, at the BOTTOM of the page -->
     <img class="creature creature--whale" src="<?php echo esc_url($creature_uri); ?>/1024x310.png" alt="" data-dir="right" />
-    <!-- facing LEFT -->
-    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x623.png" alt="" data-dir="left" />
-    <!-- facing RIGHT -->
-    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x653.png" alt="" data-dir="right" />
-    <!-- facing RIGHT -->
-    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x503.png" alt="" data-dir="right" />
-    <!-- facing LEFT -->
-    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x458.png" alt="" data-dir="left" />
-    <!-- facing RIGHT -->
-    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x411.png" alt="" data-dir="right" />
-    <!-- facing RIGHT -->
-    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x317.png" alt="" data-dir="right" />
-    <!-- facing LEFT -->
-    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x314.png" alt="" data-dir="left" />
-    <!-- School of small fish (SVG) — facing right -->
-    <svg class="creature creature--fish" viewBox="0 0 120 60" data-dir="right">
+    <!-- Creature facing LEFT -->
+    <img class="creature c-7" src="<?php echo esc_url($creature_uri); ?>/1024x314.png" alt="" data-dir="left" />
+    <!-- Fish school D — facing RIGHT (extra fish at bottom) -->
+    <svg class="creature creature--fish fish-d" viewBox="0 0 120 60" data-dir="right">
         <path d="M5 30 Q15 18 28 30 Q15 42 5 30 Z M28 30 L36 26 L36 34 Z" fill="currentColor"/>
         <path d="M44 22 Q54 10 67 22 Q54 34 44 22 Z M67 22 L75 18 L75 26 Z" fill="currentColor"/>
         <path d="M82 36 Q92 24 105 36 Q92 48 82 36 Z M105 36 L113 32 L113 40 Z" fill="currentColor"/>
