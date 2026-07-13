@@ -71,9 +71,34 @@ ul{margin:0;padding:0;list-style:none}
   background-position:0 0;
   transition:background-position .15s linear;
 }
-/* Caustics + light shafts disabled — clean darkening only */
-.caustics{display:none}
-.light-shaft{display:none}
+/* moving underwater light (caustics) */
+.caustics{
+  position:absolute;inset:-20% -20%;
+  background:
+    radial-gradient(40% 30% at 20% 10%, rgba(255,255,255,.18), transparent 60%),
+    radial-gradient(35% 25% at 75% 5%, rgba(255,255,255,.12), transparent 60%),
+    radial-gradient(50% 40% at 50% 0,  rgba(180,240,255,.10), transparent 70%);
+  filter:blur(20px);
+  animation:caustics 18s ease-in-out infinite alternate;
+  mix-blend-mode:screen;opacity:.7;
+}
+@keyframes caustics{
+  0%{transform:translate3d(-2%,-1%,0) scale(1.05)}
+  100%{transform:translate3d(3%,2%,0) scale(1.12)}
+}
+/* god-rays */
+.light-shaft{
+  position:absolute;top:-10%;width:18vw;height:120vh;
+  background:linear-gradient(180deg, rgba(255,255,255,.16), transparent 70%);
+  transform-origin:top center;filter:blur(8px);
+  mix-blend-mode:screen;opacity:.5;
+}
+.light-shaft--1{left:14%;transform:rotate(8deg);animation:sway 12s ease-in-out infinite alternate}
+.light-shaft--2{left:62%;transform:rotate(-6deg);animation:sway 16s ease-in-out infinite alternate-reverse}
+@keyframes sway{
+  0%{transform:rotate(8deg) translateX(-10px);opacity:.35}
+  100%{transform:rotate(4deg) translateX(20px);opacity:.6}
+}
 
 /* ---------- MARINE LIFE ---------- */
 /* Scrolls WITH the page. Creatures positioned by vh across document height. */
@@ -337,7 +362,8 @@ ul{margin:0;padding:0;list-style:none}
 }
 /* real photo backdrop */
 .hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;
+  animation:hero-zoom 24s ease-out forwards;}
 @keyframes hero-zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
 .hero-bg-overlay{display:none}
 .hero-content{position:relative;z-index:3;max-width:900px}
@@ -445,6 +471,7 @@ ul{margin:0;padding:0;list-style:none}
 .post-hero-bg{
   position:absolute;inset:0;
   background-size:cover;background-position:center;
+  animation:hero-zoom 24s ease-out forwards;
 }
 .post-hero-overlay{
   position:absolute;inset:0;
@@ -696,12 +723,16 @@ ul{margin:0;padding:0;list-style:none}
 }
 
 /* ---------- FOOTER — "Bioluminescent Deep" ---------- */
+/* Smooth blend: top edge fades from transparent into the deep-ocean photo */
 #site-footer{
   position:relative;z-index:1;padding:0;border-top:0;overflow:hidden;
   background:
-    linear-gradient(180deg, rgba(2,10,26,.72) 0%, rgba(2,10,26,.82) 100%),
-    url('../img/deep-ocean.webp') center bottom / cover no-repeat,
-    radial-gradient(ellipse 120% 80% at 50% 0%, #0a2540 0%, var(--c-abyss) 55%, #000308 100%);
+    linear-gradient(180deg,
+      rgba(2,10,26,0) 0%,
+      rgba(2,10,26,.4) 15%,
+      rgba(2,10,26,.72) 50%,
+      rgba(2,10,26,.88) 100%),
+    url('../img/deep-ocean.webp') center bottom / cover no-repeat;
 }
 /* glowing surface curve at the top — like looking up at the water from below */
 .footer-surface{

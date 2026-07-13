@@ -18,12 +18,6 @@ $uri = get_template_directory_uri();
         <img src="<?php echo esc_url($uri); ?>/assets/img/oan-hero-d1.jpg" alt="" />
         <div class="hero-bg-overlay"></div>
     </div>
-    <div class="hero-surface" aria-hidden="true">
-        <svg class="surface-wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M0,60 C180,100 360,20 720,60 C1080,100 1260,20 1440,60 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.06)"/>
-            <path d="M0,80 C240,40 480,120 720,80 C960,40 1200,120 1440,80 L1440,120 L0,120 Z" fill="rgba(255,255,255,0.04)"/>
-        </svg>
-    </div>
 
     <div class="hero-content reveal">
         <span class="eyebrow">A movement for the blue planet</span>
