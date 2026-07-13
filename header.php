@@ -28,64 +28,31 @@
     <div class="light-shaft light-shaft--1"></div>
     <div class="light-shaft light-shaft--2"></div>
 
-    <!-- Dark marine-life silhouettes, faded, drifting at depth -->
+    <!-- Marine-life silhouettes, faded, drifting at depth -->
     <div class="marine-life" aria-hidden="true">
-        <!-- Humpback whale — long body, tail fluke, pectoral fins (surface zone) -->
-        <svg class="silhouette whale whale--1" viewBox="0 0 500 220" preserveAspectRatio="xMidYMid meet">
-            <!-- main body: tapered head -> thick torso -> narrow tail -->
-            <path d="M40 110 C70 85 130 72 200 75 C270 78 340 80 400 70 C440 63 470 55 485 45 C490 42 492 47 489 52 L475 70 C472 74 468 76 463 77 C450 80 435 82 420 85 C410 108 395 120 370 120 C355 120 348 112 350 100 C310 105 260 110 210 113 C160 116 110 115 70 108 C58 106 46 108 40 110 Z"/>
-            <!-- tail fluke (the iconic whale tail) -->
-            <path d="M480 50 Q495 15 485 8 Q478 20 478 45 Z"/>
-            <path d="M488 55 Q520 35 530 20 Q518 48 495 62 Z"/>
-            <!-- pectoral fin -->
-            <path d="M260 115 Q250 165 220 185 Q240 155 245 118 Z"/>
-            <!-- water spout from blowhole -->
-            <path d="M120 80 Q118 45 125 20 Q130 18 132 22 Q128 48 130 80 Z" opacity="0.4"/>
-            <path d="M140 78 Q145 50 155 30 Q158 28 160 32 Q152 55 150 80 Z" opacity="0.3"/>
-        </svg>
-        <!-- Smaller whale (twilight zone) -->
-        <svg class="silhouette whale whale--2" viewBox="0 0 500 220" preserveAspectRatio="xMidYMid meet">
-            <path d="M40 110 C70 85 130 72 200 75 C270 78 340 80 400 70 C440 63 470 55 485 45 C490 42 492 47 489 52 L475 70 C472 74 468 76 463 77 C450 80 435 82 420 85 C410 108 395 120 370 120 C355 120 348 112 350 100 C310 105 260 110 210 113 C160 116 110 115 70 108 C58 106 46 108 40 110 Z"/>
-            <path d="M480 50 Q495 15 485 8 Q478 20 478 45 Z"/>
-            <path d="M488 55 Q520 35 530 20 Q518 48 495 62 Z"/>
-            <path d="M260 115 Q250 165 220 185 Q240 155 245 118 Z"/>
-        </svg>
-        <!-- Dolphin — arched body, dorsal fin, beak (sunlit zone) -->
-        <svg class="silhouette dolphin dolphin--1" viewBox="0 0 300 160">
-            <!-- arched body -->
-            <path d="M20 95 C40 70 80 50 130 52 C170 54 200 65 225 50 C245 38 265 30 280 40 C285 43 283 50 277 53 L262 60 C258 62 254 62 250 61 C245 78 235 90 220 92 C232 105 240 118 235 130 C225 125 215 110 208 95 C180 100 140 105 100 102 C70 100 45 110 30 115 C22 113 18 100 20 95 Z"/>
-            <!-- dorsal fin -->
-            <path d="M135 53 Q145 20 165 10 Q160 35 155 55 Z"/>
-            <!-- tail flukes -->
-            <path d="M275 55 Q295 35 300 20 Q285 45 280 58 Z"/>
-            <path d="M270 62 Q285 80 290 95 Q275 75 268 66 Z"/>
-        </svg>
-        <!-- Sea turtle — shell + 4 flippers + head (midnight zone) -->
-        <svg class="silhouette turtle turtle--1" viewBox="0 0 260 180">
-            <!-- shell (oval body) -->
-            <ellipse cx="130" cy="90" rx="90" ry="55"/>
-            <!-- head -->
-            <ellipse cx="40" cy="85" rx="18" ry="12"/>
-            <!-- front flippers -->
-            <path d="M70 55 Q40 25 20 30 Q35 45 60 65 Z"/>
-            <path d="M70 125 Q40 155 20 150 Q35 135 60 115 Z"/>
-            <!-- back flippers -->
-            <path d="M200 55 Q230 30 245 40 Q225 50 210 70 Z"/>
-            <path d="M200 125 Q230 150 245 140 Q225 130 210 110 Z"/>
-            <!-- shell pattern lines (subtle) -->
-            <path d="M90 90 Q130 70 175 90" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="2"/>
-            <path d="M90 90 Q130 110 175 90" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="2"/>
-        </svg>
-        <!-- School of small fish (sunlit zone) -->
-        <svg class="silhouette fish-school fish--1" viewBox="0 0 120 60">
-            <path d="M5 30 Q15 18 28 30 Q15 42 5 30 Z M28 30 L36 26 L36 34 Z"/>
-            <path d="M44 22 Q54 10 67 22 Q54 34 44 22 Z M67 22 L75 18 L75 26 Z"/>
-            <path d="M82 36 Q92 24 105 36 Q92 48 82 36 Z M105 36 L113 32 L113 40 Z"/>
-            <path d="M50 44 Q60 34 71 44 Q60 54 50 44 Z M71 44 L78 41 L78 47 Z"/>
-        </svg>
-        <!-- Manta ray (abyss zone) -->
-        <svg class="silhouette ray ray--1" viewBox="0 0 200 120">
-            <path d="M100 30 C70 20 30 30 15 55 C30 50 45 52 55 60 C45 68 30 70 15 65 C30 90 70 100 100 90 C130 100 170 90 185 65 C170 70 155 68 145 60 C155 52 170 50 185 55 C170 30 130 20 100 30 Z M100 90 Q105 105 100 115 Q95 105 100 90 Z"/>
+        <?php $creature_uri = get_template_directory_uri() . '/assets/img/creatures'; ?>
+        <!-- Whale — facing RIGHT, bigger, surface zone -->
+        <img class="creature creature--whale" src="<?php echo esc_url($creature_uri); ?>/1024x310.png" alt="" data-dir="right" />
+        <!-- facing LEFT -->
+        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x623.png" alt="" data-dir="left" />
+        <!-- facing RIGHT -->
+        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x653.png" alt="" data-dir="right" />
+        <!-- facing RIGHT -->
+        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x503.png" alt="" data-dir="right" />
+        <!-- facing LEFT -->
+        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x458.png" alt="" data-dir="left" />
+        <!-- facing RIGHT -->
+        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x411.png" alt="" data-dir="right" />
+        <!-- facing RIGHT -->
+        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x317.png" alt="" data-dir="right" />
+        <!-- facing LEFT -->
+        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x314.png" alt="" data-dir="left" />
+        <!-- School of small fish (kept as SVG) — sunlit zone, facing right -->
+        <svg class="creature creature--fish" viewBox="0 0 120 60" data-dir="right">
+            <path d="M5 30 Q15 18 28 30 Q15 42 5 30 Z M28 30 L36 26 L36 34 Z" fill="currentColor"/>
+            <path d="M44 22 Q54 10 67 22 Q54 34 44 22 Z M67 22 L75 18 L75 26 Z" fill="currentColor"/>
+            <path d="M82 36 Q92 24 105 36 Q92 48 82 36 Z M105 36 L113 32 L113 40 Z" fill="currentColor"/>
+            <path d="M50 44 Q60 34 71 44 Q60 54 50 44 Z M71 44 L78 41 L78 47 Z" fill="currentColor"/>
         </svg>
     </div>
 </div>

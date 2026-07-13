@@ -101,63 +101,64 @@ ul{margin:0;padding:0;list-style:none}
 /* Dark, faded shapes drifting at depth. Darker than the water so they read
    as shadows — never bright. Honors prefers-reduced-motion (see bottom). */
 .marine-life{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-.silhouette{
+/* Creature PNGs — faded, distant, dark silhouettes drifting in the deep */
+.creature{
   position:absolute;
-  color:rgba(0,0,0,.18);          /* dark shadow on blue water */
-  filter:blur(1px);
+  opacity:var(--fade,.3);            /* faded — set per creature */
+  filter:blur(1.5px) brightness(.4); /* dark + soft = distant shadow */
   will-change:transform;
+  height:auto;
+  object-fit:contain;
 }
-/* Humpback whale — surface zone, large, slow */
-.whale--1{
-  width:min(620px,55vw);
-  top:8%;left:-30%;
-  opacity:.5;
-  animation:drift-right 95s linear infinite;
+.creature--fish{
+  color:rgba(0,0,0,.18);
+  filter:blur(1px);
 }
-/* Smaller whale — twilight zone */
-.whale--2{
-  width:min(360px,32vw);
-  top:42%;left:-25%;
-  opacity:.32;
+/* Whale (1024x310) — bigger, surface zone, facing RIGHT */
+.creature--whale{
+  width:min(520px,46vw);
+  top:6%;
+  --fade:.32;
   animation:drift-right 140s linear infinite;
-  animation-delay:-40s;
+  animation-delay:-20s;
 }
-/* School of fish — sunlit zone */
-.fish--1{
+/* Each creature gets a unique zone + timing so they feel scattered in depth.
+   Creatures facing LEFT use drift-left (enter from right, exit left).
+   Creatures facing RIGHT use drift-right (enter from left, exit right). */
+
+/* RIGHT-facing creatures — 1024x653, 1024x503, 1024x411, 1024x317 */
+.creature[data-dir="right"]:not(.creature--whale):not(.creature--fish){
+  animation:drift-right var(--dur,120s) linear infinite;
+}
+/* LEFT-facing creatures — 1024x623, 1024x458, 1024x314 */
+.creature[data-dir="left"]{
+  animation:drift-left var(--dur,120s) linear infinite;
+}
+/* Fish school — facing right, sunlit zone */
+.creature--fish{
   width:min(180px,16vw);
-  top:26%;left:-15%;
+  top:24%;
   opacity:.4;
   animation:drift-right 60s linear infinite;
   animation-delay:-15s;
 }
-/* Dolphin — sunlit zone, arched, playful */
-.dolphin--1{
-  width:min(300px,26vw);
-  top:18%;left:-20%;
-  opacity:.38;
-  animation:drift-right 75s linear infinite;
-  animation-delay:-25s;
-}
-/* Sea turtle — midnight zone, slow majestic drift */
-.turtle--1{
-  width:min(260px,22vw);
-  top:58%;left:-22%;
-  opacity:.3;
-  animation:drift-right 160s linear infinite;
-  animation-delay:-90s;
-}
-/* Manta ray — abyss zone */
-.ray--1{
-  width:min(440px,40vw);
-  top:82%;left:-30%;
-  opacity:.25;
-  animation:drift-right 180s linear infinite;
-  animation-delay:-100s;
-}
+/* Per-creature placement: scattered vertical positions + sizes + delays */
+.creature:nth-of-type(2){top:16%;width:min(220px,20vw);--fade:.22;--dur:160s;animation-delay:-50s}
+.creature:nth-of-type(3){top:34%;width:min(280px,25vw);--fade:.28;--dur:130s;animation-delay:-30s}
+.creature:nth-of-type(4){top:48%;width:min(200px,18vw);--fade:.2;--dur:180s;animation-delay:-80s}
+.creature:nth-of-type(5){top:58%;width:min(240px,22vw);--fade:.24;--dur:145s;animation-delay:-60s}
+.creature:nth-of-type(6){top:70%;width:min(190px,17vw);--fade:.18;--dur:200s;animation-delay:-110s}
+.creature:nth-of-type(7){top:80%;width:min(260px,24vw);--fade:.22;--dur:165s;animation-delay:-90s}
+
 @keyframes drift-right{
-  0%{transform:translateX(0) translateY(0)}
-  50%{transform:translateX(60vw) translateY(-18px)}
-  100%{transform:translateX(140vw) translateY(0)}
+  0%{transform:translateX(-30vw) translateY(0)}
+  50%{transform:translateX(50vw) translateY(-22px)}
+  100%{transform:translateX(130vw) translateY(0)}
+}
+@keyframes drift-left{
+  0%{transform:translateX(130vw) translateY(0)}
+  50%{transform:translateX(50vw) translateY(-22px)}
+  100%{transform:translateX(-30vw) translateY(0)}
 }
 
 /* bubble canvas */
