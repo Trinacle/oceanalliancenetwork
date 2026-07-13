@@ -104,8 +104,8 @@ ul{margin:0;padding:0;list-style:none}
    the full document height (not the viewport), so creatures sit at real
    page depths and scroll away as you descend. */
 .marine-life{
-  position:absolute;top:0;left:0;width:100%;height:100%;
-  overflow:hidden;pointer-events:none;z-index:-1;
+  position:absolute;top:0;left:0;width:100%;
+  pointer-events:none;z-index:-1;
 }
 /* Creature PNGs — faded, distant, dark silhouettes */
 .creature{
@@ -121,22 +121,23 @@ ul{margin:0;padding:0;list-style:none}
   filter:blur(1px);
 }
 
-/* Whale (1024x310) — bigger, near top (pushed down a bit), facing RIGHT */
+/* Whale (1024x310) — bigger, near top (pushed down a bit), facing RIGHT.
+   Negative delay = exactly half the duration so it starts at center-screen. */
 .creature--whale{
-  width:min(364px,32vw);          /* was 520px → reduced 30% */
-  top:14vh;                        /* pushed down from 6% */
+  width:min(364px,32vw);
+  top:14vh;
   --fade:.3;
   animation:drift-right 130s linear infinite;
-  animation-delay:-20s;
+  animation-delay:-65s;
 }
 
 /* Fish school — facing right */
 .creature--fish{
-  width:min(126px,11vw);           /* was 180px → reduced 30% */
+  width:min(126px,11vw);
   top:8vh;
   opacity:.38;
   animation:drift-right 55s linear infinite;
-  animation-delay:-10s;
+  animation-delay:-27s;
 }
 
 /* RIGHT-facing creatures get drift-right; LEFT-facing get drift-left */
@@ -147,15 +148,17 @@ ul{margin:0;padding:0;list-style:none}
   animation:drift-left var(--dur,90s) linear infinite;
 }
 
-/* Per-creature placement: spread across the document height using vh units
-   so they sit at different scroll depths and only 1-2 are visible at once.
-   Sizes all reduced 30% from original. Durations varied (some 20% faster). */
-.creature:nth-of-type(2){top:28vh;width:min(154px,14vw);--fade:.2; --dur:75s; animation-delay:-25s}  /* 20% faster */
-.creature:nth-of-type(3){top:52vh;width:min(196px,17vw);--fade:.26;--dur:110s;animation-delay:-40s}
-.creature:nth-of-type(4){top:78vh;width:min(140px,12vw);--fade:.18;--dur:68s; animation-delay:-50s}  /* 20% faster */
-.creature:nth-of-type(5){top:108vh;width:min(168px,15vw);--fade:.22;--dur:95s; animation-delay:-30s}
-.creature:nth-of-type(6){top:138vh;width:min(133px,12vw);--fade:.16;--dur:58s; animation-delay:-60s} /* 20% faster */
-.creature:nth-of-type(7){top:172vh;width:min(182px,16vw);--fade:.2; --dur:100s;animation-delay:-45s}
+/* Per-creature placement: spread across the document height.
+   Each delay is exactly -50% of its duration so the creature starts
+   at center-screen (visible immediately, not 60s from now).
+   Top positions spread from 8vh down to 250vh so there's always
+   1-2 visible at any scroll depth. */
+.creature:nth-of-type(2){top:30vh;width:min(154px,14vw);--fade:.22;--dur:80s; animation-delay:-40s}
+.creature:nth-of-type(3){top:60vh;width:min(196px,17vw);--fade:.28;--dur:110s;animation-delay:-55s}
+.creature:nth-of-type(4){top:95vh;width:min(140px,12vw);--fade:.2; --dur:70s; animation-delay:-35s}
+.creature:nth-of-type(5){top:130vh;width:min(168px,15vw);--fade:.24;--dur:100s;animation-delay:-50s}
+.creature:nth-of-type(6){top:175vh;width:min(133px,12vw);--fade:.18;--dur:62s; animation-delay:-31s}
+.creature:nth-of-type(7){top:220vh;width:min(182px,16vw);--fade:.22;--dur:95s; animation-delay:-47s}
 
 @keyframes drift-right{
   0%{transform:translateX(-30vw) translateY(0)}
