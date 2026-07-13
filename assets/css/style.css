@@ -74,7 +74,7 @@ ul{margin:0;padding:0;list-style:none}
   background:linear-gradient(180deg,
     var(--c-twilight) 0%,
     var(--c-midnight) 40%,
-    var(--c-abyss) 100%);
+    #001829 100%);
   opacity:0;                       /* JS fades this 0→1 as you scroll */
   will-change:opacity;
 }
