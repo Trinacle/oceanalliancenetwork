@@ -22,39 +22,42 @@
 <!-- DEPTH CANVAS — bubbles / particles overlay -->
 <canvas id="depth-canvas"></canvas>
 
-<!-- PROGRESSIVE OCEAN BACKGROUND -->
+<!-- PROGRESSIVE OCEAN BACKGROUND (fixed — just the gradient + light) -->
 <div id="ocean-bg" aria-hidden="true">
     <div class="caustics"></div>
     <div class="light-shaft light-shaft--1"></div>
     <div class="light-shaft light-shaft--2"></div>
+</div>
 
-    <!-- Marine-life silhouettes, faded, drifting at depth -->
-    <div class="marine-life" aria-hidden="true">
-        <?php $creature_uri = get_template_directory_uri() . '/assets/img/creatures'; ?>
-        <!-- Whale — facing RIGHT, bigger, surface zone -->
-        <img class="creature creature--whale" src="<?php echo esc_url($creature_uri); ?>/1024x310.png" alt="" data-dir="right" />
-        <!-- facing LEFT -->
-        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x623.png" alt="" data-dir="left" />
-        <!-- facing RIGHT -->
-        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x653.png" alt="" data-dir="right" />
-        <!-- facing RIGHT -->
-        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x503.png" alt="" data-dir="right" />
-        <!-- facing LEFT -->
-        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x458.png" alt="" data-dir="left" />
-        <!-- facing RIGHT -->
-        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x411.png" alt="" data-dir="right" />
-        <!-- facing RIGHT -->
-        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x317.png" alt="" data-dir="right" />
-        <!-- facing LEFT -->
-        <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x314.png" alt="" data-dir="left" />
-        <!-- School of small fish (kept as SVG) — sunlit zone, facing right -->
-        <svg class="creature creature--fish" viewBox="0 0 120 60" data-dir="right">
-            <path d="M5 30 Q15 18 28 30 Q15 42 5 30 Z M28 30 L36 26 L36 34 Z" fill="currentColor"/>
-            <path d="M44 22 Q54 10 67 22 Q54 34 44 22 Z M67 22 L75 18 L75 26 Z" fill="currentColor"/>
-            <path d="M82 36 Q92 24 105 36 Q92 48 82 36 Z M105 36 L113 32 L113 40 Z" fill="currentColor"/>
-            <path d="M50 44 Q60 34 71 44 Q60 54 50 44 Z M71 44 L78 41 L78 47 Z" fill="currentColor"/>
-        </svg>
-    </div>
+<!-- MARINE LIFE — scrolls WITH the page (not fixed).
+     Spans full document height so creatures appear at different depths
+     and scroll away as you descend. Each creature is positioned as a %
+     of the page so they spread out and repeat naturally on long pages. -->
+<div class="marine-life" aria-hidden="true">
+    <?php $creature_uri = get_template_directory_uri() . '/assets/img/creatures'; ?>
+    <!-- Whale — facing RIGHT, near top, bigger -->
+    <img class="creature creature--whale" src="<?php echo esc_url($creature_uri); ?>/1024x310.png" alt="" data-dir="right" />
+    <!-- facing LEFT -->
+    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x623.png" alt="" data-dir="left" />
+    <!-- facing RIGHT -->
+    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x653.png" alt="" data-dir="right" />
+    <!-- facing RIGHT -->
+    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x503.png" alt="" data-dir="right" />
+    <!-- facing LEFT -->
+    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x458.png" alt="" data-dir="left" />
+    <!-- facing RIGHT -->
+    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x411.png" alt="" data-dir="right" />
+    <!-- facing RIGHT -->
+    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x317.png" alt="" data-dir="right" />
+    <!-- facing LEFT -->
+    <img class="creature" src="<?php echo esc_url($creature_uri); ?>/1024x314.png" alt="" data-dir="left" />
+    <!-- School of small fish (SVG) — facing right -->
+    <svg class="creature creature--fish" viewBox="0 0 120 60" data-dir="right">
+        <path d="M5 30 Q15 18 28 30 Q15 42 5 30 Z M28 30 L36 26 L36 34 Z" fill="currentColor"/>
+        <path d="M44 22 Q54 10 67 22 Q54 34 44 22 Z M67 22 L75 18 L75 26 Z" fill="currentColor"/>
+        <path d="M82 36 Q92 24 105 36 Q92 48 82 36 Z M105 36 L113 32 L113 40 Z" fill="currentColor"/>
+        <path d="M50 44 Q60 34 71 44 Q60 54 50 44 Z M71 44 L78 41 L78 47 Z" fill="currentColor"/>
+    </svg>
 </div>
 
 <!-- DEPTH GAUGE -->

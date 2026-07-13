@@ -100,12 +100,18 @@ ul{margin:0;padding:0;list-style:none}
 /* ---------- MARINE LIFE SILHOUETTES ---------- */
 /* Dark, faded shapes drifting at depth. Darker than the water so they read
    as shadows — never bright. Honors prefers-reduced-motion (see bottom). */
-.marine-life{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-/* Creature PNGs — faded, distant, dark silhouettes drifting in the deep */
+/* MARINE LIFE — scrolls WITH the page. Positioned absolutely against
+   the full document height (not the viewport), so creatures sit at real
+   page depths and scroll away as you descend. */
+.marine-life{
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  overflow:hidden;pointer-events:none;z-index:-1;
+}
+/* Creature PNGs — faded, distant, dark silhouettes */
 .creature{
   position:absolute;
-  opacity:var(--fade,.3);            /* faded — set per creature */
-  filter:blur(1.5px) brightness(.4); /* dark + soft = distant shadow */
+  opacity:var(--fade,.28);
+  filter:blur(1.5px) brightness(.4);
   will-change:transform;
   height:auto;
   object-fit:contain;
@@ -114,50 +120,51 @@ ul{margin:0;padding:0;list-style:none}
   color:rgba(0,0,0,.18);
   filter:blur(1px);
 }
-/* Whale (1024x310) — bigger, surface zone, facing RIGHT */
+
+/* Whale (1024x310) — bigger, near top (pushed down a bit), facing RIGHT */
 .creature--whale{
-  width:min(520px,46vw);
-  top:6%;
-  --fade:.32;
-  animation:drift-right 140s linear infinite;
+  width:min(364px,32vw);          /* was 520px → reduced 30% */
+  top:14vh;                        /* pushed down from 6% */
+  --fade:.3;
+  animation:drift-right 130s linear infinite;
   animation-delay:-20s;
 }
-/* Each creature gets a unique zone + timing so they feel scattered in depth.
-   Creatures facing LEFT use drift-left (enter from right, exit left).
-   Creatures facing RIGHT use drift-right (enter from left, exit right). */
 
-/* RIGHT-facing creatures — 1024x653, 1024x503, 1024x411, 1024x317 */
-.creature[data-dir="right"]:not(.creature--whale):not(.creature--fish){
-  animation:drift-right var(--dur,120s) linear infinite;
-}
-/* LEFT-facing creatures — 1024x623, 1024x458, 1024x314 */
-.creature[data-dir="left"]{
-  animation:drift-left var(--dur,120s) linear infinite;
-}
-/* Fish school — facing right, sunlit zone */
+/* Fish school — facing right */
 .creature--fish{
-  width:min(180px,16vw);
-  top:24%;
-  opacity:.4;
-  animation:drift-right 60s linear infinite;
-  animation-delay:-15s;
+  width:min(126px,11vw);           /* was 180px → reduced 30% */
+  top:8vh;
+  opacity:.38;
+  animation:drift-right 55s linear infinite;
+  animation-delay:-10s;
 }
-/* Per-creature placement: scattered vertical positions + sizes + delays */
-.creature:nth-of-type(2){top:16%;width:min(220px,20vw);--fade:.22;--dur:160s;animation-delay:-50s}
-.creature:nth-of-type(3){top:34%;width:min(280px,25vw);--fade:.28;--dur:130s;animation-delay:-30s}
-.creature:nth-of-type(4){top:48%;width:min(200px,18vw);--fade:.2;--dur:180s;animation-delay:-80s}
-.creature:nth-of-type(5){top:58%;width:min(240px,22vw);--fade:.24;--dur:145s;animation-delay:-60s}
-.creature:nth-of-type(6){top:70%;width:min(190px,17vw);--fade:.18;--dur:200s;animation-delay:-110s}
-.creature:nth-of-type(7){top:80%;width:min(260px,24vw);--fade:.22;--dur:165s;animation-delay:-90s}
+
+/* RIGHT-facing creatures get drift-right; LEFT-facing get drift-left */
+.creature[data-dir="right"]:not(.creature--whale):not(.creature--fish){
+  animation:drift-right var(--dur,90s) linear infinite;
+}
+.creature[data-dir="left"]{
+  animation:drift-left var(--dur,90s) linear infinite;
+}
+
+/* Per-creature placement: spread across the document height using vh units
+   so they sit at different scroll depths and only 1-2 are visible at once.
+   Sizes all reduced 30% from original. Durations varied (some 20% faster). */
+.creature:nth-of-type(2){top:28vh;width:min(154px,14vw);--fade:.2; --dur:75s; animation-delay:-25s}  /* 20% faster */
+.creature:nth-of-type(3){top:52vh;width:min(196px,17vw);--fade:.26;--dur:110s;animation-delay:-40s}
+.creature:nth-of-type(4){top:78vh;width:min(140px,12vw);--fade:.18;--dur:68s; animation-delay:-50s}  /* 20% faster */
+.creature:nth-of-type(5){top:108vh;width:min(168px,15vw);--fade:.22;--dur:95s; animation-delay:-30s}
+.creature:nth-of-type(6){top:138vh;width:min(133px,12vw);--fade:.16;--dur:58s; animation-delay:-60s} /* 20% faster */
+.creature:nth-of-type(7){top:172vh;width:min(182px,16vw);--fade:.2; --dur:100s;animation-delay:-45s}
 
 @keyframes drift-right{
   0%{transform:translateX(-30vw) translateY(0)}
-  50%{transform:translateX(50vw) translateY(-22px)}
+  50%{transform:translateX(50vw) translateY(-18px)}
   100%{transform:translateX(130vw) translateY(0)}
 }
 @keyframes drift-left{
   0%{transform:translateX(130vw) translateY(0)}
-  50%{transform:translateX(50vw) translateY(-22px)}
+  50%{transform:translateX(50vw) translateY(-18px)}
   100%{transform:translateX(-30vw) translateY(0)}
 }
 
