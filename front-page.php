@@ -84,9 +84,9 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
-     FLAGSHIP CAMPAIGNS — the real OAN initiatives
+     FLAGSHIP CAMPAIGNS — full-width WHITE section
      ============================================ -->
-<section id="campaigns" class="section depth-twilight">
+<section id="campaigns" class="section white-section">
     <div class="container">
         <div class="section-head reveal">
             <span class="eyebrow">What we do</span>

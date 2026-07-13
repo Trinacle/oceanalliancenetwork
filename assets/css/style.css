@@ -445,6 +445,118 @@ ul{margin:0;padding:0;list-style:none}
 .campaign-card p{font-size:14px;color:var(--ink-soft);margin:0}
 @media(max-width:900px){.campaigns-grid{grid-template-columns:1fr}}
 
+/* ---------- WHITE SECTION (full-width light bg) ---------- */
+.white-section{
+  background:#f5f8fa;
+  color:#1a2a38;
+  position:relative;
+  z-index:2;
+}
+.white-section .eyebrow{color:#0a4f78}
+.white-section .section-title{color:#0a2a48}
+.white-section .lead{color:#44566a}
+.white-section .campaign-card{
+  background:#fff;
+  border:1px solid #e0e8ef;
+  box-shadow:0 4px 20px rgba(10,42,72,.06);
+}
+.white-section .campaign-card:hover{
+  border-color:#0a7bb0;
+  box-shadow:0 12px 40px rgba(10,42,72,.12);
+}
+.white-section .campaign-tag{color:#0a7bb0}
+.white-section .campaign-card h3{color:#0a2a48}
+.white-section .campaign-card p{color:#44566a}
+.white-section em{color:#0a7bb0}
+
+/* ---------- SINGLE POST (blog article) ---------- */
+.post-hero{
+  position:relative;
+  min-height:56vh;
+  display:flex;align-items:flex-end;
+  padding:calc(var(--header-h) + 60px) 32px 60px;
+  overflow:hidden;
+}
+.post-hero-bg{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  animation:hero-zoom 24s ease-out forwards;
+}
+.post-hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(6,24,44,.4) 0%,rgba(6,24,44,.55) 50%,rgba(2,14,28,.85) 100%);
+}
+.post-hero-content{position:relative;z-index:2;width:100%}
+.post-title{
+  font-size:clamp(2rem,5vw,3.4rem);
+  line-height:1.08;letter-spacing:-.02em;
+  color:var(--ink);margin:12px 0 16px;
+  text-shadow:0 2px 24px rgba(0,0,0,.4);
+}
+.post-excerpt{
+  font-size:clamp(1.05rem,1.8vw,1.3rem);
+  color:rgba(234,246,255,.8);
+  margin:0;max-width:60ch;
+}
+/* Article body — white card floating above the dark bg */
+.post-body-section{
+  position:relative;z-index:2;
+  padding:0 32px 100px;
+  margin-top:-40px;           /* overlap the hero for a layered look */
+}
+.post-article{
+  background:#fff;
+  color:#2a3a48;
+  border-radius:20px;
+  padding:64px 56px;
+  box-shadow:0 30px 80px rgba(0,0,0,.3);
+}
+.post-article h2{color:#0a2a48;margin:48px 0 16px;font-size:1.8rem}
+.post-article h3{color:#0a2a48;margin:40px 0 12px;font-size:1.4rem}
+.post-article p{font-size:1.1rem;line-height:1.8;color:#3a4a5a;margin:0 0 24px}
+.post-article p:last-child{margin-bottom:0}
+.post-article a{color:#0a7bb0;text-decoration:underline;text-decoration-color:rgba(10,123,176,.3);text-underline-offset:3px}
+.post-article a:hover{text-decoration-color:#0a7bb0}
+.post-article ul,.post-article ol{margin:0 0 24px;padding-left:24px}
+.post-article ul li,.post-article ol li{font-size:1.1rem;line-height:1.8;color:#3a4a5a;margin-bottom:8px}
+.post-article blockquote{
+  border-left:4px solid #0a7bb0;
+  padding:16px 24px;margin:24px 0;
+  background:#f5f8fa;border-radius:0 12px 12px 0;
+  font-style:italic;color:#1a2a38;font-size:1.15rem;
+}
+.post-article img{border-radius:12px;margin:24px 0;max-width:100%;height:auto}
+.post-article pre{
+  background:#0a1a2a;color:#eaf6ff;
+  padding:20px 24px;border-radius:12px;
+  overflow-x:auto;font-size:14px;line-height:1.6;margin:24px 0;
+}
+.post-article code{
+  background:#e8f0f5;color:#0a4f78;
+  padding:2px 6px;border-radius:4px;font-size:.9em;
+}
+.post-page-links{margin-top:32px;padding-top:24px;border-top:1px solid #e0e8ef}
+.post-page-links a{color:#0a7bb0}
+.post-footer-meta{
+  margin-top:40px;padding-top:24px;
+  border-top:1px solid #e0e8ef;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+}
+.post-share{display:flex;align-items:center;gap:10px}
+.post-share span{font-size:13px;color:#8a9aab;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.post-share a{
+  width:36px;height:36px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:#f0f5f8;color:#0a4f78;
+  font-weight:600;font-size:13px;text-decoration:none;
+  transition:all .3s var(--ease-out);
+}
+.post-share a:hover{background:#0a7bb0;color:#fff;transform:translateY(-2px)}
+@media(max-width:600px){
+  .post-article{padding:40px 28px}
+  .post-body-section{padding:0 16px 60px}
+}
+
 /* ---------- ACCESSIBILITY (skill Phase 7) ---------- */
 .skip-link{
   position:absolute;top:-100px;left:16px;z-index:100;
