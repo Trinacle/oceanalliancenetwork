@@ -163,8 +163,70 @@ function oan_on_activate() {
 
     update_option('show_on_front', 'page');
     update_option('page_on_front', $home_id);
+
+    // Seed a sample blog post (idempotent — version-gated).
+    if (get_option('oan_posts_seeded') !== '1') {
+        if (!get_page_by_path('state-of-our-oceans-2026', OBJECT, 'post')) {
+            wp_insert_post(array(
+                'post_title'   => 'The State of Our Oceans: What 2026 Tells Us',
+                'post_name'    => 'state-of-our-oceans-2026',
+                'post_status'  => 'publish',
+                'post_type'    => 'post',
+                'post_excerpt' => 'Coral reefs have lost half their living cover. Sea temperatures keep breaking records. But protected areas work — and the Ocean Alliance Network is accelerating recovery through storytelling, technology, and community action.',
+                'post_content' => '<p>The ocean covers 71 percent of our planet. It produces more than half the oxygen we breathe, regulates our climate, and feeds billions of people. Yet it is changing faster than at any point in human history.</p>' . "\n\n" .
+                    '<h2>The numbers</h2>' . "\n" .
+                    '<p>Coral reefs, which support roughly 25 percent of all marine species, have lost half their living coral cover in the past 50 years. Sea surface temperatures continue to break records. Marine populations declined by 36 percent between 1970 and 2019.</p>' . "\n\n" .
+                    '<blockquote>The ocean does not need us. We need the ocean. Every second breath we take comes from it.</blockquote>' . "\n\n" .
+                    '<h2>Where there is hope</h2>' . "\n" .
+                    '<p>Protected marine areas work. When we give ecosystems space to recover, they do. The Ocean Alliance Network exists to accelerate that recovery — through storytelling that moves people, technology that empowers science, and partnerships that turn commitment into action.</p>' . "\n\n" .
+                    '<h3>What OAN is doing</h3>' . "\n" .
+                    '<ul>' . "\n" .
+                    '<li><strong>Storytelling</strong> — Original films like Local Legends and Wave Maker bring the ocean to audiences who may never see it in person.</li>' . "\n" .
+                    '<li><strong>Technology</strong> — Data platforms and monitoring tools that turn research into real-time protection.</li>' . "\n" .
+                    '<li><strong>Community</strong> — A growing network of ambassadors leading cleanups, screenings, and education programs on coastlines around the world.</li>' . "\n" .
+                    '</ul>' . "\n\n" .
+                    '<h2>What you can do</h2>' . "\n" .
+                    '<p>Protection starts with awareness. Share a film. Join a cleanup. Support the work. The ocean connects every one of us — and every one of us has a role in defending it.</p>',
+            ));
+        }
+        update_option('oan_posts_seeded', '1');
+    }
 }
 add_action('after_switch_theme', 'oan_on_activate');
+
+/**
+ * Run the post seeder once on init (covers the case where the theme is
+ * already active when this code first deploys). Idempotent + gated.
+ */
+function oan_seed_post_now() {
+    if (get_option('oan_posts_seeded') === '1') return;
+    if (is_admin()) return;   // front-end only so it never blocks dashboard
+    if (!get_page_by_path('state-of-our-oceans-2026', OBJECT, 'post')) {
+        wp_insert_post(array(
+            'post_title'   => 'The State of Our Oceans: What 2026 Tells Us',
+            'post_name'    => 'state-of-our-oceans-2026',
+            'post_status'  => 'publish',
+            'post_type'    => 'post',
+            'post_excerpt' => 'Coral reefs have lost half their living cover. Sea temperatures keep breaking records. But protected areas work — and the Ocean Alliance Network is accelerating recovery through storytelling, technology, and community action.',
+            'post_content' => '<p>The ocean covers 71 percent of our planet. It produces more than half the oxygen we breathe, regulates our climate, and feeds billions of people. Yet it is changing faster than at any point in human history.</p>' . "\n\n" .
+                '<h2>The numbers</h2>' . "\n" .
+                '<p>Coral reefs, which support roughly 25 percent of all marine species, have lost half their living coral cover in the past 50 years. Sea surface temperatures continue to break records. Marine populations declined by 36 percent between 1970 and 2019.</p>' . "\n\n" .
+                '<blockquote>The ocean does not need us. We need the ocean. Every second breath we take comes from it.</blockquote>' . "\n\n" .
+                '<h2>Where there is hope</h2>' . "\n" .
+                '<p>Protected marine areas work. When we give ecosystems space to recover, they do. The Ocean Alliance Network exists to accelerate that recovery — through storytelling that moves people, technology that empowers science, and partnerships that turn commitment into action.</p>' . "\n\n" .
+                '<h3>What OAN is doing</h3>' . "\n" .
+                '<ul>' . "\n" .
+                '<li><strong>Storytelling</strong> — Original films like Local Legends and Wave Maker bring the ocean to audiences who may never see it in person.</li>' . "\n" .
+                '<li><strong>Technology</strong> — Data platforms and monitoring tools that turn research into real-time protection.</li>' . "\n" .
+                '<li><strong>Community</strong> — A growing network of ambassadors leading cleanups, screenings, and education programs on coastlines around the world.</li>' . "\n" .
+                '</ul>' . "\n\n" .
+                '<h2>What you can do</h2>' . "\n" .
+                '<p>Protection starts with awareness. Share a film. Join a cleanup. Support the work. The ocean connects every one of us — and every one of us has a role in defending it.</p>',
+        ));
+    }
+    update_option('oan_posts_seeded', '1');
+}
+add_action('init', 'oan_seed_post_now', 50);
 
 /**
  * Optional: pingback header for older clients.
