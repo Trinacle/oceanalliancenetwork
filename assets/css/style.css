@@ -57,19 +57,26 @@ em{font-style:italic;color:var(--accent)}
 ul{margin:0;padding:0;list-style:none}
 
 /* ---------- OCEAN BACKGROUND ---------- */
-/* Tall gradient that shifts upward on scroll → ocean gets darker as you descend */
-#ocean-bg{
-  position:fixed;inset:0;z-index:-3;
+/* OCEAN BACKGROUND — two fixed layers that crossfade on scroll.
+   Shallow (light blue) is on top at full opacity; Deep (dark abyss)
+   sits underneath and fades in via JS opacity as you scroll.
+   GPU-accelerated opacity = buttery smooth, no banding, no sliding. */
+#ocean-bg{position:fixed;inset:0;z-index:-3}
+.ocean-layer{position:absolute;inset:0}
+.ocean-shallow{
   background:linear-gradient(180deg,
     var(--c-surface) 0%,
-    var(--c-shallow) 18%,
-    var(--c-sunlit) 38%,
-    var(--c-twilight) 58%,
-    var(--c-midnight) 78%,
+    var(--c-shallow) 30%,
+    var(--c-sunlit) 70%,
+    var(--c-twilight) 100%);
+}
+.ocean-deep{
+  background:linear-gradient(180deg,
+    var(--c-twilight) 0%,
+    var(--c-midnight) 40%,
     var(--c-abyss) 100%);
-  background-size:100% 280vh;
-  background-position:0 0;
-  transition:background-position .15s linear;
+  opacity:0;                       /* JS fades this 0→1 as you scroll */
+  will-change:opacity;
 }
 /* moving underwater light (caustics) */
 .caustics{

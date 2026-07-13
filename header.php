@@ -22,8 +22,10 @@
 <!-- DEPTH CANVAS — bubbles / particles overlay -->
 <canvas id="depth-canvas"></canvas>
 
-<!-- PROGRESSIVE OCEAN BACKGROUND (fixed — just the gradient + light) -->
+<!-- OCEAN BACKGROUND — two fixed layers that crossfade on scroll -->
 <div id="ocean-bg" aria-hidden="true">
+    <div class="ocean-layer ocean-shallow"></div>
+    <div class="ocean-layer ocean-deep"></div>
     <div class="caustics"></div>
     <div class="light-shaft light-shaft--1"></div>
     <div class="light-shaft light-shaft--2"></div>

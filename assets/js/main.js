@@ -13,6 +13,7 @@
   /* ---------- 1. SCROLL DEPTH (gradient + header + gauge) ---------- */
   const header   = document.getElementById('site-header');
   const bg       = document.getElementById('ocean-bg');
+  const oceanDeep = bg ? bg.querySelector('.ocean-deep') : null;
   const gauge    = document.getElementById('depth-gauge');
   const gaugeFill= gauge ? gauge.querySelector('.gauge-fill') : null;
   const depthTxt = gauge ? gauge.querySelector('.gauge-depth') : null;
@@ -36,8 +37,9 @@
       const docH = document.documentElement.scrollHeight - window.innerHeight;
       const p = docH > 0 ? Math.min(st / docH, 1) : 0;
 
-      // Shift the tall gradient upward to "descend" — ocean gets darker as you scroll.
-      if(bg) bg.style.backgroundPosition = `0 ${p * 220}vh`;
+      // Crossfade: shallow layer fades out, deep layer fades in.
+      // Opacity is GPU-accelerated → smooth, no banding or sliding.
+      if(oceanDeep) oceanDeep.style.opacity = p;
 
       // header solidifies after first breath
       if(header) header.classList.toggle('scrolled', st > 60);
