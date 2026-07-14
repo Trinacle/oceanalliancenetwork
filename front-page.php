@@ -304,6 +304,65 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
+     STRATEGIC ADVISORS SPOTLIGHT — reels featuring celebrities & big names
+     ============================================ -->
+<section id="advisor-spotlight" class="section depth-abyss">
+    <div class="container">
+        <div class="section-head center reveal">
+            <span class="eyebrow">Strategic Advisors</span>
+            <h2 class="section-title">The names behind the <em>mission.</em></h2>
+            <p class="lead">Celebrities, scientists, and ocean advocates who lend their voice, expertise, and platform to the Ocean Alliance Network.</p>
+        </div>
+        <div class="reels-grid">
+            <a class="reel-card reveal" href="https://www.instagram.com/oceanalliancenetwork/reel/DZVLvIzBXKI/" target="_blank" rel="noopener">
+                <div class="reel-thumb"><iframe src="https://www.instagram.com/reel/DZVLvIzBXKI/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN advisor reel"></iframe></div>
+                <span class="reel-label">Featured Advisor</span>
+            </a>
+            <a class="reel-card reveal" href="https://www.instagram.com/oceanalliancenetwork/reel/DXaGLv0SPm2/" target="_blank" rel="noopener">
+                <div class="reel-thumb"><iframe src="https://www.instagram.com/reel/DXaGLv0SPm2/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN advisor reel"></iframe></div>
+                <span class="reel-label">Featured Advisor</span>
+            </a>
+            <a class="reel-card reveal" href="https://www.instagram.com/oceanalliancenetwork/reel/DXXnyqVhHbm/" target="_blank" rel="noopener">
+                <div class="reel-thumb"><iframe src="https://www.instagram.com/reel/DXXnyqVhHbm/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN advisor reel"></iframe></div>
+                <span class="reel-label">Featured Advisor</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     FOLLOW ON SOCIAL + INSTAGRAM CAROUSEL
+     ============================================ -->
+<section id="social-follow" class="section depth-abyss">
+    <div class="container">
+        <div class="social-follow-head center reveal">
+            <span class="eyebrow">Follow the movement</span>
+            <h2 class="section-title">Join us on <em>Instagram.</em></h2>
+            <a href="https://www.instagram.com/oceanalliancenetwork/" target="_blank" rel="noopener" class="btn btn--primary social-follow-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                @oceanalliancenetwork
+            </a>
+        </div>
+        <div class="ig-carousel reveal">
+            <div class="ig-carousel-track">
+                <div class="ig-slide"><iframe src="https://www.instagram.com/oceanalliancenetwork/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN Instagram feed"></iframe></div>
+            </div>
+        </div>
+        <div class="social-links-row reveal">
+            <a href="https://www.instagram.com/oceanalliancenetwork/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.8-2c-.8-.8-1.7-.8-2.1-.9C15.9 4 12 4 12 4s-3.9 0-6.7.3c-.4 0-1.3.1-2.1.9-.6.6-.8 2-.8 2S2 8.8 2 10.5v1.6c0 1.7.2 3.3.2 3.3s.2 1.4.8 2c.8.8 1.9.8 2.4.9 1.7.2 6.6.3 6.6.3s3.9 0 6.7-.3c.4 0 1.3-.1 2.1-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.6c0-1.7-.2-3.3-.2-3.3zM9.8 14.4V8l5.2 3.2-5.2 3.2z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
      PARTNERS
      ============================================ -->
 <section id="partners" class="section depth-abyss">

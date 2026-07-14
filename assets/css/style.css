@@ -931,3 +931,71 @@ ul{margin:0;padding:0;list-style:none}
 }
 .voice-name{font-size:13px;color:var(--accent);margin:0;font-weight:600;letter-spacing:.03em}
 @media(max-width:900px){.voices-grid{grid-template-columns:1fr}}
+
+/* ---------- ADVISOR SPOTLIGHT (reels) ---------- */
+.reels-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  margin-top:40px;
+}
+.reel-card{
+  display:block;border-radius:18px;overflow:hidden;
+  border:1px solid var(--line);background:var(--glass);
+  transition:transform .5s var(--ease-out),border-color .4s;
+  position:relative;
+}
+.reel-card:hover{transform:translateY(-6px);border-color:rgba(111,231,196,.3)}
+.reel-thumb{
+  position:relative;aspect-ratio:9/16;overflow:hidden;background:#000;
+}
+.reel-thumb iframe{
+  width:100%;height:100%;border:0;display:block;
+}
+.reel-label{
+  display:block;padding:14px 18px;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);font-weight:600;text-align:center;
+}
+@media(max-width:900px){.reels-grid{grid-template-columns:1fr;max-width:400px;margin-inline:auto}}
+
+/* ---------- SOCIAL FOLLOW + INSTAGRAM ---------- */
+.social-follow-head{margin-bottom:48px}
+.social-follow-head .section-title{margin-bottom:20px}
+.social-follow-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  margin-top:8px;
+}
+.social-follow-btn svg{flex-shrink:0}
+
+/* Instagram embed card */
+.ig-carousel{
+  border-radius:20px;overflow:hidden;
+  border:1px solid var(--line);
+  background:var(--glass);
+  max-width:500px;margin:0 auto;
+}
+.ig-carousel-track{position:relative}
+.ig-slide{
+  position:relative;width:100%;
+}
+.ig-slide iframe{
+  width:100%;min-height:520px;border:0;display:block;
+}
+
+/* social icon links */
+.social-links-row{
+  display:flex;justify-content:center;gap:16px;margin-top:40px;
+}
+.social-link{
+  width:52px;height:52px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--glass);border:1px solid var(--line);color:var(--ink-soft);
+  transition:all .35s var(--ease-out);
+}
+.social-link:hover{
+  background:rgba(111,231,196,.15);color:var(--accent);
+  border-color:rgba(111,231,196,.4);transform:translateY(-3px);
+  box-shadow:0 0 20px rgba(111,231,196,.2);
+}
+@media(max-width:600px){
+  .ig-slide iframe{min-height:440px}
+}
