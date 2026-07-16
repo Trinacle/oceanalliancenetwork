@@ -48,18 +48,52 @@ $uri = get_template_directory_uri();
      MISSION — sunlight zone
      ============================================ -->
 <section id="mission" class="section depth-sunlight">
-    <div class="container narrow">
-        <span class="eyebrow reveal">Our mission</span>
-        <h2 class="section-title reveal">A collaborative initiative to <em>protect our oceans.</em></h2>
-        <p class="lead reveal">
-            The Ocean Alliance Network (OAN) brings together leaders, innovators, influencers, and communities to protect our oceans. We bridge ocean conservation and action through storytelling, technology, and strategic partnerships — uniting research, education, and policy to create measurable impact for marine ecosystems and the communities that depend on them.
-        </p>
-        <div class="mission-focus reveal">
-            <div class="focus-item"><span>01</span><p><strong>Amplify</strong> ocean conservation through film, media, and storytelling.</p></div>
-            <div class="focus-item"><span>02</span><p><strong>Engage</strong> communities, influencers, and the next generation of ocean stewards.</p></div>
-            <div class="focus-item"><span>03</span><p><strong>Advance</strong> research and technology that drives measurable protection.</p></div>
-            <div class="focus-item"><span>04</span><p><strong>Build</strong> strategic partnerships across science, industry, and policy.</p></div>
-            <div class="focus-item"><span>05</span><p><strong>Mobilize</strong> action through summits, campaigns, and ambassador programs.</p></div>
+    <div class="container">
+        <div class="mission-layout">
+            <div class="mission-intro reveal">
+                <span class="eyebrow">Our mission</span>
+                <h2 class="section-title">A collaborative initiative to <em>protect our oceans.</em></h2>
+                <p class="lead">
+                    The Ocean Alliance Network (OAN) brings together leaders, innovators, influencers, and communities to protect our oceans. We bridge ocean conservation and action through storytelling, technology, and strategic partnerships.
+                </p>
+            </div>
+            <div class="mission-focus reveal">
+                <div class="focus-item">
+                    <span class="focus-num">01</span>
+                    <div class="focus-body">
+                        <strong>Amplify</strong>
+                        <p>Ocean conservation through film, media, and storytelling.</p>
+                    </div>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-num">02</span>
+                    <div class="focus-body">
+                        <strong>Engage</strong>
+                        <p>Communities, influencers, and the next generation of ocean stewards.</p>
+                    </div>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-num">03</span>
+                    <div class="focus-body">
+                        <strong>Advance</strong>
+                        <p>Research and technology that drives measurable protection.</p>
+                    </div>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-num">04</span>
+                    <div class="focus-body">
+                        <strong>Build</strong>
+                        <p>Strategic partnerships across science, industry, and policy.</p>
+                    </div>
+                </div>
+                <div class="focus-item">
+                    <span class="focus-num">05</span>
+                    <div class="focus-body">
+                        <strong>Mobilize</strong>
+                        <p>Action through summits, campaigns, and ambassador programs.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
