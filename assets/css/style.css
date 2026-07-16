@@ -367,12 +367,24 @@ ul{margin:0;padding:0;list-style:none}
   padding:calc(var(--header-h) + 40px) 32px 80px;
   overflow:hidden;
 }
-/* real photo backdrop */
-.hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;
-  animation:hero-zoom 24s ease-out forwards;}
-@keyframes hero-zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
-.hero-bg-overlay{display:none}
+/* hero background — YouTube video scaled to cover */
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:#01060f;}
+.hero-yt-wrapper{
+  position:absolute;top:50%;left:50%;
+  width:100vw;height:56.25vw;       /* 16:9 ratio */
+  min-height:100vh;min-width:177.78vh; /* cover the viewport */
+  transform:translate(-50%,-50%);
+  pointer-events:none;              /* clicks pass through to buttons */
+}
+.hero-yt-wrapper iframe{
+  width:100%;height:100%;border:0;
+}
+/* subtle dark gradient at bottom so hero text stays readable */
+.hero-bg::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(2,14,28,.15) 0%,rgba(2,14,28,.25) 50%,rgba(2,14,28,.6) 100%);
+  pointer-events:none;
+}
 .hero-content{position:relative;z-index:3;max-width:900px}
 .hero-content .eyebrow,
 .hero-content .hero-title,
@@ -380,10 +392,6 @@ ul{margin:0;padding:0;list-style:none}
 .hero-content .hero-cta{
   text-shadow:0 2px 24px rgba(0,0,0,.5);
 }
-.hero-surface{position:absolute;top:0;left:0;right:0;height:50%;overflow:hidden;pointer-events:none;z-index:1}
-.surface-wave{position:absolute;bottom:-2px;left:0;width:100%;height:120px;
-  animation:wave-drift 14s linear infinite}
-@keyframes wave-drift{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 .hero-content{position:relative;z-index:2;max-width:900px}
 .hero-title{
