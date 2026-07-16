@@ -756,7 +756,7 @@ ul{margin:0;padding:0;list-style:none}
       rgba(2,10,26,.4) 15%,
       rgba(2,10,26,.72) 50%,
       rgba(2,10,26,.88) 100%),
-    url('../img/deep-ocean.webp') center bottom / cover no-repeat;
+    url('../img/deep-ocean-transparent.webp') center bottom / cover no-repeat;
 }
 /* glowing surface curve at the top — like looking up at the water from below */
 .footer-surface{
