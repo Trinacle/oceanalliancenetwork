@@ -762,14 +762,17 @@ ul{margin:0;padding:0;list-style:none}
 }
 
 /* ---------- FOOTER — "Bioluminescent Deep" ---------- */
-/* Smooth blend: top edge fades from transparent into the deep-ocean photo */
+/* Smooth blend: tall transparent zone at top so the footer fades in
+   gradually from the page background — no hard edge. */
 #site-footer{
   position:relative;z-index:1;padding:0;border-top:0;overflow:hidden;
   background:
     linear-gradient(180deg,
       rgba(2,10,26,0) 0%,
-      rgba(2,10,26,.4) 15%,
-      rgba(2,10,26,.72) 50%,
+      rgba(2,10,26,0) 8%,
+      rgba(2,10,26,.2) 20%,
+      rgba(2,10,26,.5) 40%,
+      rgba(2,10,26,.72) 65%,
       rgba(2,10,26,.88) 100%),
     url('../img/deep-ocean-transparent.webp') center bottom / cover no-repeat;
 }
@@ -805,7 +808,7 @@ ul{margin:0;padding:0;list-style:none}
 
 .footer-inner{
   max-width:var(--maxw);margin:0 auto;
-  padding:100px 32px 40px;
+  padding:180px 32px 40px;            /* tall top padding so footer blends in */
   position:relative;z-index:2;
 }
 /* CTA band — the hero moment of the footer */
