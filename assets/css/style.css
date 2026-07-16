@@ -128,34 +128,34 @@ ul{margin:0;padding:0;list-style:none}
 .creature[data-dir="right"]{animation:drift-right var(--dur,90s) linear infinite}
 .creature[data-dir="left"]{animation:drift-left var(--dur,90s) linear infinite}
 
-/* ZONE 1: shallow — 3 creatures visible at start (more life up top).
-   c-2 is bigger + brought closer to top so it's visible immediately. */
-.fish-a{width:min(126px,11vw);top:4vh;opacity:.2;--dur:55s;animation-delay:-27s}
-.c-1{top:12vh;width:min(160px,15vw);--fade:.14;--dur:70s;animation-delay:-35s}
-.c-2{top:30vh;width:min(220px,20vw);--fade:.16;--dur:90s;animation-delay:-45s}  /* bigger, visible at start */
+/* ZONE 1: shallow — 3 creatures visible at start.
+   Each delay = exactly -50% of duration so creatures START at center-screen. */
+.fish-a{width:min(126px,11vw);top:4vh;opacity:.2;--dur:45s;animation-delay:-22s}
+.c-1{top:12vh;width:min(160px,15vw);--fade:.14;--dur:50s;animation-delay:-25s}
+.c-2{top:30vh;width:min(220px,20vw);--fade:.16;--dur:60s;animation-delay:-30s}
 
 /* ZONE 2: mid-water */
-.c-3{top:58vh;width:min(140px,13vw);--fade:.12;--dur:65s;animation-delay:-32s}
-.fish-b{width:min(110px,10vw);top:78vh;opacity:.16;--dur:48s;animation-delay:-24s}
-.c-4{top:102vh;width:min(170px,15vw);--fade:.14;--dur:85s;animation-delay:-42s}
+.c-3{top:58vh;width:min(140px,13vw);--fade:.12;--dur:48s;animation-delay:-24s}
+.fish-b{width:min(110px,10vw);top:78vh;opacity:.16;--dur:40s;animation-delay:-20s}
+.c-4{top:102vh;width:min(170px,15vw);--fade:.14;--dur:55s;animation-delay:-27s}
 
 /* ZONE 3: deep */
-.c-5{top:140vh;width:min(130px,12vw);--fade:.1;--dur:60s;animation-delay:-30s}
-.c-6{top:175vh;width:min(150px,13vw);--fade:.12;--dur:80s;animation-delay:-40s}
-.fish-c{width:min(100px,9vw);top:205vh;opacity:.14;--dur:52s;animation-delay:-26s}
+.c-5{top:140vh;width:min(130px,12vw);--fade:.1;--dur:42s;animation-delay:-21s}
+.c-6{top:175vh;width:min(150px,13vw);--fade:.12;--dur:52s;animation-delay:-26s}
+.fish-c{width:min(100px,9vw);top:205vh;opacity:.14;--dur:38s;animation-delay:-19s}
 
-/* ZONE 4: abyss — whale at bottom + creature + extra fish.
-   Whale starts immediately (no delay) so it's moving on page load. */
+/* ZONE 4: abyss — whale + creature + fish.
+   Delay = -50% of duration so whale starts at center-screen on load. */
 .creature--whale{
   width:min(320px,28vw);
   top:240vh;
   --fade:.16;
-  --dur:110s;
-  animation:drift-right 110s linear infinite;
-  animation-delay:0s;              /* starts moving immediately */
+  --dur:70s;
+  animation:drift-right 70s linear infinite;
+  animation-delay:-35s;             /* -50% → starts at center-screen */
 }
-.c-7{top:275vh;width:min(140px,13vw);--fade:.1;--dur:70s;animation-delay:-35s}
-.fish-d{width:min(120px,10vw);top:305vh;opacity:.14;--dur:50s;animation-delay:-25s}
+.c-7{top:275vh;width:min(140px,13vw);--fade:.1;--dur:46s;animation-delay:-23s}
+.fish-d{width:min(120px,10vw);top:305vh;opacity:.14;--dur:36s;animation-delay:-18s}
 
 @keyframes drift-right{
   0%{transform:translateX(-30vw) translateY(0)}
