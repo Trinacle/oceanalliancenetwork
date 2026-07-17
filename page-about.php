@@ -67,9 +67,18 @@ $uri = get_template_directory_uri();
             <p class="lead">Visionary leaders guiding the long-term direction of the alliance.</p>
         </div>
         <div class="people-grid">
-            <article class="person reveal"><div class="person-avatar" data-initials="SA"></div><h4>Strategic Advisor</h4><p>Senior advisor</p></article>
-            <article class="person reveal"><div class="person-avatar" data-initials="SA"></div><h4>Strategic Advisor</h4><p>Senior advisor</p></article>
-            <article class="person reveal"><div class="person-avatar" data-initials="SA"></div><h4>Strategic Advisor</h4><p>Senior advisor</p></article>
+            <article class="person reveal">
+                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
+                <h4>Strategic Advisor</h4><p>Title &amp; organization</p>
+            </article>
+            <article class="person reveal">
+                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
+                <h4>Strategic Advisor</h4><p>Title &amp; organization</p>
+            </article>
+            <article class="person reveal">
+                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
+                <h4>Strategic Advisor</h4><p>Title &amp; organization</p>
+            </article>
         </div>
         <p class="grid-note reveal">Full biographies forthcoming. <a href="<?php echo esc_url(oan_page_url('donate')); ?>">Support our work →</a></p>
     </div>

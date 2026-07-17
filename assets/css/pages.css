@@ -3,6 +3,28 @@
    Loaded after style.css on sub-pages
    ============================================================ */
 
+/* ---------- IMAGE PLACEHOLDERS ---------- */
+/* Dashed-border placeholders for images/galleries not yet uploaded */
+.placeholder{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:var(--glass);border:2px dashed var(--line);border-radius:14px;
+  color:var(--ink-faint);text-align:center;gap:8px;
+  aspect-ratio:var(--ratio,16/10);
+}
+.placeholder svg{width:32px;height:32px;opacity:.4}
+.placeholder span{font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+.placeholder--portrait{--ratio:3/4}
+.placeholder--wide{--ratio:21/9}
+.placeholder--square{--ratio:1/1}
+.placeholder--video{--ratio:16/9}
+
+/* Gallery placeholder grid */
+.placeholder-gallery{
+  display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:14px;
+}
+@media(max-width:700px){.placeholder-gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.placeholder-gallery{grid-template-columns:1fr}}
+
 /* ---------- PAGE HERO ---------- */
 .page-hero{
   padding:calc(var(--header-h) + 100px) 32px 60px;

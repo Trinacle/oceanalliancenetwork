@@ -67,6 +67,13 @@ $uri = get_template_directory_uri();
                 <div class="blog-body"><span class="video-cat">Opinion</span><h3>Why Storytelling Saves Seas</h3><p>How film can move millions to act for the ocean.</p><span class="blog-meta">Essay · 5 min read</span></div>
             </article>
         </div>
+
+        <!-- More stories placeholder -->
+        <div class="placeholder-gallery reveal" style="--cols:3;margin-top:24px">
+            <div class="placeholder placeholder--video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 11h8M8 15h5"/></svg><span>More Stories</span></div>
+            <div class="placeholder placeholder--video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 11h8M8 15h5"/></svg><span>More Stories</span></div>
+            <div class="placeholder placeholder--video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M8 11h8M8 15h5"/></svg><span>More Stories</span></div>
+        </div>
     </div>
 </section>
 
@@ -98,6 +105,17 @@ $uri = get_template_directory_uri();
                 <div class="event-body"><h3>Earth Day Coastal Cleanup</h3><p>Ambassador-led cleanups across 12 coastlines in a single day.</p></div>
                 <span class="event-tag">Cleanup</span>
             </article>
+        </div>
+
+        <!-- Events photo gallery placeholder -->
+        <div class="section-head reveal" style="margin-top:60px">
+            <h3 style="font-size:1.4rem;color:var(--ink-soft)">Event Gallery</h3>
+        </div>
+        <div class="placeholder-gallery reveal" style="--cols:4">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 17l5-4 4 3 4-5 5 6"/></svg><span>Event Photo</span></div>
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 17l5-4 4 3 4-5 5 6"/></svg><span>Event Photo</span></div>
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 17l5-4 4 3 4-5 5 6"/></svg><span>Event Photo</span></div>
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 17l5-4 4 3 4-5 5 6"/></svg><span>Event Photo</span></div>
         </div>
     </div>
 </section>

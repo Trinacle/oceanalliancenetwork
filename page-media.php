@@ -40,6 +40,13 @@ $uri = get_template_directory_uri();
                 <div class="video-body"><span class="video-cat">Student Film</span><h3>Beneath the Surface</h3><p>A diver's perspective on a changing coastline.</p></div>
             </article>
         </div>
+
+        <!-- More student films placeholder -->
+        <div class="placeholder-gallery reveal" style="--cols:3;margin-top:24px">
+            <div class="placeholder placeholder--video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg><span>More Student Films</span></div>
+            <div class="placeholder placeholder--video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg><span>More Student Films</span></div>
+            <div class="placeholder placeholder--video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z" fill="currentColor"/></svg><span>More Student Films</span></div>
+        </div>
     </div>
 </section>
 
@@ -125,6 +132,17 @@ $uri = get_template_directory_uri();
                 <div class="conf-body"><span class="video-cat">Summit</span><h3>Storytellers Convening</h3><p>A gathering of the Media Division's filmmakers and creators.</p></div>
                 <a href="<?php echo esc_url(oan_anchor_url('community', 'events')); ?>" class="conf-link">Recap →</a>
             </article>
+        </div>
+
+        <!-- Conference photo gallery placeholder -->
+        <div class="section-head reveal" style="margin-top:60px">
+            <h3 style="font-size:1.4rem;color:var(--ink-soft)">Summit &amp; Conference Gallery</h3>
+        </div>
+        <div class="placeholder-gallery reveal" style="--cols:4">
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 17l5-4 4 3 4-5 5 6"/></svg><span>Photo</span></div>
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 17l5-4 4 3 4-5 5 6"/></svg><span>Photo</span></div>
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 17l5-4 4 3 4-5 5 6"/></svg><span>Photo</span></div>
+            <div class="placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M3 17l5-4 4 3 4-5 5 6"/></svg><span>Photo</span></div>
         </div>
     </div>
 </section>
