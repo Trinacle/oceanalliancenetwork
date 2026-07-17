@@ -770,10 +770,10 @@ ul{margin:0;padding:0;list-style:none}
     linear-gradient(180deg,
       rgba(2,10,26,0) 0%,
       rgba(2,10,26,0) 8%,
-      rgba(2,10,26,.2) 20%,
-      rgba(2,10,26,.5) 40%,
-      rgba(2,10,26,.72) 65%,
-      rgba(2,10,26,.88) 100%),
+      rgba(2,10,26,.15) 20%,
+      rgba(2,10,26,.35) 40%,
+      rgba(2,10,26,.5) 65%,
+      rgba(2,10,26,.65) 100%),
     url('../img/deep-ocean-transparent.webp') center bottom / cover no-repeat;
 }
 /* glowing surface curve at the top — like looking up at the water from below */
