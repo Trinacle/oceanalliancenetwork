@@ -147,6 +147,7 @@
                                     <h5>Accountability</h5>
                                     <ul>
                                         <li><a href="<?php echo esc_url(oan_anchor_url('about', 'fiscal-sponsor')); ?>">Fiscal Sponsor &amp; Tax ID</a></li>
+                                        <li><a href="<?php echo esc_url(oan_page_url('contact')); ?>">Contact</a></li>
                                         <li><a href="<?php echo esc_url(oan_page_url('donate')); ?>">Donate</a></li>
                                     </ul>
                                 </div>
@@ -213,8 +214,8 @@
                     </div>
                 </li>
 
-                <li><a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="nav-donate <?php oan_active('donate'); ?>">Donate</a></li>
                 <li><a href="<?php echo esc_url(oan_page_url('contact')); ?>" class="<?php oan_active('contact'); ?>">Contact</a></li>
+                <li class="nav-donate-wrap"><a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="nav-donate <?php oan_active('donate'); ?>">Donate</a></li>
             </ul>
         </nav>
 

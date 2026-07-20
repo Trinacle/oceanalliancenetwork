@@ -218,7 +218,34 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
-     LOCAL LEGENDS LUAU — photo gallery
+     STRATEGIC ADVISORS (white bg, with IG reels) — moved BEFORE Luau
+     ============================================ -->
+<section id="advisor-spotlight" class="section white-section">
+    <div class="container">
+        <div class="section-head center reveal">
+            <span class="eyebrow">Strategic Advisors</span>
+            <h2 class="section-title">The names behind the <em>mission.</em></h2>
+            <p class="lead">Celebrities, scientists, and ocean advocates who lend their voice, expertise, and platform to the Ocean Alliance Network.</p>
+        </div>
+        <div class="reels-grid">
+            <a class="reel-card reveal" href="https://www.instagram.com/oceanalliancenetwork/reel/DZVLvIzBXKI/" target="_blank" rel="noopener">
+                <div class="reel-thumb"><iframe src="https://www.instagram.com/reel/DZVLvIzBXKI/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN advisor reel"></iframe></div>
+                <span class="reel-label">Featured Advisor</span>
+            </a>
+            <a class="reel-card reveal" href="https://www.instagram.com/oceanalliancenetwork/reel/DXaGLv0SPm2/" target="_blank" rel="noopener">
+                <div class="reel-thumb"><iframe src="https://www.instagram.com/reel/DXaGLv0SPm2/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN advisor reel"></iframe></div>
+                <span class="reel-label">Featured Advisor</span>
+            </a>
+            <a class="reel-card reveal" href="https://www.instagram.com/oceanalliancenetwork/reel/DXXnyqVhHbm/" target="_blank" rel="noopener">
+                <div class="reel-thumb"><iframe src="https://www.instagram.com/reel/DXXnyqVhHbm/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN advisor reel"></iframe></div>
+                <span class="reel-label">Featured Advisor</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     LOCAL LEGENDS LUAU — gallery (4 more images, no media-8)
      ============================================ -->
 <section id="luau-gallery" class="section depth-twilight">
     <div class="container wide">
@@ -231,11 +258,15 @@ $uri = get_template_directory_uri();
             <div class="gallery-item gallery-item--tall"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-2.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
             <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-3.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
             <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-5.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item gallery-item--wide"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-8.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
             <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-4.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
             <div class="gallery-item gallery-item--tall"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-6.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
             <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-10.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
             <div class="gallery-item gallery-item--wide"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-9.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-11.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item gallery-item--tall"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-12.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-13.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-14.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+            <div class="gallery-item gallery-item--wide"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-15.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
         </div>
     </div>
 </section>
@@ -345,34 +376,7 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
-     STRATEGIC ADVISORS SPOTLIGHT — reels featuring celebrities & big names
-     ============================================ -->
-<section id="advisor-spotlight" class="section depth-abyss">
-    <div class="container">
-        <div class="section-head center reveal">
-            <span class="eyebrow">Strategic Advisors</span>
-            <h2 class="section-title">The names behind the <em>mission.</em></h2>
-            <p class="lead">Celebrities, scientists, and ocean advocates who lend their voice, expertise, and platform to the Ocean Alliance Network.</p>
-        </div>
-        <div class="reels-grid">
-            <a class="reel-card reveal" href="https://www.instagram.com/oceanalliancenetwork/reel/DZVLvIzBXKI/" target="_blank" rel="noopener">
-                <div class="reel-thumb"><iframe src="https://www.instagram.com/reel/DZVLvIzBXKI/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN advisor reel"></iframe></div>
-                <span class="reel-label">Featured Advisor</span>
-            </a>
-            <a class="reel-card reveal" href="https://www.instagram.com/oceanalliancenetwork/reel/DXaGLv0SPm2/" target="_blank" rel="noopener">
-                <div class="reel-thumb"><iframe src="https://www.instagram.com/reel/DXaGLv0SPm2/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN advisor reel"></iframe></div>
-                <span class="reel-label">Featured Advisor</span>
-            </a>
-            <a class="reel-card reveal" href="https://www.instagram.com/oceanalliancenetwork/reel/DXXnyqVhHbm/" target="_blank" rel="noopener">
-                <div class="reel-thumb"><iframe src="https://www.instagram.com/reel/DXXnyqVhHbm/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN advisor reel"></iframe></div>
-                <span class="reel-label">Featured Advisor</span>
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     FOLLOW ON SOCIAL + INSTAGRAM CAROUSEL
+     FOLLOW ON SOCIAL (IG button + social links, no widget)
      ============================================ -->
 <section id="social-follow" class="section depth-abyss">
     <div class="container">
@@ -383,11 +387,6 @@ $uri = get_template_directory_uri();
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                 @oceanalliancenetwork
             </a>
-        </div>
-        <div class="ig-carousel reveal">
-            <div class="ig-carousel-track">
-                <div class="ig-slide"><iframe src="https://www.instagram.com/oceanalliancenetwork/embed/" loading="lazy" scrolling="no" allowtransparency="true" title="OAN Instagram feed"></iframe></div>
-            </div>
         </div>
         <div class="social-links-row reveal">
             <a href="https://www.instagram.com/oceanalliancenetwork/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
@@ -404,25 +403,7 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
-     MAILING LIST CTA — full-width white, right above footer
-     ============================================ -->
-<section id="mailing-cta" class="mailing-cta-section">
-    <div class="mailing-cta-inner">
-        <div class="mailing-cta-content reveal">
-            <span class="mailing-eyebrow">Join the movement</span>
-            <h2>Be part of the <em>next wave.</em></h2>
-            <p>Ocean stories, campaign updates, and ways to help — delivered monthly. No noise, just impact.</p>
-            <form class="mailing-form" onsubmit="return false;">
-                <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
-                <button type="submit">Subscribe</button>
-            </form>
-            <p class="mailing-fine">We respect your privacy. Unsubscribe anytime.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     PARTNERS
+     PARTNERS — In Good Company
      ============================================ -->
 <section id="partners" class="section depth-abyss">
     <div class="container">
@@ -434,6 +415,23 @@ $uri = get_template_directory_uri();
                 <div class="partner-logo partner-logo--text">LookOut</div>
                 <div class="partner-logo partner-logo--text">Local Legends</div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     MAILING LIST CTA — below In Good Company
+     ============================================ -->
+<section id="mailing-cta" class="mailing-cta-section">
+    <div class="mailing-cta-inner">
+        <div class="mailing-cta-content reveal">
+            <span class="mailing-eyebrow">Join the movement</span>
+            <h2>Be part of the <em>next wave.</em></h2>
+            <p>Ocean stories, campaign updates, and ways to help — delivered monthly.</p>
+            <form class="mailing-form" onsubmit="return false;">
+                <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
+                <button type="submit">Subscribe</button>
+            </form>
         </div>
     </div>
 </section>

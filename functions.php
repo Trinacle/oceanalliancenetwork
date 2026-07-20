@@ -230,6 +230,27 @@ function oan_seed_post_now() {
 add_action('init', 'oan_seed_post_now', 50);
 
 /**
+ * Ensure the Contact page exists (created once, idempotent).
+ * Covers the case where the theme was activated before page-contact.php existed.
+ */
+function oan_ensure_contact_page() {
+    if (get_option('oan_contact_page_created') === '1') return;
+    if (is_admin()) return;
+    if (!get_page_by_path('contact')) {
+        wp_insert_post(array(
+            'post_title'   => 'Contact',
+            'post_name'    => 'contact',
+            'post_status'  => 'publish',
+            'post_type'    => 'page',
+            'post_content' => '',
+            'page_template' => 'page-contact.php',
+        ));
+    }
+    update_option('oan_contact_page_created', '1');
+}
+add_action('init', 'oan_ensure_contact_page', 55);
+
+/**
  * Optional: pingback header for older clients.
  */
 function oan_pingback_header($headers) {

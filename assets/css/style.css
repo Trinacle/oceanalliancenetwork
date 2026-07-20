@@ -302,6 +302,7 @@ ul{margin:0;padding:0;list-style:none}
   transform:rotate(45deg);margin-left:2px;opacity:.6;transition:transform .3s var(--ease);
 }
 .has-mega:hover .caret{transform:rotate(225deg)}
+.nav-donate-wrap{margin-left:auto}  /* push Donate to the far right */
 .nav-donate{
   background:var(--accent)!important;color:#03241b!important;font-weight:600!important;
   box-shadow:0 6px 20px rgba(111,231,196,.25);
@@ -808,7 +809,7 @@ ul{margin:0;padding:0;list-style:none}
 
 .footer-inner{
   max-width:var(--maxw);margin:0 auto;
-  padding:180px 32px 40px;            /* tall top padding so footer blends in */
+  padding:240px 32px 40px;            /* tall top padding so footer bg shows more */
   position:relative;z-index:2;
 }
 /* CTA band — the hero moment of the footer */
@@ -992,6 +993,16 @@ ul{margin:0;padding:0;list-style:none}
 }
 @media(max-width:900px){.reels-grid{grid-template-columns:1fr;max-width:400px;margin-inline:auto}}
 
+/* White-section overrides for advisor spotlight */
+.white-section .reel-card{
+  background:#fff;border:1px solid #e0e8ef;
+  box-shadow:0 4px 20px rgba(10,42,72,.08);
+}
+.white-section .reel-card:hover{
+  border-color:#0a7bb0;box-shadow:0 12px 40px rgba(10,42,72,.15);
+}
+.white-section .reel-label{color:#0a7bb0}
+
 /* ---------- SOCIAL FOLLOW + INSTAGRAM ---------- */
 .social-follow-head{margin-bottom:48px}
 .social-follow-head .section-title{margin-bottom:20px}
@@ -1065,18 +1076,19 @@ ul{margin:0;padding:0;list-style:none}
   display:flex;gap:8px;max-width:480px;margin:0 auto;
 }
 .mailing-form input{
-  flex:1;padding:16px 22px;
-  background:#f5f8fa;border:1px solid #e0e8ef;border-radius:100px;
-  color:#0a2a48;font-size:15px;
+  flex:1;padding:18px 24px;
+  background:#f5f8fa;border:2px solid #e0e8ef;border-radius:100px;
+  color:#0a2a48;font-size:16px;font-weight:500;
 }
-.mailing-form input:focus{outline:none;border-color:#0a7bb0;background:#fff}
-.mailing-form input::placeholder{color:#8a9aab}
+.mailing-form input:focus{outline:none;border-color:#0a7bb0;background:#fff;box-shadow:0 0 0 4px rgba(10,123,176,.1)}
+.mailing-form input::placeholder{color:#8a9aab;font-weight:400}
 .mailing-form button{
-  padding:16px 32px;border-radius:100px;
-  background:#0a2a48;color:#fff;font-weight:600;font-size:15px;
+  padding:18px 40px;border-radius:100px;
+  background:#0a2a48;color:#fff;font-weight:700;font-size:16px;
   white-space:nowrap;transition:all .3s var(--ease-out);
+  box-shadow:0 8px 24px rgba(10,42,72,.2);
 }
-.mailing-form button:hover{background:#0a7bb0;transform:translateY(-2px)}
+.mailing-form button:hover{background:#0a7bb0;transform:translateY(-3px);box-shadow:0 12px 32px rgba(10,123,176,.3)}
 .mailing-fine{font-size:12px;color:#8a9aab;margin-top:16px}
 @media(max-width:540px){
   .mailing-form{flex-direction:column}
