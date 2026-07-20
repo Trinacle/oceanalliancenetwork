@@ -33,7 +33,7 @@
         <!-- main grid -->
         <div class="footer-grid">
             <div class="footer-brand-col">
-                <img class="brand-logo" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/oan-logo-white.png" alt="<?php esc_attr_e('Ocean Alliance Network', 'ocean-alliance'); ?>" />
+                <img class="brand-logo" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/img/Ocean-Alliance-Network-Logo-Wide-white.png" alt="<?php esc_attr_e('Ocean Alliance Network', 'ocean-alliance'); ?>" />
                 <p class="footer-tag">Ocean Alliance Network</p>
                 <p class="footer-mission">A collaborative initiative bringing together leaders, innovators, and communities to protect our oceans — from the surface to the deep.</p>
                 <div class="footer-social">
