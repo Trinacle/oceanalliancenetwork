@@ -36,12 +36,12 @@ $uri = get_template_directory_uri();
             <div class="info-card-body">
                 <span class="eyebrow">Fiscal Sponsor &amp; Tax Information</span>
                 <h2 class="section-title">Donate with full confidence.</h2>
-                <p class="lead">Ocean Alliance Network operates under a verified fiscal sponsor, making every contribution fully tax-deductible to the extent allowed by law. We are committed to radical transparency in how funds are received and spent.</p>
+                <p class="lead">Ocean Alliance Network is a fiscally sponsored initiative under the <strong>Sustain OC Foundation</strong>, a 501(c)(3) nonprofit. Every contribution is fully tax-deductible to the extent allowed by law.</p>
 
                 <div class="tax-grid">
                     <div class="tax-item"><span class="tax-label">501(c)(3) Status</span><span class="tax-value">Verified</span></div>
-                    <div class="tax-item"><span class="tax-label">Fiscal Sponsor</span><span class="tax-value">On file</span></div>
-                    <div class="tax-item"><span class="tax-label">EIN / Tax ID</span><span class="tax-value">Available on request</span></div>
+                    <div class="tax-item"><span class="tax-label">Fiscal Sponsor</span><span class="tax-value">Sustain OC Foundation</span></div>
+                    <div class="tax-item"><span class="tax-label">Tax ID (EIN)</span><span class="tax-value">27-4353381</span></div>
                 </div>
                 <p class="tax-note">Tax ID documentation is provided to donors upon gift confirmation and is available to grant-makers and institutional partners on request. <a href="<?php echo esc_url(oan_page_url('donate')); ?>">Make a donation →</a></p>
             </div>
@@ -58,8 +58,8 @@ $uri = get_template_directory_uri();
     </div>
 </section>
 
-<!-- STRATEGIC ADVISORS -->
-<section id="strategic-advisors" class="section depth-twilight">
+<!-- STRATEGIC ADVISORS (merged — single section, white bg) -->
+<section id="strategic-advisors" class="section white-section">
     <div class="container">
         <div class="section-head center reveal">
             <span class="eyebrow">Leadership</span>
@@ -69,44 +69,38 @@ $uri = get_template_directory_uri();
         <div class="people-grid">
             <article class="person reveal">
                 <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Strategic Advisor</h4><p>Title &amp; organization</p>
+                <h4>Advisor Name</h4><p>Title &amp; organization</p>
             </article>
             <article class="person reveal">
                 <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Strategic Advisor</h4><p>Title &amp; organization</p>
+                <h4>Advisor Name</h4><p>Title &amp; organization</p>
             </article>
             <article class="person reveal">
                 <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Strategic Advisor</h4><p>Title &amp; organization</p>
+                <h4>Advisor Name</h4><p>Title &amp; organization</p>
+            </article>
+            <article class="person reveal">
+                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
+                <h4>Advisor Name</h4><p>Title &amp; organization</p>
+            </article>
+            <article class="person reveal">
+                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
+                <h4>Advisor Name</h4><p>Title &amp; organization</p>
+            </article>
+            <article class="person reveal">
+                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
+                <h4>Advisor Name</h4><p>Title &amp; organization</p>
+            </article>
+            <article class="person reveal">
+                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
+                <h4>Advisor Name</h4><p>Title &amp; organization</p>
+            </article>
+            <article class="person reveal">
+                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
+                <h4>Advisor Name</h4><p>Title &amp; organization</p>
             </article>
         </div>
         <p class="grid-note reveal">Full biographies forthcoming. <a href="<?php echo esc_url(oan_page_url('donate')); ?>">Support our work →</a></p>
-    </div>
-</section>
-
-<!-- BOARD OF ADVISORS -->
-<section id="advisors" class="section depth-midnight">
-    <div class="container">
-        <div class="section-head center reveal">
-            <span class="eyebrow">Board of Advisors</span>
-            <h2 class="section-title">A council of experts.</h2>
-            <p class="lead">Scientists, filmmakers, and community leaders who lend their expertise to every program we run.</p>
-        </div>
-        <div class="advisors-wall reveal">
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-            <span class="advisor-chip">Advisor Name</span>
-        </div>
-        <p class="grid-note reveal">Names listed pending final board approval.</p>
     </div>
 </section>
 

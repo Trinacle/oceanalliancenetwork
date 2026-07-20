@@ -26,12 +26,13 @@ $uri = get_template_directory_uri();
     </div>
 
     <div class="hero-content reveal">
-        <span class="eyebrow">A movement for the blue planet</span>
+        <span class="eyebrow">Innovation, Collaboration &amp; Conservation</span>
         <h1 class="hero-title">
-            Uniting to <em>protect</em><br/>
-            our oceans.
+            Uniting Leaders for<br/>
+            Ocean <em>Conservation</em>,<br/>
+            Innovation &amp; Impact.
         </h1>
-        <p class="hero-sub">The Ocean Alliance Network brings together leaders, innovators, influencers, and communities to protect our oceans — bridging conservation and action through storytelling, technology, and strategic partnerships.</p>
+        <p class="hero-sub">OAN brings together coastal stakeholders, educators, innovators, investors, influencers, and community leaders to protect our oceans, improve water quality, and build a thriving Blue Economy.</p>
         <div class="hero-cta">
             <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="btn btn--primary">Dive in — Donate</a>
             <a href="#mission" class="btn btn--ghost">Explore the depths</a>
@@ -52,45 +53,45 @@ $uri = get_template_directory_uri();
         <div class="mission-layout">
             <div class="mission-intro reveal">
                 <span class="eyebrow">Our mission</span>
-                <h2 class="section-title">A collaborative initiative to <em>protect our oceans.</em></h2>
+                <h2 class="section-title">Smart Seas, <em>Safe Ocean.</em></h2>
                 <p class="lead">
-                    The Ocean Alliance Network (OAN) brings together leaders, innovators, influencers, and communities to protect our oceans. We bridge ocean conservation and action through storytelling, technology, and strategic partnerships.
+                    To advance Ocean Conservation, Empower Future Leaders and build Sustainable Communities through collaboration, innovation, education, and storytelling.
                 </p>
             </div>
             <div class="mission-focus reveal">
                 <div class="focus-item">
                     <span class="focus-num">01</span>
                     <div class="focus-body">
-                        <strong>Amplify</strong>
-                        <p>Ocean conservation through film, media, and storytelling.</p>
+                        <strong>Protect Oceans</strong>
+                        <p>Protecting water quality, reducing TMDL pollutants, plastic pollution, and DDT impacts on coastlines.</p>
                     </div>
                 </div>
                 <div class="focus-item">
                     <span class="focus-num">02</span>
                     <div class="focus-body">
-                        <strong>Engage</strong>
-                        <p>Communities, influencers, and the next generation of ocean stewards.</p>
+                        <strong>Empower Students</strong>
+                        <p>Environmental leadership, storytelling programs, and career pathways in sustainability, media, and science.</p>
                     </div>
                 </div>
                 <div class="focus-item">
                     <span class="focus-num">03</span>
                     <div class="focus-body">
-                        <strong>Advance</strong>
-                        <p>Research and technology that drives measurable protection.</p>
+                        <strong>Ocean Innovation</strong>
+                        <p>Advancing AI and emerging technologies to prevent whale strikes and support the Blue Economy.</p>
                     </div>
                 </div>
                 <div class="focus-item">
                     <span class="focus-num">04</span>
                     <div class="focus-body">
-                        <strong>Build</strong>
-                        <p>Strategic partnerships across science, industry, and policy.</p>
+                        <strong>Community Engagement</strong>
+                        <p>Curated events that inspire collaboration, from Local Legends Luau to Tide to Table experiences.</p>
                     </div>
                 </div>
                 <div class="focus-item">
                     <span class="focus-num">05</span>
                     <div class="focus-body">
-                        <strong>Mobilize</strong>
-                        <p>Action through summits, campaigns, and ambassador programs.</p>
+                        <strong>Storytelling</strong>
+                        <p>The OAN Media Division and LEAF student film series — amplifying voices for ocean conservation.</p>
                     </div>
                 </div>
             </div>
@@ -398,6 +399,24 @@ $uri = get_template_directory_uri();
             <a href="#" class="social-link" aria-label="LinkedIn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
             </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     MAILING LIST CTA — full-width white, right above footer
+     ============================================ -->
+<section id="mailing-cta" class="mailing-cta-section">
+    <div class="mailing-cta-inner">
+        <div class="mailing-cta-content reveal">
+            <span class="mailing-eyebrow">Join the movement</span>
+            <h2>Be part of the <em>next wave.</em></h2>
+            <p>Ocean stories, campaign updates, and ways to help — delivered monthly. No noise, just impact.</p>
+            <form class="mailing-form" onsubmit="return false;">
+                <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="mailing-fine">We respect your privacy. Unsubscribe anytime.</p>
         </div>
     </div>
 </section>

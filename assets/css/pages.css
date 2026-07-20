@@ -71,6 +71,24 @@
 .person p{font-size:13px;color:var(--ink-soft);margin:0}
 @media(max-width:760px){.people-grid{grid-template-columns:1fr}}
 
+/* White-section overrides for people-grid (About page) */
+.white-section .people-grid{grid-template-columns:repeat(4,1fr);gap:24px}
+.white-section .person{
+  background:#fff;border:1px solid #e0e8ef;
+  box-shadow:0 4px 20px rgba(10,42,72,.06);
+}
+.white-section .person:hover{
+  border-color:#0a7bb0;
+  box-shadow:0 12px 40px rgba(10,42,72,.12);
+}
+.white-section .person h4{color:#0a2a48}
+.white-section .person p{color:#44566a}
+.white-section .person .placeholder{background:#f5f8fa;border-color:#d0dae3;color:#8a9aab}
+.white-section .grid-note{color:#8a9aab}
+.white-section .grid-note a{color:#0a7bb0}
+@media(max-width:900px){.white-section .people-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.white-section .people-grid{grid-template-columns:1fr}}
+
 /* advisor wall */
 .advisors-wall{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
 .advisor-chip{

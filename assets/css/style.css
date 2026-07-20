@@ -774,7 +774,7 @@ ul{margin:0;padding:0;list-style:none}
       rgba(2,10,26,.35) 40%,
       rgba(2,10,26,.5) 65%,
       rgba(2,10,26,.65) 100%),
-    url('../img/deep-ocean-transparent.webp') center bottom / cover no-repeat;
+    url('../img/deep-ocean.webp') center bottom / cover no-repeat;
 }
 /* glowing surface curve at the top — like looking up at the water from below */
 .footer-surface{
@@ -1033,4 +1033,52 @@ ul{margin:0;padding:0;list-style:none}
 }
 @media(max-width:600px){
   .ig-slide iframe{min-height:440px}
+}
+
+/* ---------- MAILING LIST CTA (full-width white, above footer) ---------- */
+.mailing-cta-section{
+  width:100%;background:#fff;color:#0a2a48;
+  position:relative;z-index:2;padding:0;
+}
+.mailing-cta-inner{
+  max-width:var(--maxw);margin:0 auto;
+  padding:100px 32px;
+}
+.mailing-cta-content{
+  text-align:center;max-width:640px;margin:0 auto;
+}
+.mailing-eyebrow{
+  display:inline-block;font-size:12px;font-weight:600;
+  letter-spacing:.22em;text-transform:uppercase;color:#0a7bb0;
+  margin-bottom:18px;
+}
+.mailing-cta-content h2{
+  font-family:var(--serif);font-size:clamp(2rem,5vw,3.6rem);
+  line-height:1.05;letter-spacing:-.02em;color:#0a2a48;
+  margin:0 0 16px;
+}
+.mailing-cta-content h2 em{color:#0a7bb0}
+.mailing-cta-content > p{
+  font-size:1.1rem;color:#44566a;margin:0 auto 32px;max-width:50ch;
+}
+.mailing-form{
+  display:flex;gap:8px;max-width:480px;margin:0 auto;
+}
+.mailing-form input{
+  flex:1;padding:16px 22px;
+  background:#f5f8fa;border:1px solid #e0e8ef;border-radius:100px;
+  color:#0a2a48;font-size:15px;
+}
+.mailing-form input:focus{outline:none;border-color:#0a7bb0;background:#fff}
+.mailing-form input::placeholder{color:#8a9aab}
+.mailing-form button{
+  padding:16px 32px;border-radius:100px;
+  background:#0a2a48;color:#fff;font-weight:600;font-size:15px;
+  white-space:nowrap;transition:all .3s var(--ease-out);
+}
+.mailing-form button:hover{background:#0a7bb0;transform:translateY(-2px)}
+.mailing-fine{font-size:12px;color:#8a9aab;margin-top:16px}
+@media(max-width:540px){
+  .mailing-form{flex-direction:column}
+  .mailing-form button{width:100%}
 }
