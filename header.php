@@ -214,6 +214,7 @@
                 </li>
 
                 <li><a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="nav-donate <?php oan_active('donate'); ?>">Donate</a></li>
+                <li><a href="<?php echo esc_url(oan_page_url('contact')); ?>" class="<?php oan_active('contact'); ?>">Contact</a></li>
             </ul>
         </nav>
 
@@ -247,6 +248,7 @@
             <a href="<?php echo esc_url(oan_anchor_url('community', 'events')); ?>">Past Events</a>
         </details>
         <a href="<?php echo esc_url(oan_page_url('donate')); ?>" class="m-donate">Donate</a>
+        <a href="<?php echo esc_url(oan_page_url('contact')); ?>">Contact</a>
     </nav>
 </div>
 

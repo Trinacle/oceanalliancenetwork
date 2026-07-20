@@ -54,8 +54,8 @@
                 <h6>Get Involved</h6>
                 <a href="<?php echo esc_url(oan_anchor_url('community', 'ambassadors')); ?>">Become an Ambassador</a>
                 <a href="<?php echo esc_url(oan_page_url('donate')); ?>">Donate</a>
+                <a href="<?php echo esc_url(oan_page_url('contact')); ?>">Contact</a>
                 <a href="<?php echo esc_url(oan_anchor_url('about', 'fiscal-sponsor')); ?>">Fiscal Sponsor &amp; Tax ID</a>
-                <a href="<?php echo esc_url(oan_anchor_url('community', 'blog')); ?>">Read the Blog</a>
             </div>
             <div class="footer-col">
                 <h6>Watch</h6>

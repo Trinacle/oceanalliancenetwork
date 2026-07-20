@@ -132,6 +132,7 @@ function oan_on_activate() {
         'media'     => __('Media', 'ocean-alliance'),
         'community' => __('Community', 'ocean-alliance'),
         'donate'    => __('Donate', 'ocean-alliance'),
+        'contact'   => __('Contact', 'ocean-alliance'),
     );
 
     foreach ($pages as $slug => $title) {
