@@ -22,6 +22,21 @@
     <span class="footer-orb footer-orb--4" aria-hidden="true"></span>
     <span class="footer-orb footer-orb--5" aria-hidden="true"></span>
 
+    <!-- Mailing list CTA — appears on every page right above footer CTA -->
+    <section id="mailing-cta" class="mailing-cta-section">
+        <div class="mailing-cta-inner">
+            <div class="mailing-cta-content reveal">
+                <span class="mailing-eyebrow">Join the movement</span>
+                <h2>Be part of the <em>next wave.</em></h2>
+                <p>Ocean stories, campaign updates, and ways to help — delivered monthly.</p>
+                <form class="mailing-form" onsubmit="return false;">
+                    <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <div class="footer-inner">
         <!-- CTA band — the hero moment -->
         <div class="footer-cta reveal">

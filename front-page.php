@@ -419,21 +419,5 @@ $uri = get_template_directory_uri();
     </div>
 </section>
 
-<!-- ============================================
-     MAILING LIST CTA — below In Good Company
-     ============================================ -->
-<section id="mailing-cta" class="mailing-cta-section">
-    <div class="mailing-cta-inner">
-        <div class="mailing-cta-content reveal">
-            <span class="mailing-eyebrow">Join the movement</span>
-            <h2>Be part of the <em>next wave.</em></h2>
-            <p>Ocean stories, campaign updates, and ways to help — delivered monthly.</p>
-            <form class="mailing-form" onsubmit="return false;">
-                <input type="email" placeholder="Enter your email address" aria-label="Email address" required />
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-    </div>
-</section>
 
 <?php get_footer(); ?>
