@@ -278,7 +278,7 @@ ul{margin:0;padding:0;list-style:none}
 .brand-mark{width:42px;height:42px;color:var(--accent);transition:transform .6s var(--ease)}
 .brand-logo{height:auto;width:150px;max-width:none;filter:none;transition:transform .6s var(--ease)}
 /* Footer logo is already white — bigger */
-.footer-brand-col .brand-logo{height:auto;width:120px;margin-bottom:20px;filter:none}
+.footer-brand-col .brand-logo{height:auto;width:180px;margin-bottom:20px;filter:none}
 .brand:hover .brand-mark{transform:rotate(-8deg) scale(1.05)}
 .brand:hover .brand-logo{transform:scale(1.03)}
 @media(max-width:540px){.brand-logo{height:38px}}
