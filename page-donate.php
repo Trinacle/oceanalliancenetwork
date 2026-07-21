@@ -10,7 +10,7 @@ get_header();
 $uri = get_template_directory_uri();
 ?>
 
-<section class="page-hero">
+<section class="page-hero page-hero--compact">
     <div class="container narrow center">
         <span class="eyebrow reveal">Support the ocean</span>
         <h1 class="reveal">Your gift <em>keeps the ocean alive</em>.</h1>
