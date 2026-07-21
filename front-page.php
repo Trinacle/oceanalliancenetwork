@@ -80,49 +80,107 @@ $uri = get_template_directory_uri();
      ============================================ -->
 <section id="mission" class="section depth-sunlight">
     <div class="container">
-        <div class="mission-layout">
-            <div class="mission-intro reveal">
-                <span class="eyebrow">Our mission</span>
-                <h2 class="section-title">Smart Seas, <em>Safe Ocean.</em></h2>
-                <p class="lead">
-                    To advance Ocean Conservation, Empower Future Leaders and build Sustainable Communities through collaboration, innovation, education, and storytelling.
-                </p>
+        <div class="mission-intro reveal" style="text-align:center;max-width:700px;margin:0 auto 60px">
+            <span class="eyebrow">Our mission</span>
+            <h2 class="section-title">Smart Seas, <em>Safe Ocean.</em></h2>
+            <p class="lead">
+                To advance Ocean Conservation, Empower Future Leaders and build Sustainable Communities through collaboration, innovation, education, and storytelling.
+            </p>
+        </div>
+    </div>
+
+    <!-- Focus area 1: Protect Oceans -->
+    <div class="focus-section reveal">
+        <div class="container">
+            <div class="focus-row">
+                <div class="focus-img"><img src="<?php echo esc_url($uri); ?>/assets/img/focus-protect-oceans.jpg" alt="Protect Oceans" loading="lazy"/></div>
+                <div class="focus-content">
+                    <span class="focus-tag">01 — Protect Oceans</span>
+                    <h3>Protect Oceans. Empower Students. Create Lasting Impact.</h3>
+                    <p>OAN supports partnerships and programs that protect local waterways and advance healthier coastal ecosystems.</p>
+                    <ul class="focus-bullets">
+                        <li>Protecting water quality in coastal and urban waterways</li>
+                        <li>Reducing TMDL pollutants, including copper-based boat paint contamination</li>
+                        <li>Reducing plastic pollution and marine debris</li>
+                        <li>Reducing impacts of DDT on Southern California coastline</li>
+                        <li>Supporting innovative technologies that improve ocean and watershed health</li>
+                    </ul>
+                </div>
             </div>
-            <div class="mission-focus reveal">
-                <div class="focus-item">
-                    <span class="focus-num">01</span>
-                    <div class="focus-body">
-                        <strong>Protect Oceans</strong>
-                        <p>Protecting water quality, reducing TMDL pollutants, plastic pollution, and DDT impacts on coastlines.</p>
-                    </div>
+        </div>
+    </div>
+
+    <!-- Focus area 2: Ocean Innovation -->
+    <div class="focus-section reveal">
+        <div class="container">
+            <div class="focus-row focus-row--reverse">
+                <div class="focus-img"><img src="<?php echo esc_url($uri); ?>/assets/img/focus-ocean-innovation.jpg" alt="Ocean Innovation" loading="lazy"/></div>
+                <div class="focus-content">
+                    <span class="focus-tag">02 — Ocean Innovation</span>
+                    <h3>Advancing solutions for a sustainable Blue Economy</h3>
+                    <p>OAN helps connect innovators, investors, researchers, and community leaders to advance practical solutions for ocean conservation.</p>
+                    <ul class="focus-bullets">
+                        <li>Advancing AI and emerging technologies to prevent whale strikes</li>
+                        <li>Supporting clean marine transportation and sustainable ocean industries</li>
+                        <li>Showcasing solutions that strengthen the Blue Economy</li>
+                    </ul>
                 </div>
-                <div class="focus-item">
-                    <span class="focus-num">02</span>
-                    <div class="focus-body">
-                        <strong>Empower Students</strong>
-                        <p>Environmental leadership, storytelling programs, and career pathways in sustainability, media, and science.</p>
-                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Focus area 3: Youth Leadership -->
+    <div class="focus-section reveal">
+        <div class="container">
+            <div class="focus-row">
+                <div class="focus-img"><img src="<?php echo esc_url($uri); ?>/assets/img/focus-youth-leadership.jpg" alt="Youth Leadership" loading="lazy"/></div>
+                <div class="focus-content">
+                    <span class="focus-tag">03 — Empower Students</span>
+                    <h3>Youth Leadership &amp; Workforce Development</h3>
+                    <p>OAN empowers students through environmental education, storytelling, mentorship, and hands-on career experiences.</p>
+                    <ul class="focus-bullets">
+                        <li>Environmental leadership and storytelling programs</li>
+                        <li>Career pathways in sustainability, media, science, and technology</li>
+                        <li>Student access to industry leaders, mentors, and real-world opportunities</li>
+                    </ul>
                 </div>
-                <div class="focus-item">
-                    <span class="focus-num">03</span>
-                    <div class="focus-body">
-                        <strong>Ocean Innovation</strong>
-                        <p>Advancing AI and emerging technologies to prevent whale strikes and support the Blue Economy.</p>
-                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Focus area 4: Community Engagement -->
+    <div class="focus-section reveal">
+        <div class="container">
+            <div class="focus-row focus-row--reverse">
+                <div class="focus-img"><img src="<?php echo esc_url($uri); ?>/assets/img/focus-community.jpg" alt="Community Engagement" loading="lazy"/></div>
+                <div class="focus-content">
+                    <span class="focus-tag">04 — Community Engagement</span>
+                    <h3>Curated events that inspire collaboration and action</h3>
+                    <p>OAN produces and supports ocean conservation events that bring together stakeholders, students, media, businesses, and local communities.</p>
+                    <ul class="focus-bullets">
+                        <li>Curated events that inspire collaboration and action</li>
+                        <li>Educational experiences that connect communities to ocean solutions</li>
+                        <li>Partnerships that turn awareness into measurable impact</li>
+                    </ul>
                 </div>
-                <div class="focus-item">
-                    <span class="focus-num">04</span>
-                    <div class="focus-body">
-                        <strong>Community Engagement</strong>
-                        <p>Curated events that inspire collaboration, from Local Legends Luau to Tide to Table experiences.</p>
-                    </div>
-                </div>
-                <div class="focus-item">
-                    <span class="focus-num">05</span>
-                    <div class="focus-body">
-                        <strong>Storytelling</strong>
-                        <p>The OAN Media Division and LEAF student film series — amplifying voices for ocean conservation.</p>
-                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Focus area 5: Storytelling / Media Division -->
+    <div class="focus-section reveal">
+        <div class="container">
+            <div class="focus-row">
+                <div class="focus-img"><img src="<?php echo esc_url($uri); ?>/assets/img/focus-media-division.jpg" alt="OAN Media Division" loading="lazy"/></div>
+                <div class="focus-content">
+                    <span class="focus-tag">05 — Storytelling</span>
+                    <h3>Ocean Alliance Network Media Division</h3>
+                    <p>The OAN Media Division creates opportunities for emerging storytellers and young talent to cover influential events, interview industry leaders, and produce content that inspires environmental awareness and action.</p>
+                    <ul class="focus-bullets">
+                        <li>Media training, mentorship, and hands-on experiences</li>
+                        <li>LEAF Student Impact Series — Leaders of Environmental Action Films</li>
+                        <li>Coverage of events like Roth Capital, Billabong XXL Awards, and pro surf contests</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -245,31 +303,39 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
-     LOCAL LEGENDS LUAU — gallery (4 more images, no media-8)
+     EVENT PHOTO GALLERY — clickable lightbox, lazy-loaded
      ============================================ -->
-<section id="luau-gallery" class="section depth-twilight">
+<section id="event-gallery" class="section depth-twilight">
     <div class="container wide">
         <div class="section-head center reveal">
-            <span class="eyebrow">Local Legends Live Luau</span>
-            <h2 class="section-title">A night celebrating ocean champions.</h2>
-            <p class="lead">Our flagship gathering brought together advisors, ambassadors, filmmakers, and community leaders for an evening of storytelling, music, and commitment to the ocean.</p>
+            <span class="eyebrow">Event Gallery</span>
+            <h2 class="section-title">Moments that <em>matter.</em></h2>
+            <p class="lead">From Local Legends Luau to Ocean Alliance Summits, Tide to Table, and student film premieres — these are the gatherings that bring our mission to life.</p>
         </div>
-        <div class="gallery-grid reveal">
-            <div class="gallery-item gallery-item--tall"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-2.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-3.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-5.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-4.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item gallery-item--tall"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-6.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-10.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item gallery-item--wide"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-9.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-11.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item gallery-item--tall"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-12.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-13.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-14.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
-            <div class="gallery-item gallery-item--wide"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-15.jpg" alt="Local Legends Live Luau" loading="lazy"/></div>
+        <div class="event-gallery-grid reveal" id="event-gallery-grid">
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-2.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-2.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-3.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-3.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-5.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-5.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-4.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-4.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-6.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-6.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-9.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-9.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-10.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-10.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-11.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-11.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-12.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-12.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-13.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-13.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-14.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-14.jpg" alt="OAN event" loading="lazy"/></button>
+            <button class="event-gallery-item" data-full="<?php echo esc_url($uri); ?>/assets/img/oan-media-15.jpg"><img src="<?php echo esc_url($uri); ?>/assets/img/oan-media-15.jpg" alt="OAN event" loading="lazy"/></button>
         </div>
     </div>
 </section>
+
+<!-- Lightbox overlay -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8249;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next">&#8250;</button>
+</div>
 
 <!-- ============================================
      2026 SUMMIT — save the date

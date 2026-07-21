@@ -718,31 +718,81 @@ ul{margin:0;padding:0;list-style:none}
   isolation:isolate;
 }
 
-/* ---------- MISSION (redesigned — two-column for readability) ---------- */
-.mission-layout{
-  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;
+/* ---------- FOCUS SECTIONS (image + content rows) ---------- */
+.focus-section{padding:48px 0}
+.focus-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
 }
-.mission-intro .section-title{margin-bottom:20px}
-.mission-intro .lead{margin:0}
-.mission-focus{display:flex;flex-direction:column;gap:0}
-.focus-item{
-  display:flex;align-items:flex-start;gap:20px;
-  padding:20px 0;border-bottom:1px solid var(--line);
+.focus-row--reverse .focus-img{order:2}
+.focus-img{
+  border-radius:20px;overflow:hidden;border:1px solid var(--line);
+  aspect-ratio:3/2;
 }
-.focus-item:last-child{border-bottom:0}
-.focus-num{
-  flex-shrink:0;font-family:var(--serif);font-size:1.4rem;
-  color:var(--accent);opacity:.6;line-height:1;
-  min-width:36px;padding-top:2px;
+.focus-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease-out)}
+.focus-section:hover .focus-img img{transform:scale(1.05)}
+.focus-content{padding:0 8px}
+.focus-tag{
+  display:inline-block;font-size:11px;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:14px;
 }
-.focus-body strong{
-  display:block;font-size:1.05rem;color:var(--ink);font-weight:600;
-  margin-bottom:2px;
+.focus-content h3{font-size:clamp(1.4rem,2.5vw,1.9rem);margin-bottom:12px}
+.focus-content > p{font-size:15px;color:var(--ink-soft);margin:0 0 16px;line-height:1.6}
+.focus-bullets{list-style:none;padding:0;margin:0}
+.focus-bullets li{
+  padding:8px 0 8px 24px;position:relative;font-size:14px;color:var(--ink-soft);
+  border-bottom:1px solid var(--line);line-height:1.5;
 }
-.focus-body p{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.5}
-@media(max-width:900px){
-  .mission-layout{grid-template-columns:1fr;gap:40px}
+.focus-bullets li:last-child{border-bottom:0}
+.focus-bullets li::before{
+  content:"";position:absolute;left:0;top:14px;width:8px;height:8px;
+  border-radius:50%;background:var(--accent);
 }
+@media(max-width:800px){
+  .focus-row{grid-template-columns:1fr;gap:24px}
+  .focus-row--reverse .focus-img{order:0}
+}
+
+/* ---------- EVENT GALLERY + LIGHTBOX ---------- */
+.event-gallery-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;
+}
+.event-gallery-item{
+  border:0;padding:0;cursor:pointer;border-radius:12px;overflow:hidden;
+  background:var(--glass);position:relative;aspect-ratio:1;
+  transition:transform .4s var(--ease-out);
+}
+.event-gallery-item:hover{transform:scale(1.03)}
+.event-gallery-item img{width:100%;height:100%;object-fit:cover}
+.event-gallery-item::after{
+  content:"+";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:2rem;color:#fff;background:rgba(0,0,0,.3);opacity:0;transition:opacity .3s;
+}
+.event-gallery-item:hover::after{opacity:1}
+@media(max-width:700px){.event-gallery-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){.event-gallery-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);
+  display:none;align-items:center;justify-content:center;
+  backdrop-filter:blur(8px);
+}
+.lightbox.open{display:flex}
+.lightbox-img{
+  max-width:90vw;max-height:85vh;border-radius:8px;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+.lightbox-close,.lightbox-prev,.lightbox-next{
+  position:absolute;background:rgba(255,255,255,.1);color:#fff;
+  border:1px solid rgba(255,255,255,.2);border-radius:50%;
+  width:52px;height:52px;font-size:1.8rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s;z-index:1;
+}
+.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{background:rgba(255,255,255,.25)}
+.lightbox-close{top:24px;right:24px}
+.lightbox-prev{left:24px;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:24px;top:50%;transform:translateY(-50%)}
 .parallax-bg{
   position:absolute;inset:-10% 0;
   background-size:cover;background-position:center;
