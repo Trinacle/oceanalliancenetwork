@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['oan_contact'])) {
 }
 ?>
 
-<!-- PAGE HERO -->
-<section class="page-hero">
+<!-- PAGE HERO (compact — no video) -->
+<section class="page-hero page-hero--compact">
     <div class="container narrow center">
         <span class="eyebrow reveal">Contact</span>
         <h1 class="reveal">Let's <em>connect.</em></h1>
