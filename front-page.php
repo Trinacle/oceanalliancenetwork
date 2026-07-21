@@ -17,7 +17,7 @@ $uri = get_template_directory_uri();
     <div class="hero-bg" aria-hidden="true">
         <div class="hero-yt-wrapper">
             <iframe
-                src="https://www.youtube-nocookie.com/embed/tADnCEpbPI8?autoplay=1&mute=1&start=3233&loop=1&playlist=tADnCEpbPI8&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
+                src="https://www.youtube-nocookie.com/embed/tADnCEpbPI8?autoplay=1&mute=1&start=3319&loop=1&playlist=tADnCEpbPI8&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1"
                 title=""
                 frameborder="0"
                 allow="autoplay; encrypted-media"

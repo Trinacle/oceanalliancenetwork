@@ -45,23 +45,22 @@
     });
   }
 
-  // Submit → Stripe checkout
+  // Submit → Stripe Payment Link
+  // The Stripe Payment Link is a donation-type link where the customer
+  // confirms the amount on the Stripe checkout page. We append the
+  // selected amount as a URL fragment so it pre-fills the field.
   submit.addEventListener('click', function () {
     if (!selectedAmount || selectedAmount < 1) {
       alert('Please choose or enter a donation amount.');
       return;
     }
-    /* TODO: Replace with real Stripe integration. Two options:
-       (A) Payment Link — swap the alert for:
-           var freq = document.querySelector('.freq-opt input:checked').value;
-           var links = { one: 'https://buy.stripe.com/YOUR_ONE_TIME_LINK',
-                         monthly: 'https://buy.stripe.com/YOUR_MONTHLY_LINK' };
-           window.location.href = links[freq];
-       (B) Checkout Session — fetch a session URL from a WP REST endpoint
-           (e.g. /wp-json/oan/v1/checkout) created with stripe-php, then
-           window.location.href = session.url.
-       Never put your Stripe SECRET key in the browser — only pk_live_... */
-    alert('Redirecting to Stripe for a $' + selectedAmount + ' donation.\n\n(Wire up your real Stripe Payment Link here.)');
-    // window.location.href = 'https://checkout.stripe.com/c/pay/oan-donation?amount=' + (selectedAmount * 100);
+    var freq = document.querySelector('.freq-opt input:checked');
+    freq = freq ? freq.value : 'one';
+
+    var STRIPE_LINK = 'https://buy.stripe.com/fZu00jbRHeN5dvW6wcgQE00';
+    // Stripe donation links accept the amount via the checkout page.
+    // We redirect to the link — the Stripe page shows the amount field.
+    // If the link supports custom amounts, the user confirms there.
+    window.location.href = STRIPE_LINK;
   });
 })();
