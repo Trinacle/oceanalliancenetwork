@@ -67,14 +67,4 @@ $uri = get_template_directory_uri();
     </div>
 </section>
 
-<section class="section depth-abyss">
-    <div class="container narrow center">
-        <div class="reveal">
-            <h2 class="section-title">Prefer to give another way?</h2>
-            <p class="lead" style="margin:18px auto 32px">Mail a check, give stock, or explore corporate partnership. Every form of support moves the mission forward.</p>
-            <a href="mailto:hello@oceanalliancenetwork.org" class="btn btn--ghost">Contact us</a>
-        </div>
-    </div>
-</section>
-
 <?php get_footer(); ?>
