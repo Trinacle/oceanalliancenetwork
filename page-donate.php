@@ -67,22 +67,6 @@ $uri = get_template_directory_uri();
     </div>
 </section>
 
-<!-- TIERS (from flyer) -->
-<section class="section depth-midnight">
-    <div class="container narrow">
-        <div class="section-head center reveal">
-            <span class="eyebrow">Founding Supporter Circle</span>
-            <h2 class="section-title">Be among the first.</h2>
-            <p class="lead">An exclusive circle of founding supporters powering the launch of the Ocean Alliance Network Media Division.</p>
-        </div>
-        <div class="tiers">
-            <div class="tier reveal"><span class="tier-name">Tide</span><span class="tier-amount">$100</span><ul><li>Founding supporter recognition</li><li>Digital supporter badge</li><li>Behind-the-scenes updates</li></ul><a href="https://buy.stripe.com/fZu00jbRHeN5dvW6wcgQE00" class="btn btn--ghost">Give</a></div>
-            <div class="tier tier--featured reveal"><span class="tier-flag">Most popular</span><span class="tier-name">Current</span><span class="tier-amount">$500</span><ul><li>Everything in Tide</li><li>Name in film credits</li><li>Invitation to annual summit</li><li>Limited-edition print</li></ul><a href="https://buy.stripe.com/fZu00jbRHeN5dvW6wcgQE00" class="btn btn--primary">Give</a></div>
-            <div class="tier reveal"><span class="tier-name">Deep Blue</span><span class="tier-amount">$2,500</span><ul><li>Everything in Current</li><li>Executive producer credit</li><li>Private screening invite</li><li>Direct line to the team</li></ul><a href="https://buy.stripe.com/fZu00jbRHeN5dvW6wcgQE00" class="btn btn--ghost">Give</a></div>
-        </div>
-    </div>
-</section>
-
 <section class="section depth-abyss">
     <div class="container narrow center">
         <div class="reveal">
