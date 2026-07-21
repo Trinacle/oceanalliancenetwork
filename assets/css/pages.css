@@ -29,7 +29,7 @@
 .page-hero{
   padding:calc(var(--header-h) + 100px) 32px 60px;
   text-align:center;position:relative;z-index:1;
-  overflow:hidden;min-height:60vh;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;min-height:80vh;display:flex;align-items:center;justify-content:center;
 }
 /* video background for page heroes */
 .page-hero-video{
