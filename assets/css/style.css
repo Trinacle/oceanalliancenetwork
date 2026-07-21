@@ -129,31 +129,32 @@ ul{margin:0;padding:0;list-style:none}
 .creature[data-dir="left"]{animation:drift-left var(--dur,90s) linear infinite}
 
 /* ZONE 1: shallow — 3 creatures visible at start.
-   Each delay = exactly -50% of duration so creatures START at center-screen. */
-.fish-a{width:min(126px,11vw);top:4vh;opacity:.2;--dur:45s;animation-delay:-22s}
-.c-1{top:12vh;width:min(160px,15vw);--fade:.14;--dur:50s;animation-delay:-25s}
-.c-2{top:30vh;width:min(220px,20vw);--fade:.16;--dur:60s;animation-delay:-30s}
+   Each delay = exactly -50% of duration so creatures START at center-screen.
+   Durations doubled for calmer, slower drift. */
+.fish-a{width:min(126px,11vw);top:4vh;opacity:.2;--dur:90s;animation-delay:-45s}
+.c-1{top:12vh;width:min(160px,15vw);--fade:.14;--dur:100s;animation-delay:-50s}
+.c-2{top:30vh;width:min(220px,20vw);--fade:.16;--dur:120s;animation-delay:-60s}
 
 /* ZONE 1b: extra shallow creature */
-.c-extra1{top:42vh;width:min(130px,12vw);--fade:.12;--dur:44s;animation-delay:-22s}
+.c-extra1{top:42vh;width:min(130px,12vw);--fade:.12;--dur:88s;animation-delay:-44s}
 
 /* ZONE 2: mid-water */
-.c-3{top:58vh;width:min(140px,13vw);--fade:.12;--dur:48s;animation-delay:-24s}
-.fish-b{width:min(110px,10vw);top:78vh;opacity:.16;--dur:40s;animation-delay:-20s}
-.c-4{top:102vh;width:min(170px,15vw);--fade:.14;--dur:55s;animation-delay:-27s}
+.c-3{top:58vh;width:min(140px,13vw);--fade:.12;--dur:96s;animation-delay:-48s}
+.fish-b{width:min(110px,10vw);top:78vh;opacity:.16;--dur:80s;animation-delay:-40s}
+.c-4{top:102vh;width:min(170px,15vw);--fade:.14;--dur:110s;animation-delay:-55s}
 
 /* ZONE 2b: extra mid-water creatures */
-.c-extra2{top:90vh;width:min(120px,11vw);--fade:.11;--dur:42s;animation-delay:-21s}
-.fish-e{width:min(90px,8vw);top:118vh;opacity:.12;--dur:34s;animation-delay:-17s}
+.c-extra2{top:90vh;width:min(120px,11vw);--fade:.11;--dur:84s;animation-delay:-42s}
+.fish-e{width:min(90px,8vw);top:118vh;opacity:.12;--dur:68s;animation-delay:-34s}
 
 /* ZONE 3: deep */
-.c-5{top:140vh;width:min(130px,12vw);--fade:.1;--dur:42s;animation-delay:-21s}
-.c-6{top:175vh;width:min(150px,13vw);--fade:.12;--dur:52s;animation-delay:-26s}
-.fish-c{width:min(100px,9vw);top:205vh;opacity:.14;--dur:38s;animation-delay:-19s}
+.c-5{top:140vh;width:min(130px,12vw);--fade:.1;--dur:84s;animation-delay:-42s}
+.c-6{top:175vh;width:min(150px,13vw);--fade:.12;--dur:104s;animation-delay:-52s}
+.fish-c{width:min(100px,9vw);top:205vh;opacity:.14;--dur:76s;animation-delay:-38s}
 
 /* ZONE 3b: extra deep creatures */
-.c-extra3{top:160vh;width:min(110px,10vw);--fade:.09;--dur:38s;animation-delay:-19s}
-.c-extra4{top:195vh;width:min(130px,12vw);--fade:.1;--dur:46s;animation-delay:-23s}
+.c-extra3{top:160vh;width:min(110px,10vw);--fade:.09;--dur:76s;animation-delay:-38s}
+.c-extra4{top:195vh;width:min(130px,12vw);--fade:.1;--dur:92s;animation-delay:-46s}
 
 /* ZONE 4: abyss — whale + creature + fish.
    Delay = -50% of duration so whale starts at center-screen on load. */
@@ -161,16 +162,16 @@ ul{margin:0;padding:0;list-style:none}
   width:min(320px,28vw);
   top:240vh;
   --fade:.16;
-  --dur:70s;
-  animation:drift-right 70s linear infinite;
-  animation-delay:-35s;
+  --dur:140s;
+  animation:drift-right 140s linear infinite;
+  animation-delay:-70s;
 }
-.c-7{top:275vh;width:min(140px,13vw);--fade:.1;--dur:46s;animation-delay:-23s}
-.fish-d{width:min(120px,10vw);top:305vh;opacity:.14;--dur:36s;animation-delay:-18s}
+.c-7{top:275vh;width:min(140px,13vw);--fade:.1;--dur:92s;animation-delay:-46s}
+.fish-d{width:min(120px,10vw);top:305vh;opacity:.14;--dur:72s;animation-delay:-36s}
 
 /* ZONE 4b: extra abyss creatures + fish */
-.c-extra5{top:325vh;width:min(130px,12vw);--fade:.1;--dur:44s;animation-delay:-22s}
-.fish-f{width:min(90px,8vw);top:350vh;opacity:.12;--dur:32s;animation-delay:-16s}
+.c-extra5{top:325vh;width:min(130px,12vw);--fade:.1;--dur:88s;animation-delay:-44s}
+.fish-f{width:min(90px,8vw);top:350vh;opacity:.12;--dur:64s;animation-delay:-32s}
 
 @keyframes drift-right{
   0%{transform:translateX(-30vw) translateY(0)}
