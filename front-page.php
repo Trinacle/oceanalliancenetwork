@@ -46,6 +46,36 @@ $uri = get_template_directory_uri();
 </section>
 
 <!-- ============================================
+     FLAGSHIP CAMPAIGNS — full-width WHITE section (right below hero)
+     ============================================ -->
+<section id="campaigns" class="section white-section">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">What we do</span>
+            <h2 class="section-title">Three flagship initiatives.</h2>
+            <p class="lead">Each campaign bridges science and storytelling to drive measurable protection for marine ecosystems.</p>
+        </div>
+        <div class="campaigns-grid">
+            <article class="campaign-card reveal">
+                <span class="campaign-tag">Voice 4 Oceans · LEAF</span>
+                <h3>Listen. Engage. Act. Forward.</h3>
+                <p>Our flagship engagement framework — turning awareness into action by amplifying the voices of coastal communities, scientists, and the next generation of ocean stewards.</p>
+            </article>
+            <article class="campaign-card reveal">
+                <span class="campaign-tag">TMDL Awareness</span>
+                <h3>Total Maximum Daily Load</h3>
+                <p>Driving public understanding of water-quality limits under the Clean Water Act — because what runs off our land ends up in the sea.</p>
+            </article>
+            <article class="campaign-card reveal">
+                <span class="campaign-tag">Whale Strike Reduction</span>
+                <h3>Protecting whales from ship strikes</h3>
+                <p>Working with maritime partners on slow-transit corridors and real-time monitoring to reduce fatal vessel collisions with migrating whales.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
      MISSION — sunlight zone
      ============================================ -->
 <section id="mission" class="section depth-sunlight">
@@ -114,36 +144,6 @@ $uri = get_template_directory_uri();
         <div class="stat reveal">
             <span class="stat-num" data-count="1" data-suffix="/3">0</span>
             <p>of marine life is at risk without action</p>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================
-     FLAGSHIP CAMPAIGNS — full-width WHITE section
-     ============================================ -->
-<section id="campaigns" class="section white-section">
-    <div class="container">
-        <div class="section-head reveal">
-            <span class="eyebrow">What we do</span>
-            <h2 class="section-title">Three flagship initiatives.</h2>
-            <p class="lead">Each campaign bridges science and storytelling to drive measurable protection for marine ecosystems.</p>
-        </div>
-        <div class="campaigns-grid">
-            <article class="campaign-card reveal">
-                <span class="campaign-tag">Voice 4 Oceans · LEAF</span>
-                <h3>Listen. Engage. Act. Forward.</h3>
-                <p>Our flagship engagement framework — turning awareness into action by amplifying the voices of coastal communities, scientists, and the next generation of ocean stewards.</p>
-            </article>
-            <article class="campaign-card reveal">
-                <span class="campaign-tag">TMDL Awareness</span>
-                <h3>Total Maximum Daily Load</h3>
-                <p>Driving public understanding of water-quality limits under the Clean Water Act — because what runs off our land ends up in the sea.</p>
-            </article>
-            <article class="campaign-card reveal">
-                <span class="campaign-tag">Whale Strike Reduction</span>
-                <h3>Protecting whales from ship strikes</h3>
-                <p>Working with maritime partners on slow-transit corridors and real-time monitoring to reduce fatal vessel collisions with migrating whales.</p>
-            </article>
         </div>
     </div>
 </section>
