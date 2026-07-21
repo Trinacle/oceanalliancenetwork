@@ -398,8 +398,13 @@ ul{margin:0;padding:0;list-style:none}
   pointer-events:none;
 }
 .hero-yt-wrapper iframe{
-  width:100%;height:calc(100% + 80px);border:0;  /* extra height hides bottom controls */
-  margin-top:-40px;
+  width:100%;height:calc(100% + 120px);border:0;  /* extra height hides bottom controls */
+  margin-top:-60px;
+}
+/* invisible blocker sits on top of iframe to hide any YouTube UI overlay */
+.hero-yt-blocker{
+  position:absolute;inset:0;z-index:0;
+  background:transparent;pointer-events:none;
 }
 /* subtle dark gradient at bottom so hero text stays readable */
 .hero-bg::after{

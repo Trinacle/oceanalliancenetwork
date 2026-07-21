@@ -12,8 +12,9 @@ $uri = get_template_directory_uri();
 
 <section class="page-hero">
     <div class="page-hero-video" aria-hidden="true">
-        <iframe src="https://www.youtube-nocookie.com/embed/tADnCEpbPI8?autoplay=1&mute=1&start=3411&loop=1&playlist=tADnCEpbPI8&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1" title="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/tADnCEpbPI8?autoplay=1&mute=1&start=3411&loop=1&playlist=tADnCEpbPI8&controls=0&showinfo=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&disablekb=1" title="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+    <div class="page-hero-blocker" aria-hidden="true"></div>
     <div class="page-hero-overlay" aria-hidden="true"></div>
     <div class="container narrow center">
         <span class="eyebrow reveal">Our Community</span>
