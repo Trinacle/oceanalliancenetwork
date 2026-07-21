@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['oan_contact'])) {
         } elseif (!is_email($email)) {
             $contact_error = 'Please enter a valid email address.';
         } else {
-            $to      = 'hello@oceanalliancenetwork.org';
+            $to      = 'ana@oceanalliancenetwork.org';
             $subj    = '[OAN Contact] ' . $subject;
             $body    = "Name: $name\nEmail: $email\nSubject: $subject\n\nMessage:\n$message\n";
             $headers = array(
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['oan_contact'])) {
             if ($sent) {
                 $contact_sent = true;
             } else {
-                $contact_error = 'Something went wrong sending your message. Please email us directly at hello@oceanalliancenetwork.org';
+                $contact_error = 'Something went wrong sending your message. Please email us directly at ana@oceanalliancenetwork.org';
             }
         }
     }
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['oan_contact'])) {
 
                 <div class="contact-method">
                     <span class="contact-label">Email</span>
-                    <a href="mailto:hello@oceanalliancenetwork.org">hello@oceanalliancenetwork.org</a>
+                    <a href="mailto:ana@oceanalliancenetwork.org">ana@oceanalliancenetwork.org</a>
                 </div>
 
                 <div class="contact-method">

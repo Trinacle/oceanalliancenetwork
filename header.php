@@ -140,7 +140,6 @@
                                     <ul>
                                         <li><a href="<?php echo esc_url(oan_page_url('about')); ?>">Our Story</a></li>
                                         <li><a href="<?php echo esc_url(oan_anchor_url('about', 'strategic-advisors')); ?>">Strategic Advisors</a></li>
-                                        <li><a href="<?php echo esc_url(oan_anchor_url('about', 'advisors')); ?>">Board of Advisors</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega-col">
@@ -233,7 +232,6 @@
             <summary>About</summary>
             <a href="<?php echo esc_url(oan_anchor_url('about', 'fiscal-sponsor')); ?>">Fiscal Sponsor &amp; Tax ID</a>
             <a href="<?php echo esc_url(oan_anchor_url('about', 'strategic-advisors')); ?>">Strategic Advisors</a>
-            <a href="<?php echo esc_url(oan_anchor_url('about', 'advisors')); ?>">Board of Advisors</a>
         </details>
         <details <?php oan_open('media'); ?>>
             <summary>Media</summary>
