@@ -39,6 +39,9 @@
   position:absolute;top:50%;left:50%;
   width:100vw;height:56.25vw;min-height:100vh;min-width:177.78vh;
   transform:translate(-50%,-50%);border:0;pointer-events:none;
+  /* extra height + margin crops bottom YouTube controls */
+  height:calc(56.25vw + 80px);margin-top:-40px;
+  min-height:calc(100vh + 80px);
 }
 .page-hero-overlay{
   position:absolute;inset:0;z-index:1;
