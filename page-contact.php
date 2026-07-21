@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['oan_contact'])) {
 </section>
 
 <!-- CONTACT FORM -->
-<section class="section depth-sunlight">
+<section class="section depth-sunlight" style="padding-bottom:40px">
     <div class="container">
         <div class="contact-layout">
 
