@@ -89,7 +89,7 @@ $uri = get_template_directory_uri();
             $advisor_uri = $uri . '/assets/img/advisors';
             foreach ($advisors as $slug => $name) { ?>
                 <article class="person reveal">
-                    <div class="person-photo"><img src="<?php echo esc_url($advisor_uri . '/' . $slug . '.png'); ?>" alt="<?php echo esc_attr($name); ?>" loading="lazy"/></div>
+                    <div class="person-photo"><img src="<?php echo esc_url($advisor_uri . '/' . $slug . '.webp'); ?>" alt="<?php echo esc_attr($name); ?>" loading="lazy"/></div>
                     <h4><?php echo esc_html($name); ?></h4>
                 </article>
             <?php } ?>
