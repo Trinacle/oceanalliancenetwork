@@ -72,40 +72,29 @@ $uri = get_template_directory_uri();
             <p class="lead">Visionary leaders guiding the long-term direction of the alliance.</p>
         </div>
         <div class="people-grid">
-            <article class="person reveal">
-                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Advisor Name</h4><p>Title &amp; organization</p>
-            </article>
-            <article class="person reveal">
-                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Advisor Name</h4><p>Title &amp; organization</p>
-            </article>
-            <article class="person reveal">
-                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Advisor Name</h4><p>Title &amp; organization</p>
-            </article>
-            <article class="person reveal">
-                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Advisor Name</h4><p>Title &amp; organization</p>
-            </article>
-            <article class="person reveal">
-                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Advisor Name</h4><p>Title &amp; organization</p>
-            </article>
-            <article class="person reveal">
-                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Advisor Name</h4><p>Title &amp; organization</p>
-            </article>
-            <article class="person reveal">
-                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Advisor Name</h4><p>Title &amp; organization</p>
-            </article>
-            <article class="person reveal">
-                <div class="placeholder placeholder--portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></svg><span>Advisor Photo</span></div>
-                <h4>Advisor Name</h4><p>Title &amp; organization</p>
-            </article>
+            <?php
+            $advisors = array(
+                'alex-avant'             => 'Alex Avant',
+                'charles-hambleton'      => 'Charles Hambleton',
+                'david-chokachi'         => 'David Chokachi',
+                'david-electric'         => 'David Electric',
+                'ed-begley-jr'           => 'Ed Begley, Jr.',
+                'jimmy-thomas'           => 'Jimmy Thomas',
+                'kevin-legrett'          => 'Kevin Legrett',
+                'metta-world-peace'      => 'Metta World Peace',
+                'myguymars'              => 'MyGuyMars',
+                'nathan-banda'           => 'Nathan Banda',
+                'pierre-andre-senizergues' => 'Pierre-André Senizergues',
+            );
+            $advisor_uri = $uri . '/assets/img/advisors';
+            foreach ($advisors as $slug => $name) { ?>
+                <article class="person reveal">
+                    <div class="person-photo"><img src="<?php echo esc_url($advisor_uri . '/' . $slug . '.png'); ?>" alt="<?php echo esc_attr($name); ?>" loading="lazy"/></div>
+                    <h4><?php echo esc_html($name); ?></h4>
+                </article>
+            <?php } ?>
         </div>
-        <p class="grid-note reveal">Full biographies forthcoming. <a href="<?php echo esc_url(oan_page_url('donate')); ?>">Support our work →</a></p>
+    </div>
     </div>
 </section>
 
